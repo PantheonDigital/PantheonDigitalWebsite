@@ -1,103 +1,127 @@
+import About from "@/components/features/About";
+import ChooseUs from "@/components/features/ChooseUs";
+import Clients from "@/components/features/Clients";
+import FaqItem from "@/components/features/FaqItem";
+import OurProject from "@/components/features/OurProjects";
+import Testimonials from "@/components/features/Testimonials";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import Card from "@/components/ui/Card";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      {/* top header */}
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+      {/* hero section background image */}
+      <Image
+        src="/BackgroundImageHomePage.svg"
+        alt="Home Page Background Banner"
+        width="0"
+        height="0"
+        className="w-full h-full absolute bottom-[3%] fade-bottom"
+      />
+
+      {/* starting of main section */}
+      <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
+        <div className="w-screen h-auto rounded-b-4xl flex flex-col justify-center items-center mt-24 md:mt-44">
+          <h1 className="font-geometric  text-xl md:text-4xl text-white text-center md:mt-0 ">
+            Powering possibility through digital innovation
+          </h1>
+          <p className="md:text-avenir-16 text-white font-avenir md:text-xl text-xs w-[80vw] leading-6 md:leading-8  mt-6 md:mt-12 text-center">
+            At Pantheon Digital, we don't just adapt to the future — we create
+            it. Pantheon Digital is where the future is imagined, engineered,
+            and launched.
+          </p>
+        </div>
+
+        <PrimaryButton
+          className={"my-12 md:my-18"}
+          label={"Get with us"}
+          href={""}
+          type="variant2"
+        />
+
+        {/* informational card */}
+        <div className="w-screen relative bg-gradient-to-b from-[#0000] to-[#000]  h-auto rounded-b-4xl flex items-center justify-center pb-8 shadow-2xl/30 shadow-[#F61313] md:pb-32 mt-8 md:pt-8 z-40 translate-y-12">
+          <div className="w-[90%] md:w-[80%] md:grid md:grid-cols-2 sm:items-center place-items-center flex flex-col gap-8 ">
+            <Card
+              imgHref="/mobile.svg"
+              title="Digital Marketing, SEO & Social media management"
+              description="Embark on a journey into cutting-edge technology with Pantheon Digital. Our specialized team transforms your concepts into reality, prioritizing excellence in both quality & functionality."
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <Card
+              imgHref="/coding.svg"
+              title="Custom Software designing & Development"
+              description="Elevate your online presence with Pantheon Digital's exceptional design services. Our skilled experts ensure that your digital footprint not only stands out but leaves a lasting impression."
+            />
+            <Card
+              imgHref="/keyboard-open.svg"
+              title="HRMS & CRM Software Services"
+              description="Simplify and streamline your HR processes with Pantheon Digital's robust HRMS software. Tailored to meet your unique needs, our Human Resource Management Services empower businesses with efficient workforce management."
+            />
+            <Card
+              imgHref="/airdrop.svg"
+              title="Cloud & DevOps services"
+              description="Forge and strengthen your customer relationships with Pantheon Digital's CRM Software. Our software is meticulously designed to enhance communication, streamline interactions, and ensure that your business thrives on strong connections."
+            />
+          </div>
+        </div>
+
+        {/* about us section */}
+        <About />
+
+        {/* Reason to choose use section */}
+        <ChooseUs />
+
+        {/* Project section */}
+        <OurProject />
+
+        {/* Testimonial section */}
+        <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
+          <h4 className="font-avenir-20 opacity-60 text-white text-xs md:text-xl text-center">
+            Testimonials
+          </h4>
+          <h1 className="font-geometric text-xl md:text-4xl text-white text-center my-4">
+            100+ satisfied clients worldwide
+          </h1>
+          <Testimonials speed="normal" direction="right" testimonials={[]} />
+          <Testimonials speed="normal" direction="left" testimonials={[]} />
+        </div>
+
+        {/* Our Trusted Clients */}
+        <Clients />
+
+        {/* Faq Section */}
+        <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
+          <h1 className="font-geometric text-lg md:text-4xl text-white text-center my-4 ">
+            Frequently Asked Questions
+          </h1>
+          <div className=" w-[80%] md:w-[60%] border-b-1 border-white mx-auto mb-8" />
+          <FaqItem
+            ques="What sets Pantheon Digital apart from other digital agencies?"
+            ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+          />
+          <FaqItem
+            ques="Do you run Meta Ads and Google PPC campaigns both?"
+            ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+          />
+          <FaqItem
+            ques="How does your SMO and SEO approach help my company?"
+            ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+          />
+          <FaqItem
+            ques="Will Pantheon Digital enable me to create and keep my app or website?"
+            ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+          />
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      {/* Footer section */}
+      <Footer />
+    </>
   );
 }
