@@ -4,8 +4,6 @@ import Clients from "@/components/features/Clients";
 import FaqItem from "@/components/features/FaqItem";
 import OurProject from "@/components/features/OurProjects";
 import Testimonials from "@/components/features/Testimonials";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import Card from "@/components/ui/Card";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import Image from "next/image";
@@ -13,9 +11,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      {/* top header */}
-      <Header />
-
       {/* hero section background image */}
       <Image
         src="/BackgroundImageHomePage.svg"
@@ -46,24 +41,32 @@ export default function Home() {
         />
 
         {/* informational card */}
-        <div className="w-screen relative bg-gradient-to-b from-[#0000] to-[#000]  h-auto rounded-b-4xl flex items-center justify-center pb-8 shadow-2xl/30 shadow-[#F61313] md:pb-32 mt-8 md:pt-8 z-40 translate-y-12">
+        <div className="w-screen relative bg-gradient-to-b from-[#0000] to-[#000]  h-auto rounded-b-4xl flex items-center justify-center pb-8 shadow-2xl/10 shadow-[#F61313] md:pb-32 mt-8 md:pt-8 z-40 translate-y-12">
           <div className="w-[90%] md:w-[80%] md:grid md:grid-cols-2 sm:items-center place-items-center flex flex-col gap-8 ">
             <Card
+              href=""
+              key={1}
               imgHref="/mobile.svg"
               title="Digital Marketing, SEO & Social media management"
               description="Embark on a journey into cutting-edge technology with Pantheon Digital. Our specialized team transforms your concepts into reality, prioritizing excellence in both quality & functionality."
             />
             <Card
+              href=""
+              key={2}
               imgHref="/coding.svg"
               title="Custom Software designing & Development"
               description="Elevate your online presence with Pantheon Digital's exceptional design services. Our skilled experts ensure that your digital footprint not only stands out but leaves a lasting impression."
             />
             <Card
+              href=""
+              key={3}
               imgHref="/keyboard-open.svg"
               title="HRMS & CRM Software Services"
               description="Simplify and streamline your HR processes with Pantheon Digital's robust HRMS software. Tailored to meet your unique needs, our Human Resource Management Services empower businesses with efficient workforce management."
             />
             <Card
+              href=""
+              key={4}
               imgHref="/airdrop.svg"
               title="Cloud & DevOps services"
               description="Forge and strengthen your customer relationships with Pantheon Digital's CRM Software. Our software is meticulously designed to enhance communication, streamline interactions, and ensure that your business thrives on strong connections."
@@ -119,9 +122,6 @@ export default function Home() {
           />
         </div>
       </main>
-
-      {/* Footer section */}
-      <Footer />
     </>
   );
 }

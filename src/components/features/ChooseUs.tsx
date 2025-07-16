@@ -43,7 +43,7 @@ function ChooseUs() {
             Client-Centric <br /> Approach
           </h1>
           <Image
-            className="w-full h-full pb-24"
+            className="w-full h-full md:pb-24"
             src="/ChooseUs3.svg"
             alt="third choose us image"
             width="0"

@@ -54,7 +54,7 @@ const About = () => {
 
       {/* about information in numerical */}
       <div className="w-full flex items-center justify-center mt-24">
-        <div className="grid w-[90%] md:w-[80%] place-items-center gap-8 grid-cols-2 md:grid-cols-4 auto-cols-fr p-8 md:p-15 rounded-4xl bg-[#313131] shadow-[inset_-10px_10px_8px_rgba(0,0,0,.25)]">
+        <div className="grid w-[90%] md:w-[80%] place-items-center gap-4 md:gap-8 grid-cols-3 md:grid-cols-7 auto-cols-fr  p-8 md:px-24 rounded-4xl bg-[#313131] shadow-[inset_-10px_10px_8px_rgba(0,0,0,.25)]">
           {/* 1 */}
           <div className="flex flex-col gap-2 ">
             <div className="flex gap-2">
@@ -73,6 +73,9 @@ const About = () => {
               Happy Client
             </p>
           </div>
+
+          {/* first vertical line */}
+          <div className="h-full  border-[0.5] border-[#A8A8A8] rounded-full" />
 
           {/* 2 */}
           <div className="flex flex-col gap-2">
@@ -93,6 +96,12 @@ const About = () => {
             </p>
           </div>
 
+          {/* second vertical line */}
+          <div className="h-full hidden md:block  border-[0.5] border-[#A8A8A8] rounded-full" />
+
+          {/* horizontal line for mobile view */}
+          <div className="w-full block md:hidden  border-[0.5] border-[#A8A8A8] rounded-full col-span-3" />
+
           {/* 3 */}
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
@@ -111,6 +120,9 @@ const About = () => {
               Skilled Experts
             </p>
           </div>
+
+          {/* third vertical line */}
+          <div className="h-full  border-[0.5] border-[#A8A8A8] rounded-full" />
 
           {/* 4 */}
           <div className="flex flex-col gap-2">

@@ -20,11 +20,11 @@ const PrimaryButton = ({
   onClick,
   className = "",
 }: PrimaryButtonProps) => {
-  const commonStyles = `flex cursor-pointer flex-row items-center justify-normal md:justify-between gap-3  ${className} ${
+  const commonStyles = `flex cursor-pointer flex-row items-center justify-between gap-3 ${className} ${
     type === "normal" &&
     "button rounded-3xl shadow-[2px_2px_0px_rgba(246,19,19,0.4)] shadow-red-900"
   } ${type === "variant2" && "btn-variant2"}
-    ${type === "outline" && "btn-outline"}
+    ${type === "outline" && "btn-outline group"}
     ${
       type === "red-outline" &&
       "px-8 py-4 shadow-[1px_1px_5px_rgba(246,19,19,0.4)] shadow-[#F61313] rounded-2xl"
@@ -32,21 +32,29 @@ const PrimaryButton = ({
 
   const content = (
     <>
-      {leftIcon && (
-        <Image src={leftIcon} alt="left icon" width={20} height={20} />
-      )}
-      <span
-        className={`font-avenir font-extrabold text-sm md:text-base ${
-          type === "variant2" ? "text-black" : "text-white"
-        }
+      <div className="flex gap-3">
+        {leftIcon && (
+          <Image
+            src={leftIcon}
+            alt="left icon"
+            width={20}
+            height={20}
+            className="group-hover:scale-150 duration-300"
+          />
+        )}
+        <span
+          className={`font-avenir font-extrabold text-sm md:text-base group-hover:scale-110 duration-300 ${
+            type === "variant2" ? "text-black" : "text-white"
+          }
         ${type === "red-outline" && "underline"}
         `}
-      >
-        {label}
-      </span>
+        >
+          {label}
+        </span>
+      </div>
       {rightIcon && (
         <Image
-          className="justify-self-end-safe"
+          className="justify-self-end-safe group-hover:scale-110 duration-300"
           src={rightIcon}
           alt="right icon"
           width={20}
@@ -58,7 +66,7 @@ const PrimaryButton = ({
 
   if (href) {
     return (
-      <Link href={href} className={commonStyles}>
+      <Link href={href} onClick={onClick} className={commonStyles}>
         {content}
       </Link>
     );
