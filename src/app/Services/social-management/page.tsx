@@ -1,0 +1,197 @@
+import About from "@/components/features/About";
+import Clients from "@/components/features/Clients";
+import FaqItem from "@/components/features/FaqItem";
+import Hero from "@/components/features/Hero";
+import Process from "@/components/features/Process";
+import Technology from "@/components/features/Technology";
+import Testimonials from "@/components/features/Testimonials";
+import WeProvide from "@/components/features/WeProvide";
+import AboutNumerics from "@/components/ui/AboutNumerics";
+
+const page = () => {
+  return (
+    <div className="mt-24 flex flex-col justify-center items-center">
+      {/* hero section */}
+      <Hero
+        title="Powerful Social Media Management That Grows Your Brand"
+        subTitle="Smart strategies. Real connections. Measurable impact."
+        description={
+          "We help brands connect, engage, and convert across every major social platform. From content strategy to daily publishing, analytics, and community management — we take care of it all so you can focus on running your business."
+        }
+        buttonTitle={"Create with us"}
+        imageSrc={"/SocialMediaManagementBannerImage.svg"}
+        imageStyle="w-[60%] h-full"
+      />
+
+      {/* what we provide for web dev */}
+      <div className="w-screen mt-24 md:mt-0 flex flex-col justify-center items-center bg-black rounded-b-4xl shadow-[0_0_100px_rgba(236,19,19,0.2)] translate-y-10 z-10">
+        <WeProvide
+          title={"What We Offer in Application Development"}
+          subtitle={"What we provide"}
+          cardsData={cardsData}
+        />
+      </div>
+
+      {/* Technologies */}
+      <Technology
+        heading=""
+        icons={[]}
+        title="Smart strategies. Real connections. Measurable impact."
+        subtitle="Benefits of social Management"
+        href=""
+        list={[
+          "Boosts Brand Awareness",
+          "Builds Meaningful Customer Relationships",
+          "Drives Targeted Traffic & Leads",
+          "Reinforces Brand Voice & Identity",
+          "Saves Time & Resources",
+          "Provides Measurable Results",
+          "Increases Engagement & Community Growth",
+          "Keeps You Relevant & Competitive",
+        ]}
+      />
+
+      {/* Our process */}
+      <Process
+        heading="Our Proven SEO & SMO Process"
+        process={[
+          {
+            id: 1,
+            title: "Discovery & Strategy",
+            description:
+              "We begin by immersing ourselves in your brand — understanding your mission, target audience, competitors, voice, and visual identity. Through a comprehensive audit of your existing social presence (if any), market research, and audience analysis, we uncover what resonates with your audience and where the gaps lie. Based on these insights, we craft a customized social media strategy that aligns with your business goals — whether it's brand awareness, engagement, lead generation, or community building.",
+            image: "/seo/Process/1.svg",
+          },
+          {
+            id: 2,
+            title: "Content Planning",
+            description:
+              "With the strategy as our foundation, we build a content plan that’s purposeful and aligned with your campaigns, launches, seasonal events, and audience interests. This includes ideating content themes, post types (e.g. educational, promotional, entertaining), tone of voice, and frequency. Everything is mapped into a monthly content calendar, offering a clear view of what's coming — ensuring consistency, coherence, and relevance across platforms.",
+            image: "/seo/Process/2.svg",
+          },
+          {
+            id: 3,
+            title: "Creation & Review",
+            description:
+              "Our design and content team turns ideas into high-quality creative assets — from attention-grabbing graphics, Reels, and videos, to on-brand captions that drive engagement and conversation. We ensure each post reflects your brand’s tone and identity. Once the content is ready, it’s shared with you through a collaborative review process where we gather your feedback, fine-tune details, and finalize for publishing. Your approval is key before anything goes live.",
+            image: "/seo/Process/3.svg",
+          },
+          {
+            id: 4,
+            title: "Scheduling & Publishing",
+            description:
+              "Using advanced scheduling tools like Meta Business Suite, Buffer, or Later, we schedule all approved posts at the most effective times for audience engagement. Our publishing process ensures that content goes out on time, error-free, and optimized for each platform — whether it’s an Instagram carousel, a LinkedIn thought piece, or a Twitter thread. Your social channels stay consistently active without you lifting a finger.",
+            image: "/seo/Process/4.svg",
+          },
+          {
+            id: 5,
+            title: "Engagement & Community Management",
+            description:
+              "Social media is a two-way street. Our community managers monitor and respond to comments, mentions, DMs, and tags — nurturing genuine interactions and building a loyal following. We handle FAQs, escalate important issues to your team, and maintain a tone that reflects your brand’s personality. This ongoing engagement helps turn followers into loyal customers and advocates.",
+            image: "/seo/Process/5.svg",
+          },
+          {
+            id: 6,
+            title: "Analytics & Optimization",
+            description:
+              "We continuously track the performance of every post and campaign using platform insights and third-party analytics tools. Each month, you receive a clear, actionable report that highlights key metrics like reach, engagement rate, growth, top-performing content, and audience behavior. More than just reporting — we use this data to optimize future content, improve strategies, and ensure that your social media presence grows stronger with every cycle.",
+            image: "/seo/Process/5.svg",
+          },
+        ]}
+      />
+
+      {/* Our Trusted Clients */}
+      <Clients />
+
+      {/* Testimonial section */}
+      <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
+        <h4 className="font-avenir-20 opacity-60 text-white text-xs md:text-xl text-center">
+          Testimonials
+        </h4>
+        <h1 className="font-geometric text-xl md:text-4xl text-white text-center my-4">
+          100+ satisfied clients worldwide
+        </h1>
+        <Testimonials speed="normal" direction="right" testimonials={[]} />
+        <Testimonials speed="normal" direction="left" testimonials={[]} />
+      </div>
+
+      {/* About Numerics */}
+      <AboutNumerics />
+
+      <div className="mt-12 md:mt-24" />
+      {/* About Section */}
+      <About />
+
+      {/* Faq Section */}
+      <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
+        <h1 className="font-geometric text-lg md:text-4xl text-white text-center my-4 ">
+          Frequently Asked Questions
+        </h1>
+        <div className=" w-[80%] md:w-[60%] border-b-1 border-white mx-auto mb-8" />
+        <FaqItem
+          ques="What sets Pantheon Digital apart from other digital agencies?"
+          ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+        />
+        <FaqItem
+          ques="Do you run Meta Ads and Google PPC campaigns both?"
+          ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+        />
+        <FaqItem
+          ques="How does your SMO and SEO approach help my company?"
+          ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+        />
+        <FaqItem
+          ques="Will Pantheon Digital enable me to create and keep my app or website?"
+          ans="Pantheon Digital builds digital ecosystems rather than just campaigns. Not only for short-term outcomes but also for long-term corporate effect, our holistic strategy integrates marketing, technology, and design."
+        />
+      </div>
+    </div>
+  );
+};
+
+export default page;
+
+export const cardsData = [
+  {
+    id: 1,
+    icon: "/ui/1.svg",
+    title: "Content Creation",
+    description:
+      "We craft engaging, platform-optimized content that captures attention and drives interaction. From scroll-stopping graphics and high-performing Reels to clear, compelling captions and copy, every post is designed to align with your brand voice and marketing goals.",
+  },
+  {
+    id: 2,
+    icon: "/ui/2.svg",
+    title: "Platform Management",
+    description:
+      "We handle your social presence across all major platforms — consistently and professionally. Whether it's Instagram stories, LinkedIn thought leadership, or Twitter engagement, we ensure your brand shows up where your audience is most active.",
+  },
+  {
+    id: 3,
+    icon: "/ui/3.svg",
+    title: "Post Scheduling & Calendar",
+    description:
+      "Stay ahead with a structured content calendar. We plan, organize, and schedule your posts at the optimal time for each platform, ensuring your social feed is consistent, timely, and never rushed. You'll always know what's going out and when.",
+  },
+  {
+    id: 4,
+    icon: "/ui/4.svg",
+    title: "Hashtag Research & Trends",
+    description:
+      "We use smart tools and social listening to find the most relevant, trending, and high-performing hashtags for your brand. This helps boost discoverability, increase reach, and keep your content aligned with what's current.",
+  },
+  {
+    id: 5,
+    icon: "/ui/5.svg",
+    title: "Community Management",
+    description:
+      "We monitor and manage your social conversations so you don’t have to. From replying to comments and answering DMs to moderating discussions and resolving issues — we keep your community engaged and supported, every day.",
+  },
+  {
+    id: 6,
+    icon: "/ui/4.svg",
+    title: "Analytics & Report",
+    description:
+      "Know what’s working and where to improve. We provide regular performance reports with insights on engagement, reach, clicks, and more. Our data-driven approach helps refine your content strategy for better results each month.",
+  },
+];

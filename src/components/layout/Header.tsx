@@ -111,8 +111,9 @@ const Header = () => {
                 <ul className="text-left mt-4 h-full styled-list">
                   <li>
                     <Link
-                      href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      href="/Services/social-management/"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">
                         Social Media Management
@@ -129,7 +130,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">Google PPC</span>
                       <Image
@@ -144,7 +146,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">Meta Ads Campaign</span>
                       <Image
@@ -158,8 +161,9 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      href=""
-                      className="flex flex-row justify-between items-center"
+                      href="/Services/seo/"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">SEO & SMO</span>
                       <Image
@@ -174,7 +178,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">Posts & Reels</span>
                       <Image
@@ -189,7 +194,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">
                         Branding & Advertising
@@ -205,7 +211,6 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
-
               {/* first service close */}
 
               {/* second service start */}
@@ -215,8 +220,9 @@ const Header = () => {
                 <ul className="text-left mt-4 h-full styled-list">
                   <li>
                     <Link
-                      href=""
-                      className="flex flex-row justify-between items-center"
+                      href="/Services/ui-ux"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">UX/UI Design</span>
                       <Image
@@ -231,7 +237,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">Brochure & PPT</span>
                       <Image
@@ -246,7 +253,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">Logo Design</span>
                       <Image
@@ -261,7 +269,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">Posts & Banner</span>
                       <Image
@@ -284,8 +293,9 @@ const Header = () => {
                 <ul className="text-left mt-4 h-full styled-list">
                   <li>
                     <Link
-                      href=""
-                      className="flex flex-row justify-between items-center"
+                      href="/Services/hrms/"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">HRMS Software</span>
                       <Image
@@ -299,8 +309,9 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      href=""
-                      className="flex flex-row justify-between items-center"
+                      href="/Services/crm"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">CRM Software</span>
                       <Image
@@ -314,8 +325,9 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      href=""
-                      className="flex flex-row justify-between items-center"
+                      href="/Services/website-development/"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">
                         Website Development
@@ -331,8 +343,9 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      href=""
-                      className="flex flex-row justify-between items-center"
+                      href="/Services/application-development"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">
                         Application Development
@@ -349,7 +362,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">
                         Software Development
@@ -366,7 +380,8 @@ const Header = () => {
                   <li>
                     <Link
                       href=""
-                      className="flex flex-row justify-between items-center"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                     >
                       <span className="text-avenir-16">
                         Cloud & DevOps Services
@@ -458,22 +473,22 @@ const Header = () => {
                 </div>
               </div>
               <div className="col-span-2 bg-[#2A2A2A] min-h-[120] rounded-3xl justify-between flex-row flex px-6 py-2 items-center">
-                <Link href="">
+                <Link href="" onClick={() => setIsDropDownOpen(false)}>
                   <span className="text-avenir-16 underline">
                     Privacy Policy
                   </span>
                 </Link>
-                <Link href="">
+                <Link href="" onClick={() => setIsDropDownOpen(false)}>
                   <span className="text-avenir-16 underline">
                     Terms & Condition
                   </span>
                 </Link>
-                <Link href="">
+                <Link href="" onClick={() => setIsDropDownOpen(false)}>
                   <span className="text-avenir-16 underline">
                     Cookie Policy
                   </span>
                 </Link>
-                <Link href="">
+                <Link href="" onClick={() => setIsDropDownOpen(false)}>
                   <span className="text-avenir-16 underline">Blogs</span>
                 </Link>
               </div>
@@ -568,7 +583,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">
                             Social Media Management
@@ -585,7 +600,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">Google PPC</span>
                           <Image
@@ -600,7 +615,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">
                             Meta Ads Campaign
@@ -617,7 +632,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">SEO & SMO</span>
                           <Image
@@ -632,7 +647,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">Posts & Reels</span>
                           <Image
@@ -647,7 +662,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">
                             Branding & Advertising
@@ -673,7 +688,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">UX/UI Design</span>
                           <Image
@@ -688,7 +703,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">Brochure & PPT</span>
                           <Image
@@ -703,7 +718,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">Logo Design</span>
                           <Image
@@ -718,7 +733,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">Posts & Banner</span>
                           <Image
@@ -742,7 +757,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">HRMS Software</span>
                           <Image
@@ -757,7 +772,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">CRM Software</span>
                           <Image
@@ -772,7 +787,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">
                             Website Development
@@ -789,7 +804,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">
                             Application Development
@@ -806,7 +821,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">
                             Software Development
@@ -823,7 +838,7 @@ const Header = () => {
                       <li>
                         <Link
                           href=""
-                          className="flex flex-row justify-between items-center"
+                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                         >
                           <span className="text-avenir-16">
                             Cloud & DevOps Services

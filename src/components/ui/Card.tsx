@@ -30,12 +30,16 @@ const Card = ({
         alt="card image"
         width="0"
         height="0"
-        className={type !== "square" ? "w-[9%] h-auto" : "w-[15%] h-auto"}
+        className={type !== "square" ? "w-[9%] h-auto" : "w-[10%] h-auto"}
       />
       <h1 className="text-sm md:text-base font-avenir mt-3 font-extrabold">
         {title}
       </h1>
-      <p className="text-xs md:text-sm font-avenir leading-6 font-medium mt-3">
+      <p
+        className={`text-xs md:text-sm font-avenir leading-6 font-medium mt-3 ${
+          type === "square" && "mt-4"
+        }`}
+      >
         {description}
       </p>
 

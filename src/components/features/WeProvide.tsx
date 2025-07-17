@@ -1,4 +1,5 @@
 import Card from "../ui/Card";
+import { HoverEffect } from "../ui/card-hover-effect";
 
 const WeProvide = ({
   title,
@@ -18,8 +19,8 @@ const WeProvide = ({
         {title}
       </h1>
 
-      <div className="grid  md:grid-cols-3 auto-cols-fr mt-6 md:mt-12 place-items-center gap-8">
-        {cardsData?.map((item) => (
+      {/* <div className="grid  md:grid-cols-3 auto-cols-fr mt-6 md:mt-12 place-items-center gap-8"> */}
+      {/* {cardsData?.map((item) => (
           <Card
             href=""
             type="square"
@@ -28,8 +29,9 @@ const WeProvide = ({
             title={item.title}
             description={item.description}
           />
-        ))}
-      </div>
+        ))} */}
+      {/* </div> */}
+      <HoverEffect items={cardsData} />
     </div>
   );
 };

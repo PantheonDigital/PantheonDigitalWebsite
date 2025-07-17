@@ -177,7 +177,7 @@
 }
 
 ul.styled-list li {
-  @apply my-4 font-avenir text-sm md:text-base text-white;
+  @apply my-2 font-avenir text-sm md:text-base text-white;
 }
 
 .text-avenir-20 {
