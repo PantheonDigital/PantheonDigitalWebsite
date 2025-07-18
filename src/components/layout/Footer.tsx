@@ -33,7 +33,7 @@ const Footer = () => {
         </h1>
 
         {/* main div for services */}
-        <div className="grid grid-cols-1 md:grid-cols-4 auto-cols-fr w-[80%] mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 auto-cols-fr  w-[80%] mt-16">
           {/* section 1 */}
           <div className="h-auto text-center md:text-left">
             <h4 className="font-avenir text-white text-lg font-extrabold text-center md:text-left">

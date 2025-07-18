@@ -165,11 +165,11 @@
 }
 
 .button {
-  @apply bg-[#F61313] px-8 py-4;
+  @apply bg-[#F61313] px-8 py-4 sm:px-3 sm:py-1;
 }
 
 .btn-outline {
-  @apply border-[1px] border-[#656565] px-8 py-4 rounded-3xl hover:ring-1 ring-white duration-300;
+  @apply border-[1px] border-[#656565] px-8 py-4 sm:px-3 sm:py-4 rounded-3xl hover:ring-1 ring-white duration-300;
 }
 
 .btn-variant2 {

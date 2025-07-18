@@ -20,7 +20,7 @@ const PrimaryButton = ({
   onClick,
   className = "",
 }: PrimaryButtonProps) => {
-  const commonStyles = `flex cursor-pointer flex-row items-center justify-between gap-3 ${className} ${
+  const commonStyles = `flex cursor-pointer flex-row items-center justify-between md:gap-3 ${className} ${
     type === "normal" &&
     "button rounded-3xl shadow-[2px_2px_0px_rgba(246,19,19,0.4)] shadow-red-900"
   } ${type === "variant2" && "btn-variant2"}
@@ -32,7 +32,7 @@ const PrimaryButton = ({
 
   const content = (
     <>
-      <div className="flex gap-3">
+      <div className="flex lg:gap-3 sm:gap-1">
         {leftIcon && (
           <Image
             src={leftIcon}
@@ -43,7 +43,7 @@ const PrimaryButton = ({
           />
         )}
         <span
-          className={`font-avenir font-extrabold text-sm md:text-base group-hover:scale-110 duration-300 ${
+          className={`font-avenir mr-3 text-nowrap font-extrabold text-sm md:text-md lg:text-base  group-hover:scale-110 duration-300 ${
             type === "variant2" ? "text-black" : "text-white"
           }
         ${type === "red-outline" && "underline"}
@@ -54,7 +54,7 @@ const PrimaryButton = ({
       </div>
       {rightIcon && (
         <Image
-          className="justify-self-end-safe group-hover:scale-110 duration-300"
+          className="justify-self-end-safe group-hover:scale-110 duration-300 mr-3"
           src={rightIcon}
           alt="right icon"
           width={20}

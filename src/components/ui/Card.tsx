@@ -5,11 +5,11 @@ const Card = ({
   imgHref,
   title,
   description,
-  key,
+  ckey,
   type = "normal",
   href,
 }: {
-  key: string | number;
+  ckey: string | number;
   imgHref: string;
   title: string;
   description: string;
@@ -18,7 +18,7 @@ const Card = ({
 }) => {
   return (
     <div
-      key={key}
+      key={ckey}
       className={` bg-white rounded-2xl group p-4 ${
         type === "square"
           ? "w-[100%] md:min-h-[300px] h-auto"

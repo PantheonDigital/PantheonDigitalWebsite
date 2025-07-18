@@ -39,13 +39,14 @@ const Header = () => {
   return (
     <>
       {/* Desktop Header */}
-      <div className="hidden md:block sticky top-0 z-50 mt-10  shadow-xl shadow-black">
+      <div className="hidden md:block sticky top-0 z-50 mt-10 shadow-xl gap-32 shadow-black">
         <header className="bg-black flex flex-row p-4 items-center justify-between px-0 md:px-16">
           <Link href="/">
             <Image
               src="/Logo.svg"
-              width="275"
-              height="200"
+              width="0"
+              height="0"
+              className="w-[275px] h-auto mr-32"
               alt="Pantheon Digitals Logo"
             />
           </Link>

@@ -19,18 +19,6 @@ const WeProvide = ({
         {title}
       </h1>
 
-      {/* <div className="grid  md:grid-cols-3 auto-cols-fr mt-6 md:mt-12 place-items-center gap-8"> */}
-      {/* {cardsData?.map((item) => (
-          <Card
-            href=""
-            type="square"
-            key={item.id}
-            imgHref={item.icon}
-            title={item.title}
-            description={item.description}
-          />
-        ))} */}
-      {/* </div> */}
       <HoverEffect items={cardsData} />
     </div>
   );

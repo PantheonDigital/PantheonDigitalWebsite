@@ -23,10 +23,10 @@ export default function Home() {
       {/* starting of main section */}
       <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
         <div className="w-screen h-auto rounded-b-4xl flex flex-col justify-center items-center mt-24 md:mt-44">
-          <h1 className="font-geometric  text-xl md:text-4xl text-white text-center md:mt-0 ">
+          <h1 className="font-geometric font-bold  text-xl sm:text-4xl text-white text-center md:mt-0 ">
             Powering possibility through digital innovation
           </h1>
-          <p className="md:text-avenir-16 text-white font-avenir md:text-xl text-xs w-[80vw] leading-6 md:leading-8  mt-6 md:mt-12 text-center">
+          <p className="text-white font-avenir sm:text-xl text-xs  w-[80vw] leading-6 md:leading-8  mt-6 md:mt-12 text-center">
             At Pantheon Digital, we don't just adapt to the future — we create
             it. Pantheon Digital is where the future is imagined, engineered,
             and launched.
@@ -45,28 +45,28 @@ export default function Home() {
           <div className="w-[90%] md:w-[80%] md:grid md:grid-cols-2 sm:items-center place-items-center flex flex-col gap-8 ">
             <Card
               href=""
-              key={1}
+              ckey={1}
               imgHref="/mobile.svg"
               title="Digital Marketing, SEO & Social media management"
               description="Embark on a journey into cutting-edge technology with Pantheon Digital. Our specialized team transforms your concepts into reality, prioritizing excellence in both quality & functionality."
             />
             <Card
               href=""
-              key={2}
+              ckey={2}
               imgHref="/coding.svg"
               title="Custom Software designing & Development"
               description="Elevate your online presence with Pantheon Digital's exceptional design services. Our skilled experts ensure that your digital footprint not only stands out but leaves a lasting impression."
             />
             <Card
               href=""
-              key={3}
+              ckey={3}
               imgHref="/keyboard-open.svg"
               title="HRMS & CRM Software Services"
               description="Simplify and streamline your HR processes with Pantheon Digital's robust HRMS software. Tailored to meet your unique needs, our Human Resource Management Services empower businesses with efficient workforce management."
             />
             <Card
               href=""
-              key={4}
+              ckey={4}
               imgHref="/airdrop.svg"
               title="Cloud & DevOps services"
               description="Forge and strengthen your customer relationships with Pantheon Digital's CRM Software. Our software is meticulously designed to enhance communication, streamline interactions, and ensure that your business thrives on strong connections."

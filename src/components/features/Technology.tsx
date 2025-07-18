@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { HoverEffect } from "../ui/card-hover-effect";
 
 const Technology = ({
   heading,
@@ -8,6 +9,7 @@ const Technology = ({
   title,
   subtitle,
   href,
+  showCards,
 }: {
   heading: string;
   icons: string[];
@@ -15,6 +17,7 @@ const Technology = ({
   title: string;
   subtitle?: string;
   href: string;
+  showCards?: boolean;
 }) => {
   return (
     <div className="w-screen h-auto flex justify-center pt-12 md:pt-24 bg-gradient-to-b from-[#202020] via-[#202020] to-[#86868600] z-0">
@@ -44,7 +47,6 @@ const Technology = ({
         </div>
 
         {/* description section */}
-
         <div
           className={`flex flex-col md:flex-row w-full ${
             icons?.length > 0 && "mt-12 md:mt-24"
@@ -89,9 +91,61 @@ const Technology = ({
               ))}
           </ul>
         </div>
+
+        {/* social sites we use */}
+        {showCards && (
+          <div className="grid md:grid-2 lg:grid-3">
+            <HoverEffect items={cardsData} type="dark" />
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Technology;
+
+export const cardsData = [
+  {
+    id: 1,
+    icon: "/technology/social-management/1.svg",
+    title: "Instagram",
+    description:
+      "Improve reach on insta for you. You just have to sit back, enjoy your reels and we do all the work for you. Enjoy your fame.",
+  },
+  {
+    id: 2,
+    icon: "/technology/social-management/2.svg",
+    title: "Facebook",
+    description:
+      "Improve reach on insta for you. You just have to sit back, enjoy your reels and we do all the work for you. Enjoy your fame.",
+  },
+  {
+    id: 3,
+    icon: "/technology/social-management/3.svg",
+    title: "Youtube",
+    description:
+      "Improve reach on insta for you. You just have to sit back, enjoy your reels and we do all the work for you. Enjoy your fame.",
+  },
+  {
+    id: 4,
+    icon: "/technology/social-management/4.svg",
+    title: "Pinterest",
+    description:
+      "Improve reach on insta for you. You just have to sit back, enjoy your reels and we do all the work for you. Enjoy your fame.",
+  },
+  {
+    id: 5,
+    icon: "/technology/social-management/5.svg",
+    title: "LinkedIn",
+    description:
+      "Improve reach on insta for you. You just have to sit back, enjoy your reels and we do all the work for you. Enjoy your fame.",
+  },
+  {
+    id: 6,
+    icon: "/technology/social-management/6.svg",
+    title: "x.com",
+    description:
+      "Improve reach on insta for you. You just have to sit back, enjoy your reels and we do all the work for you. Enjoy your fame.",
+  },
+];

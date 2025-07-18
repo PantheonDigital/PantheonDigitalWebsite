@@ -27,20 +27,20 @@ const Hero = ({
           imageStyle ? imageStyle : "w-full h-full"
         }`}
       />
-      <div className="md:w-[40%] w-[90%] mx-auto md:mx-0">
-        <h1 className="text-white font-geometric text-xl md:text-4xl text-center md:text-left ">
+      <div className="lg:w-[40%] w-[90%] mx-auto md:mx-0">
+        <h1 className="text-white font-geometric text-xl sm:text-4xl  text-center lg:text-left ">
           {title}
         </h1>
-        <p className="text-white font-avenir font-regular mt-8 text-sm md:text-base leading-6 text-center md:text-left">
+        <p className="text-white font-avenir font-regular mt-8 text-base sm:text-sm lg:text-base leading-6 text-center lg:text-left">
           {subTitle}
         </p>
-        <p className="text-white font-avenir font-regular mt-8 text-sm md:text-base leading-6 text-center md:text-left">
+        <p className="text-white font-avenir font-regular mt-8 text-base sm:text-sm leading-6 text-center lg:text-left">
           {description}
         </p>
         <PrimaryButton
           label={buttonTitle}
           type="variant2"
-          className={`mt-24 justify-self-center md:justify-self-auto`}
+          className={`mt-24 justify-self-center lg:justify-self-auto`}
         />
       </div>
     </div>

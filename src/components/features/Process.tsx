@@ -21,7 +21,7 @@ function Process({
         process?.map((item, idx) => (
           <div
             className={`w-[90%] md:w-[80%] h-auto min-h-[300] md:min-h-[480px] mt-6 md:mt-12 flex flex-col ${
-              idx % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+              idx % 2 !== 0 ? "sm:flex-row-reverse" : "sm:flex-row"
             } justify-center py-8 px-4 md:py-16 md:px-8 bg-[#202020] rounded-3xl gap-4 md:gap-8`}
           >
             {/* title and description */}
