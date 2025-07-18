@@ -11,7 +11,10 @@ const WeProvide = ({
   cardsData: { id: number; icon: string; title: string; description: string }[];
 }) => {
   return (
-    <div className="w-[90%] md:w-[80%] mt-12 md:mt-24 flex flex-col  items-center justify-center">
+    <div
+      key={title}
+      className="w-[90%] md:w-[80%] mt-12 md:mt-24 flex flex-col  items-center justify-center"
+    >
       <h4 className="text-white font-avenir opacity-60 font-medium text-sm md:text-xl ">
         {subtitle}
       </h4>

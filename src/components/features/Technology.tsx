@@ -35,8 +35,9 @@ const Technology = ({
           }`}
         >
           {icons?.length > 0 &&
-            icons?.map((item: string) => (
+            icons?.map((item: string, idx) => (
               <Image
+                key={idx}
                 src={item}
                 alt="technology img"
                 width="0"
@@ -83,7 +84,10 @@ const Technology = ({
           <ul className="w-full px-4 md:px-16 flex flex-col justify-between list-outside list-image-[url('/CheckList2.svg')]">
             {list?.length > 0 &&
               list?.map((item, idx) => (
-                <li className={`${idx === 0 ? "mt-0" : "mt-4 md:mt-6"} ml-8 `}>
+                <li
+                  key={idx}
+                  className={`${idx === 0 ? "mt-0" : "mt-4 md:mt-6"} ml-8 `}
+                >
                   <p className="text-white ml-2 font-avenir -translate-y-1">
                     {item} 
                   </p>
