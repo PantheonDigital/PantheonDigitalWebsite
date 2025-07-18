@@ -7,6 +7,7 @@ import Link from "next/link";
 const Header = () => {
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [isMobileDropDown, setIsMobileDropDown] = useState<boolean>(false);
 
   const toggleServices = () => {
     setIsDropDownOpen(!isDropDownOpen);
@@ -25,7 +26,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (isDropDownOpen) {
+    if (isDropDownOpen || isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -34,7 +35,7 @@ const Header = () => {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isDropDownOpen]);
+  }, [isDropDownOpen, isMobileMenuOpen]);
 
   return (
     <>
@@ -521,7 +522,10 @@ const Header = () => {
             />
           </Link>
 
-          <button onClick={toggleMobileMenu} className="text-white z-30">
+          <button
+            onClick={() => setIsMobileDropDown(!isMobileDropDown)}
+            className="text-white z-30"
+          >
             {isMobileMenuOpen ? (
               <Image
                 src="/crossIcon.svg"
@@ -543,385 +547,398 @@ const Header = () => {
         </header>
 
         {/* transparent background */}
-        {isMobileMenuOpen && (
-          <div className="w-full h-screen bg-black/50 absolute left-0 top-0" />
+        {isMobileDropDown && (
+          <button
+            onClick={() => setIsMobileDropDown(false)}
+            className="w-full h-[100dvh] bg-black/50 absolute left-0 top-0"
+          />
         )}
 
         <div
-          className={`absolute top-0 right-0 w-[80%] h-screen bg-black z-[51] p-4 pt-18 md:pt-24  flex flex-col gap-4  duration-300 ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[51] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-y-scroll ${
+            isMobileDropDown ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* buttons */}
-          <PrimaryButton
-            href="/About"
-            onClick={closeMobileMenu}
-            leftIcon="/About-Us.svg"
-            type="outline"
-            label="About Us"
-            className="justify-normal"
-          />
-          <PrimaryButton
-            onClick={toggleServices}
-            href=""
-            leftIcon="/Services.svg"
-            type="outline"
-            label="Services"
-            rightIcon="/DownArrow.svg"
-          />
+          <div className="flex flex-col gap-4 grow">
+            <PrimaryButton
+              href="/About"
+              onClick={closeMobileMenu}
+              leftIcon="/About-Us.svg"
+              type="outline"
+              label="About Us"
+              className="justify-normal"
+            />
+            <PrimaryButton
+              onClick={toggleServices}
+              href=""
+              leftIcon="/Services.svg"
+              type="outline"
+              label="Services"
+              rightIcon={isMobileMenuOpen ? "/arrow-up.svg" : "/DownArrow.svg"}
+            />
 
-          {isDropDownOpen && (
-            <div className="flex w-full h-auto justify-center -translate-y-4 bg-black z-[60] overflow-y-scroll">
-              <div className="w-full bg-black rounded-3xl ">
-                <div className="grid grid-cols-1 mt-6 gap-4">
-                  {/* Categories */}
+            {isDropDownOpen && (
+              <div className="flex w-full h-auto min-h-[400px] justify-center bg-black z-[60] overflow-y-scroll">
+                <div className="w-full bg-black rounded-3xl ">
+                  <div className="grid grid-cols-1 mt-6 gap-4">
+                    {/* Categories */}
 
-                  {/* first service start */}
-                  <div className="bg-[#2A2A2A] min-w-[25%] rounded-3xl p-4">
-                    <h1 className="text-avenir-20">Digital Marketing</h1>
-                    <div className="my-4 border-[0.5] border-white"></div>
-                    <ul className="text-left mt-4 h-full styled-list">
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">
-                            Social Media Management
-                          </span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">Google PPC</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">
-                            Meta Ads Campaign
-                          </span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">SEO & SMO</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">Posts & Reels</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">
-                            Branding & Advertising
-                          </span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                    </ul>
+                    {/* first service start */}
+                    <div className="bg-[#2A2A2A] min-w-[25%] rounded-3xl p-4">
+                      <h1 className="text-avenir-20">Digital Marketing</h1>
+                      <div className="my-4 border-[0.5] border-white"></div>
+                      <ul className="text-left mt-4 h-full styled-list">
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Social Media Management
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">Google PPC</span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Meta Ads Campaign
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">SEO & SMO</span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Posts & Reels
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Branding & Advertising
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* 1st service close */}
+
+                    {/* second service start */}
+                    <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
+                      <h1 className="text-avenir-20">Graphic Designing</h1>
+                      <div className="my-4 border-[0.5] border-white"></div>
+                      <ul className="text-left mt-4 h-full styled-list">
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">UX/UI Design</span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Brochure & PPT
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">Logo Design</span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Posts & Banner
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* second service close */}
+
+                    {/* third service start */}
+                    <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
+                      <h1 className="text-avenir-20">Tech & Software</h1>
+                      <div className="my-4 border-[0.5] border-white"></div>
+                      <ul className="text-left mt-4 h-full styled-list">
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              HRMS Software
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">CRM Software</span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Website Development
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Application Development
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Software Development
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href=""
+                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                          >
+                            <span className="text-avenir-16">
+                              Cloud & DevOps Services
+                            </span>
+                            <Image
+                              src="/ArrowRight.svg"
+                              alt="arrow right"
+                              width="10"
+                              height="10"
+                              className="w-[10%] h-[10%]"
+                            />
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* third service close */}
                   </div>
-                  {/* 1st service close */}
-
-                  {/* second service start */}
-                  <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
-                    <h1 className="text-avenir-20">Graphic Designing</h1>
-                    <div className="my-4 border-[0.5] border-white"></div>
-                    <ul className="text-left mt-4 h-full styled-list">
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">UX/UI Design</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">Brochure & PPT</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">Logo Design</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">Posts & Banner</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* second service close */}
-
-                  {/* third service start */}
-                  <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
-                    <h1 className="text-avenir-20">Tech & Software</h1>
-                    <div className="my-4 border-[0.5] border-white"></div>
-                    <ul className="text-left mt-4 h-full styled-list">
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">HRMS Software</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">CRM Software</span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">
-                            Website Development
-                          </span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">
-                            Application Development
-                          </span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">
-                            Software Development
-                          </span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href=""
-                          className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                        >
-                          <span className="text-avenir-16">
-                            Cloud & DevOps Services
-                          </span>
-                          <Image
-                            src="/ArrowRight.svg"
-                            alt="arrow right"
-                            width="10"
-                            height="10"
-                            className="w-[10%] h-[10%]"
-                          />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  {/* third service close */}
                 </div>
               </div>
-            </div>
-          )}
+            )}
 
-          <PrimaryButton
-            href=""
-            onClick={closeMobileMenu}
-            leftIcon="/Blogs.svg"
-            type="outline"
-            label="Blogs"
-            className="justify-normal"
-          />
-          <PrimaryButton
-            href=""
-            onClick={closeMobileMenu}
-            leftIcon="/Contact-Us.svg"
-            label="Contact Us"
-            className="justify-normal"
-          />
-          {!isDropDownOpen && (
-            <div className="absolute bottom-10 flex flex-row w-full  justify-evenly mt-4 left-0">
-              <Image
-                src="/social-icons/facebook.svg"
-                alt="facebook icon"
-                width="10"
-                height="10"
-                className="w-[7%] h-[7%]"
-              />
-              <Image
-                src="/social-icons/x.svg"
-                alt="x icon"
-                width="10"
-                height="10"
-                className="w-[7%] h-[7%]"
-              />
-              <Image
-                src="/social-icons/insta.svg"
-                alt="instagram icon"
-                width="10"
-                height="10"
-                className="w-[7%] h-[7%]"
-              />
-              <Image
-                src="/social-icons/linkedin.svg"
-                alt="linkedin icon"
-                width="10"
-                height="10"
-                className="w-[7%] h-[7%]"
-              />
-              <Image
-                src="/social-icons/youtube.svg"
-                alt="youtube icon"
-                width="10"
-                height="10"
-                className="w-[7%] h-[7%]"
-              />
-              <Image
-                src="/social-icons/pinterest.svg"
-                alt="pinterest icon"
-                width="10"
-                height="10"
-                className="w-[7%] h-[7%]"
-              />
-            </div>
-          )}
+            <PrimaryButton
+              href=""
+              onClick={closeMobileMenu}
+              leftIcon="/Blogs.svg"
+              type="outline"
+              label="Blogs"
+              className="justify-normal"
+            />
+
+            <PrimaryButton
+              href=""
+              onClick={closeMobileMenu}
+              leftIcon="/Contact-Us.svg"
+              label="Contact Us"
+              className="justify-normal"
+            />
+          </div>
+          {/* social icons */}
+          <div className=" flex flex-row w-full  justify-evenly mt-4 left-0">
+            <Image
+              src="/social-icons/facebook.svg"
+              alt="facebook icon"
+              width="10"
+              height="10"
+              className="w-[30%] h-[30%]"
+            />
+            <Image
+              src="/social-icons/x.svg"
+              alt="x icon"
+              width="10"
+              height="10"
+              className="w-[30%] h-[30%]"
+            />
+            <Image
+              src="/social-icons/insta.svg"
+              alt="instagram icon"
+              width="10"
+              height="10"
+              className="w-[30%] h-[30%]"
+            />
+            <Image
+              src="/social-icons/linkedin.svg"
+              alt="linkedin icon"
+              width="10"
+              height="10"
+              className="w-[30%] h-[30%]"
+            />
+            <Image
+              src="/social-icons/youtube.svg"
+              alt="youtube icon"
+              width="10"
+              height="10"
+              className="w-[30%] h-[30%]"
+            />
+            <Image
+              src="/social-icons/pinterest.svg"
+              alt="pinterest icon"
+              width="10"
+              height="10"
+              className="w-[30%] h-[30%]"
+            />
+          </div>
         </div>
       </div>
     </>
