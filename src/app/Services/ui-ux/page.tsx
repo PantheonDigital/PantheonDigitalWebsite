@@ -9,6 +9,43 @@ import WeProvide from "@/components/features/WeProvide";
 import AboutNumerics from "@/components/ui/AboutNumerics";
 
 const page = () => {
+  const cardsData = [
+    {
+      id: 1,
+      icon: "/ui/1.svg",
+      title: "Modern & Engaging UI/UX",
+      description:
+        "Creating designs with a strong visual appeal that captivate and entice users to return for more. Use effective layouts and a contemporary style to stay ahead of trends.",
+    },
+    {
+      id: 2,
+      icon: "/ui/2.svg",
+      title: "Responsive Design",
+      description:
+        "Determine that your website or application functions flawlessly on all platforms, including desktops and mobile phones, providing the best possible experience regardless of screen size.",
+    },
+    {
+      id: 3,
+      icon: "/ui/3.svg",
+      title: "Customization & Branding",
+      description:
+        "Designs that are specifically tailored to your brand's identity. We use consistent color schemes, typography, and logo integration to help you realize your distinct identity.",
+    },
+    {
+      id: 4,
+      icon: "/ui/4.svg",
+      title: "Interactive Elements",
+      description:
+        "Making user experiences feel seamless and memorable by incorporating dynamic and captivating components like animations, micro-interactions, and transitions.",
+    },
+    {
+      id: 5,
+      icon: "/ui/5.svg",
+      title: "Efficient Navigation",
+      description:
+        "To guarantee simple, easy navigation that enables visitors to locate what they need with the least amount of effort, we optimize user flows and site structure.",
+    },
+  ];
   return (
     <div className="mt-24 flex flex-col justify-center items-center">
       {/* hero section */}
@@ -160,41 +197,3 @@ const page = () => {
 };
 
 export default page;
-
-export const cardsData = [
-  {
-    id: 1,
-    icon: "/ui/1.svg",
-    title: "Modern & Engaging UI/UX",
-    description:
-      "Creating designs with a strong visual appeal that captivate and entice users to return for more. Use effective layouts and a contemporary style to stay ahead of trends.",
-  },
-  {
-    id: 2,
-    icon: "/ui/2.svg",
-    title: "Responsive Design",
-    description:
-      "Determine that your website or application functions flawlessly on all platforms, including desktops and mobile phones, providing the best possible experience regardless of screen size.",
-  },
-  {
-    id: 3,
-    icon: "/ui/3.svg",
-    title: "Customization & Branding",
-    description:
-      "Designs that are specifically tailored to your brand's identity. We use consistent color schemes, typography, and logo integration to help you realize your distinct identity.",
-  },
-  {
-    id: 4,
-    icon: "/ui/4.svg",
-    title: "Interactive Elements",
-    description:
-      "Making user experiences feel seamless and memorable by incorporating dynamic and captivating components like animations, micro-interactions, and transitions.",
-  },
-  {
-    id: 5,
-    icon: "/ui/5.svg",
-    title: "Efficient Navigation",
-    description:
-      "To guarantee simple, easy navigation that enables visitors to locate what they need with the least amount of effort, we optimize user flows and site structure.",
-  },
-];

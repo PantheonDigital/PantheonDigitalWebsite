@@ -9,6 +9,44 @@ import WeProvide from "@/components/features/WeProvide";
 import AboutNumerics from "@/components/ui/AboutNumerics";
 
 const page = () => {
+  const cardsData = [
+    {
+      id: 1,
+      icon: "/ui/1.svg",
+      title: "On - Page SEO",
+      description:
+        "We optimize your website in every way to boost user experience and SEO. This involves improving your website's structure, writing relevant content, and using meta tags, header tags, and keywords.",
+    },
+    {
+      id: 2,
+      icon: "/ui/2.svg",
+      title: "Off - Page SEO",
+      description:
+        "We build high-quality backlinks and boost your website's authority. Our team uses influencer outreach, guest blogging, and social media to boost your website's credibility.",
+    },
+    {
+      id: 3,
+      icon: "/ui/3.svg",
+      title: "Technical SEO",
+      description:
+        "We ensure your website is technically sound, has HTTPS encryption, loads swiftly, is mobile-friendly, and is appropriately indexed. Technical issues that affect search engine results are fixed by rigorous examinations.",
+    },
+    {
+      id: 4,
+      icon: "/ui/4.svg",
+      title: "Local SEO",
+      description:
+        "Our local SEO services boost your company's visibility on Google Maps and local search results. We monitor local listings, collect comments, and improve your Google My Business profile to boost local visibility.",
+    },
+    {
+      id: 5,
+      icon: "/ui/5.svg",
+      title: "SEO Analytics & Reporting",
+      description:
+        "Comprehensive SEO reports track visitor increase, keyword ranks, and conversion rates. Our ongoing analysis will disclose and optimize your SEO investment.",
+    },
+  ];
+
   return (
     <div className="mt-24 flex flex-col justify-center items-center">
       {/* hero section */}
@@ -143,41 +181,3 @@ const page = () => {
 };
 
 export default page;
-
-export const cardsData = [
-  {
-    id: 1,
-    icon: "/ui/1.svg",
-    title: "On - Page SEO",
-    description:
-      "We optimize your website in every way to boost user experience and SEO. This involves improving your website's structure, writing relevant content, and using meta tags, header tags, and keywords.",
-  },
-  {
-    id: 2,
-    icon: "/ui/2.svg",
-    title: "Off - Page SEO",
-    description:
-      "We build high-quality backlinks and boost your website's authority. Our team uses influencer outreach, guest blogging, and social media to boost your website's credibility.",
-  },
-  {
-    id: 3,
-    icon: "/ui/3.svg",
-    title: "Technical SEO",
-    description:
-      "We ensure your website is technically sound, has HTTPS encryption, loads swiftly, is mobile-friendly, and is appropriately indexed. Technical issues that affect search engine results are fixed by rigorous examinations.",
-  },
-  {
-    id: 4,
-    icon: "/ui/4.svg",
-    title: "Local SEO",
-    description:
-      "Our local SEO services boost your company's visibility on Google Maps and local search results. We monitor local listings, collect comments, and improve your Google My Business profile to boost local visibility.",
-  },
-  {
-    id: 5,
-    icon: "/ui/5.svg",
-    title: "SEO Analytics & Reporting",
-    description:
-      "Comprehensive SEO reports track visitor increase, keyword ranks, and conversion rates. Our ongoing analysis will disclose and optimize your SEO investment.",
-  },
-];

@@ -20,6 +20,7 @@ const AboutUs = () => {
             "Welcome to Pantheon Digital, where innovation meets excellence. As a leading player in the digital landscape, we specialize in crafting transformative solutions that empower businesses to thrive in the modern era."
           }
           imageSrc={"/AboutUsBackgroundImage.svg"}
+          imageStyle=""
         />
 
         {/* descriptive section */}

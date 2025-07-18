@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <>
       {/* Desktop Header */}
-      <div className="hidden md:block sticky top-0 z-50 mt-10 shadow-xl gap-32 shadow-black">
+      <div className="hidden lg:block sticky top-0 z-50 mt-10 shadow-xl gap-32 shadow-black">
         <header className="bg-black flex flex-row p-4 items-center justify-between px-0 md:px-16">
           <Link href="/">
             <Image
@@ -95,8 +95,8 @@ const Header = () => {
         >
           <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[80.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
-          <div className="w-[75vw] min-w-[760] h-[80vh] bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
-            <p className="font-avenir text-white font-base">
+          <div className="w-[75vw] min-w-[760] h-[80vh] overflow-y-scroll bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
+            <p className="font-avenir text-white font-base ">
               Welcome to Pantheon Digital, where innovation meets excellence. As
               a leading player in the digital landscape, we specialize in
               crafting transformative solutions that empower businesses to
@@ -506,7 +506,7 @@ const Header = () => {
       {/* ====================================================================================================================== */}
 
       {/* Mobile Header */}
-      <div className="md:hidden fixed w-full top-0 z-50">
+      <div className="lg:hidden fixed w-full top-0 z-50">
         <header className="bg-black flex flex-row p-4 items-center justify-between sticky top-0 z-60">
           <Link href="/">
             <Image

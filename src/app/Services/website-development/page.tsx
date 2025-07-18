@@ -9,6 +9,43 @@ import WeProvide from "@/components/features/WeProvide";
 import AboutNumerics from "@/components/ui/AboutNumerics";
 
 const page = () => {
+  const cardsData = [
+    {
+      id: 1,
+      icon: "/website/1.svg",
+      title: "Customized Solutions",
+      description:
+        "Our team creates custom online and app solutions for businesses of all sizes, ensuring they are adaptive, flexible, and prepared for future challenges.",
+    },
+    {
+      id: 2,
+      icon: "/website/2.svg",
+      title: "Cutting-Edge Technology",
+      description:
+        "Our team utilizes cutting-edge technology, including cloud computing, mobile-first design, and JavaScript frameworks, to deliver scalable, secure, and high-performance solutions tailored to your company's needs.",
+    },
+    {
+      id: 3,
+      icon: "/website/3.svg",
+      title: "User - Centric Development",
+      description:
+        "Our strategy prioritizes designing user-friendly, intuitive, and captivating applications that satisfy people and achieve business goals, focusing on interface and UX design throughout the development process.",
+    },
+    {
+      id: 4,
+      icon: "/website/4.svg",
+      title: "Scalability for Growth",
+      description:
+        "Our online and app solutions are designed for scalability, allowing for easy expansion and change, while maintaining functionality and user experience.",
+    },
+    {
+      id: 5,
+      icon: "/website/5.svg",
+      title: "Comprehensive Testing & Support",
+      description:
+        "Our testing process ensures the optimization of our online and app solutions, including cross-browser compatibility and functionality, while also providing ongoing support and maintenance for platform safety and functionality.",
+    },
+  ];
   return (
     <div className="mt-24 flex flex-col justify-center items-center">
       {/* hero section */}
@@ -163,41 +200,3 @@ const page = () => {
 };
 
 export default page;
-
-export const cardsData = [
-  {
-    id: 1,
-    icon: "/website/1.svg",
-    title: "Customized Solutions",
-    description:
-      "Our team creates custom online and app solutions for businesses of all sizes, ensuring they are adaptive, flexible, and prepared for future challenges.",
-  },
-  {
-    id: 2,
-    icon: "/website/2.svg",
-    title: "Cutting-Edge Technology",
-    description:
-      "Our team utilizes cutting-edge technology, including cloud computing, mobile-first design, and JavaScript frameworks, to deliver scalable, secure, and high-performance solutions tailored to your company's needs.",
-  },
-  {
-    id: 3,
-    icon: "/website/3.svg",
-    title: "User - Centric Development",
-    description:
-      "Our strategy prioritizes designing user-friendly, intuitive, and captivating applications that satisfy people and achieve business goals, focusing on interface and UX design throughout the development process.",
-  },
-  {
-    id: 4,
-    icon: "/website/4.svg",
-    title: "Scalability for Growth",
-    description:
-      "Our online and app solutions are designed for scalability, allowing for easy expansion and change, while maintaining functionality and user experience.",
-  },
-  {
-    id: 5,
-    icon: "/website/5.svg",
-    title: "Comprehensive Testing & Support",
-    description:
-      "Our testing process ensures the optimization of our online and app solutions, including cross-browser compatibility and functionality, while also providing ongoing support and maintenance for platform safety and functionality.",
-  },
-];

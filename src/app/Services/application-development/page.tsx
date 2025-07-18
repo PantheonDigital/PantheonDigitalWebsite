@@ -9,6 +9,44 @@ import WeProvide from "@/components/features/WeProvide";
 import AboutNumerics from "@/components/ui/AboutNumerics";
 
 const page = () => {
+  const cardsData = [
+    {
+      id: 1,
+      icon: "/application/1.svg",
+      title: "Latest Mobile Technologies",
+      description:
+        "We leverage the most advanced frameworks and tools to build high-performance mobile apps for Android, iOS, and cross-platform.",
+    },
+    {
+      id: 2,
+      icon: "/application/2.svg",
+      title: "User-First Mobile Experiences",
+      description:
+        "Intuitive UI/UX that puts your users at the center of every screen tap and swipe.",
+    },
+    {
+      id: 3,
+      icon: "/application/3.svg",
+      title: "Built to Scale",
+      description:
+        "Mobile apps engineered to grow with your business—smooth performance from startup to enterprise level.",
+    },
+    {
+      id: 4,
+      icon: "/application/4.svg",
+      title: "End-to-End Support & QA",
+      description:
+        "From development to deployment, we provide thorough testing and continuous support to ensure a flawless app experience.",
+    },
+    {
+      id: 5,
+      icon: "/application/5.svg",
+      title: "Robust Security Integration",
+      description:
+        "Your data and user privacy are protected with industry-standard encryption, secure coding practices, and compliance-ready architecture.",
+    },
+  ];
+
   return (
     <div className="mt-24 flex flex-col justify-center items-center">
       {/* hero section */}
@@ -164,41 +202,3 @@ const page = () => {
 };
 
 export default page;
-
-export const cardsData = [
-  {
-    id: 1,
-    icon: "/application/1.svg",
-    title: "Latest Mobile Technologies",
-    description:
-      "We leverage the most advanced frameworks and tools to build high-performance mobile apps for Android, iOS, and cross-platform.",
-  },
-  {
-    id: 2,
-    icon: "/application/2.svg",
-    title: "User-First Mobile Experiences",
-    description:
-      "Intuitive UI/UX that puts your users at the center of every screen tap and swipe.",
-  },
-  {
-    id: 3,
-    icon: "/application/3.svg",
-    title: "Built to Scale",
-    description:
-      "Mobile apps engineered to grow with your business—smooth performance from startup to enterprise level.",
-  },
-  {
-    id: 4,
-    icon: "/application/4.svg",
-    title: "End-to-End Support & QA",
-    description:
-      "From development to deployment, we provide thorough testing and continuous support to ensure a flawless app experience.",
-  },
-  {
-    id: 5,
-    icon: "/application/5.svg",
-    title: "Robust Security Integration",
-    description:
-      "Your data and user privacy are protected with industry-standard encryption, secure coding practices, and compliance-ready architecture.",
-  },
-];

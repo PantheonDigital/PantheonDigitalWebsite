@@ -9,6 +9,51 @@ import WeProvide from "@/components/features/WeProvide";
 import AboutNumerics from "@/components/ui/AboutNumerics";
 
 const page = () => {
+  const cardsData = [
+    {
+      id: 1,
+      icon: "/ui/1.svg",
+      title: "Content Creation",
+      description:
+        "We create engaging content to drive interaction, using eye-catching graphics and compelling captions tailored to your brand and goals.",
+    },
+    {
+      id: 2,
+      icon: "/ui/2.svg",
+      title: "Platform Management",
+      description:
+        "We manage your brand’s social presence across major platforms, keeping your audience engaged and your message consistent.",
+    },
+    {
+      id: 3,
+      icon: "/ui/3.svg",
+      title: "Post Scheduling & Calendar",
+      description:
+        "Use a content calendar. We plan and schedule your posts for optimal timing to keep posts consistent and timely.",
+    },
+    {
+      id: 4,
+      icon: "/ui/4.svg",
+      title: "Hashtag Research & Trends",
+      description:
+        "We use smart tools to find trending hashtags, boosting your reach and keeping your content current.",
+    },
+    {
+      id: 5,
+      icon: "/ui/5.svg",
+      title: "Community Management",
+      description:
+        "We handle your social conversations—replying to comments, answering DMs, and moderating discussions—to keep your community engaged and supported daily.",
+    },
+    {
+      id: 6,
+      icon: "/ui/4.svg",
+      title: "Analytics & Report",
+      description:
+        "Get regular reports with key insights to refine your strategy monthly for better results.",
+    },
+  ];
+
   return (
     <div className="mt-24 flex flex-col justify-center items-center">
       {/* hero section */}
@@ -151,48 +196,3 @@ const page = () => {
 };
 
 export default page;
-
-export const cardsData = [
-  {
-    id: 1,
-    icon: "/ui/1.svg",
-    title: "Content Creation",
-    description:
-      "We create engaging content to drive interaction, using eye-catching graphics and compelling captions tailored to your brand and goals.",
-  },
-  {
-    id: 2,
-    icon: "/ui/2.svg",
-    title: "Platform Management",
-    description:
-      "We manage your brand’s social presence across major platforms, keeping your audience engaged and your message consistent.",
-  },
-  {
-    id: 3,
-    icon: "/ui/3.svg",
-    title: "Post Scheduling & Calendar",
-    description:
-      "Use a content calendar. We plan and schedule your posts for optimal timing to keep posts consistent and timely.",
-  },
-  {
-    id: 4,
-    icon: "/ui/4.svg",
-    title: "Hashtag Research & Trends",
-    description:
-      "We use smart tools to find trending hashtags, boosting your reach and keeping your content current.",
-  },
-  {
-    id: 5,
-    icon: "/ui/5.svg",
-    title: "Community Management",
-    description:
-      "We handle your social conversations—replying to comments, answering DMs, and moderating discussions—to keep your community engaged and supported daily.",
-  },
-  {
-    id: 6,
-    icon: "/ui/4.svg",
-    title: "Analytics & Report",
-    description:
-      "Get regular reports with key insights to refine your strategy monthly for better results.",
-  },
-];
