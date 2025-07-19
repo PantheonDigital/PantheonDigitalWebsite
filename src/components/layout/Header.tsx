@@ -13,6 +13,14 @@ const Header = () => {
     setIsDropDownOpen(!isDropDownOpen);
   };
 
+  const toggleMobileServices = () => {
+    setIsMobileDropDown(!isMobileDropDown);
+  };
+
+  useEffect(() => {
+    console.log("isMobileDropDown changed to:", isMobileDropDown);
+  }, [isMobileDropDown]);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -26,7 +34,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (isDropDownOpen || isMobileMenuOpen) {
+    if (isDropDownOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -35,7 +43,7 @@ const Header = () => {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isDropDownOpen, isMobileMenuOpen]);
+  }, [isDropDownOpen]);
 
   return (
     <>
@@ -508,7 +516,7 @@ const Header = () => {
 
       {/* Mobile Header */}
       <div className="lg:hidden fixed w-full top-0 z-50">
-        <header className="bg-black flex flex-row p-4 items-center justify-between sticky top-0 z-60">
+        <header className="bg-black shadow-xl shadow-black flex flex-row p-4 items-center justify-between sticky top-0 z-[60]">
           <Link href="/">
             <Image
               src="/Logo.svg"
@@ -522,45 +530,46 @@ const Header = () => {
             />
           </Link>
 
-          <button
-            onClick={() => setIsMobileDropDown(!isMobileDropDown)}
-            className="text-white z-30"
-          >
-            {isMobileMenuOpen ? (
-              <Image
-                src="/crossIcon.svg"
-                width="20"
-                height="20"
-                className="w-[60] h-[60] absolute top-1 -right-1"
-                alt="cross icon"
-              />
-            ) : (
-              <Image
-                src="/MenuIcon.svg"
-                width="10"
-                height="10"
-                className="w-[100%] h-[100%]"
-                alt="menu icon"
-              />
-            )}
+          <button onClick={toggleMobileMenu} className="text-white">
+            <Image
+              src="/MenuIcon.svg"
+              width="20"
+              height="20"
+              className={`w-[20] h-[20] duration-300 ${
+                isMobileMenuOpen ? "-translate-y-100" : "translate-y-0"
+              }`}
+              alt="menu icon"
+            />
           </button>
         </header>
 
         {/* transparent background */}
-        {isMobileDropDown && (
+        {isMobileMenuOpen && (
           <button
-            onClick={() => setIsMobileDropDown(false)}
-            className="w-full h-[100dvh] bg-black/50 absolute left-0 top-0"
+            onClick={closeMobileMenu}
+            className="w-full h-[100dvh] bg-black/50 absolute left-0 top-0 "
           />
         )}
 
         <div
-          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[51] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-y-scroll ${
-            isMobileDropDown ? "translate-x-0" : "translate-x-full"
+          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[60] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-y-scroll  ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
+          <button
+            className="absolute top-1 -right-1"
+            onClick={toggleMobileMenu}
+          >
+            <Image
+              src="/crossIcon.svg"
+              width="20"
+              height="20"
+              className={`w-[60] h-[60] duration-300`}
+              alt="cross icon"
+            />
+          </button>
           {/* buttons */}
-          <div className="flex flex-col gap-4 grow">
+          <div className="flex flex-col gap-4 grow ">
             <PrimaryButton
               href="/About"
               onClick={closeMobileMenu}
@@ -570,15 +579,15 @@ const Header = () => {
               className="justify-normal"
             />
             <PrimaryButton
-              onClick={toggleServices}
+              onClick={toggleMobileServices}
               href=""
               leftIcon="/Services.svg"
               type="outline"
               label="Services"
-              rightIcon={isMobileMenuOpen ? "/arrow-up.svg" : "/DownArrow.svg"}
+              rightIcon={isMobileDropDown ? "/arrow-up.svg" : "/DownArrow.svg"}
             />
 
-            {isDropDownOpen && (
+            {isMobileDropDown && (
               <div className="flex w-full h-auto min-h-[400px] justify-center bg-black z-[60] overflow-y-scroll">
                 <div className="w-full bg-black rounded-3xl ">
                   <div className="grid grid-cols-1 mt-6 gap-4">
@@ -591,7 +600,8 @@ const Header = () => {
                       <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
-                            href=""
+                            href="/Services/social-management/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -608,7 +618,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">Google PPC</span>
@@ -623,7 +634,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -640,7 +652,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/seo/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">SEO & SMO</span>
@@ -655,7 +668,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -672,7 +686,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -698,7 +713,8 @@ const Header = () => {
                       <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">UX/UI Design</span>
@@ -713,7 +729,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -730,7 +747,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">Logo Design</span>
@@ -745,7 +763,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -771,7 +790,8 @@ const Header = () => {
                       <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
-                            href=""
+                            href="/Services/hrms/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -788,7 +808,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/crm/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">CRM Software</span>
@@ -803,7 +824,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/website-development"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -820,7 +842,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/application-development"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -837,7 +860,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">
@@ -854,7 +878,8 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href=""
+                            href="/Services/"
+                            onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
                           >
                             <span className="text-avenir-16">

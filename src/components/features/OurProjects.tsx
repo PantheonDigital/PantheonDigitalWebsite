@@ -3,13 +3,15 @@ import Link from "next/link";
 
 const OurProject = () => {
   return (
-    <div className="w-[100%] md:w-[80%] -mt-160 md:mt-24 relative ">
-      <h4 className="font-avenir-20 opacity-60 text-white text-center">
-        Our best projects
-      </h4>
-      <h1 className="font-geometric text-4xl text-white text-center mt-4">
-        We delivered best solution
-      </h1>
+    <div className="w-full md:w-[80%] mt-32 md:mt-24 relative ">
+      <div className="w-[90%] mx-auto">
+        <h4 className=" font-avenir-20 opacity-60 text-white text-center">
+          Our best projects
+        </h4>
+        <h1 className="font-geometric text-4xl text-white text-center mt-4">
+          We delivered best solution
+        </h1>
+      </div>
       {/* cards for reason to choose us */}
       <div className=" px-7 w-full h-auto flex overflow-x-scroll md:overflow-x-hidden md:grid md:auto-cols-fr md:grid-cols-2 gap-6 md:gap-10 mt-12">
         <ProjectCard

@@ -22,7 +22,7 @@ export default function Home() {
 
       {/* starting of main section */}
       <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
-        <div className="w-screen h-auto rounded-b-4xl flex flex-col justify-center items-center mt-24 md:mt-44">
+        <div className="w-[90%] h-auto rounded-b-4xl flex flex-col justify-center items-center mt-24 md:mt-44">
           <h1 className="font-geometric font-bold  text-xl sm:text-4xl text-white text-center md:mt-0 ">
             Powering possibility through digital innovation
           </h1>
@@ -81,7 +81,9 @@ export default function Home() {
         <ChooseUs />
 
         {/* Project section */}
-        <OurProject />
+        <div className="mt-24 sm:-mt-160 w-screen h-auto">
+          <OurProject />
+        </div>
 
         {/* Testimonial section */}
         <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">

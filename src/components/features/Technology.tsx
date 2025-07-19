@@ -42,7 +42,7 @@ const Technology = ({
                 alt="technology img"
                 width="0"
                 height="0"
-                className="bg-white rounded-lg w-[70%] h-full hover:scale-120 duration-300"
+                className="bg-white rounded-lg w-[30] sm:w-[70] h-full hover:scale-120 duration-300"
               />
             ))}
         </div>
@@ -65,7 +65,7 @@ const Technology = ({
             </div>
             <Link
               href={href}
-              className="w-full mt-12 md:mt-0 flex flex-row justify-center md:justify-normal gap-8 group"
+              className="w-full md:flex hidden mt-12 md:mt-0 flex-row justify-center md:justify-normal gap-8 group"
             >
               <span className="text-white">Connect with us</span>
               <Image
@@ -95,6 +95,20 @@ const Technology = ({
               ))}
           </ul>
         </div>
+
+        <Link
+          href={href}
+          className="w-full flex md:hidden mt-2 mb-6 md:mt-0 flex-row justify-center md:justify-normal gap-8 group"
+        >
+          <span className="text-white">Connect with us</span>
+          <Image
+            src="/ArrowRight.svg"
+            alt={"right arrow"}
+            width={"0"}
+            height={"0"}
+            className="w-[30] -translate-x-5 group-hover:translate-x-0 duration-300"
+          />
+        </Link>
 
         {/* social sites we use */}
         {showCards && (

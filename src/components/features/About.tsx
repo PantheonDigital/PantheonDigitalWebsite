@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="w-screen relative flex flex-col items-center justify-center h-auto bg-gradient-to-b mt-0 from-[#202020] via-[#202020] to-[#86868600] z-10 pt-8 md:pt-16">
+    <div className="w-screen mask-t-from-92% sm:mask-t-from-80% relative flex flex-col items-center justify-center h-auto bg-gradient-to-b mt-0 from-[#202020] via-[#202020] to-[#86868600] z-10 pt-8 md:pt-16">
       <div className="flex items-center flex-col md:flex-row md:mx-40 mt-24 w-[80vw] gap-8">
         {/* left side */}
         <div className="md:w-[50%] w-full md:flex flex-col justify-center text-center md:text-left">
@@ -21,7 +21,7 @@ const About = () => {
             modern era.
           </p>
 
-          <div className="flex flex-row-reverse md:flex-row items-center justify-evenly md:justify-normal w-full mt-12 gap-4">
+          <div className=" hidden md:flex flex-row-reverse md:flex-row items-center justify-evenly md:justify-normal w-full mt-12 gap-4">
             <PrimaryButton
               label={"Get in touch"}
               href={""}
@@ -51,6 +51,15 @@ const About = () => {
             className="md:w-[508] w-full h-full"
           />
         </div>
+      </div>
+
+      <div className=" md:hidden flex flex-row-reverse md:flex-row items-center justify-evenly md:justify-normal w-full mt-12 gap-4">
+        <PrimaryButton
+          label={"Get in touch"}
+          href={""}
+          className="rounded-lg"
+        />
+        <PrimaryButton label="About Us" href={""} type="red-outline" />
       </div>
 
       {/* about information in numerical */}
