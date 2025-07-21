@@ -59,7 +59,7 @@ const page = () => {
         }
         buttonTitle={"Contact Us"}
         imageSrc={"/ApplicationDevelopmentBannerImage.svg"}
-        imageStyle="w-[60%] h-full"
+        imageStyle="w-full sm:w-[60%] h-full"
       />
 
       {/* what we provide for web dev */}

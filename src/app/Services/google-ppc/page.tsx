@@ -81,7 +81,7 @@ const page = () => {
         }
         buttonTitle={"Create with us"}
         imageSrc={"/GooglePPCHomeBannerImage.svg"}
-        imageStyle="w-[60%] h-full"
+        imageStyle="w-full sm:w-[60%] h-full"
       />
 
       {/* what we provide for web dev */}

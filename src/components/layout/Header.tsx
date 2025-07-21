@@ -64,7 +64,7 @@ const Header = () => {
           <div className="flex flex-row gap-3">
             <PrimaryButton
               onClick={closeDropDownMenu}
-              href="About/"
+              href="/About/"
               leftIcon="/About-Us.svg"
               type="outline"
               label="About Us"
@@ -105,7 +105,7 @@ const Header = () => {
         >
           <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[80.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
-          <div className="w-[75vw] min-w-[760] h-[80vh] overflow-y-scroll bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
+          <div className="w-[75vw] min-w-[760] h-[80vh] .macos-scrollbar overflow-y-scroll bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
             <p className="font-avenir-regular text-white text-base ">
               Welcome to Pantheon Digital, where innovation meets excellence. As
               a leading player in the digital landscape, we specialize in
@@ -968,13 +968,15 @@ const Header = () => {
           </div>
           {/* social icons */}
           <div className=" flex flex-row w-full  justify-evenly mt-4 left-0">
-            <Image
-              src="/social-icons/facebook.svg"
-              alt="facebook icon"
-              width="10"
-              height="10"
-              className="w-[30%] h-[30%]"
-            />
+            <Link href="/https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#">
+              <Image
+                src="/social-icons/facebook.svg"
+                alt="facebook icon"
+                width="10"
+                height="10"
+                className="w-[30%] h-[30%]"
+              />
+            </Link>
             <Image
               src="/social-icons/x.svg"
               alt="x icon"

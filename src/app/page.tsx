@@ -12,18 +12,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      {/* hero section background image */}
-      <Image
-        src="/BackgroundImageHomePage.svg"
-        alt="Home Page Background Banner"
-        width="0"
-        height="0"
-        className="w-full h-full absolute bottom-[3%] fade-bottom"
-      />
-
       {/* starting of main section */}
       <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
         <div className="w-[90%] h-auto rounded-b-4xl flex flex-col justify-center items-center mt-24 md:mt-44">
+          {/* hero section background image */}
+          <Image
+            src="/BackgroundImageHomePage.svg"
+            alt="Home Page Background Banner"
+            width="0"
+            height="0"
+            className="w-screen h-screen absolute -z-10 top-[-3%]  object-cover mask-b-from-90% mask-b-to-100%"
+          />
           <h1 className="font-geometric font-bold text-xl sm:text-4xl text-white text-center md:mt-0 ">
             Powering possibility through digital innovation
           </h1>
@@ -45,7 +44,7 @@ export default function Home() {
         <div className="w-screen relative bg-gradient-to-b from-[#0000] to-[#000]  h-auto rounded-b-4xl flex items-center justify-center pb-8 shadow-2xl/10 shadow-[#F61313] md:pb-32 mt-8 md:pt-8 z-40 translate-y-12">
           <div className="w-[90%] md:w-[80%] md:grid md:grid-cols-2 sm:items-center place-items-center flex flex-col gap-8 ">
             <Card
-              href=""
+              href="/Services/seo/"
               ckey={1}
               imgHref="/mobile.svg"
               title="Digital Marketing, SEO & Social media management"
@@ -59,7 +58,7 @@ export default function Home() {
               description="Elevate your online presence with Pantheon Digital's exceptional design services. Our skilled experts ensure that your digital footprint not only stands out but leaves a lasting impression."
             />
             <Card
-              href=""
+              href="/Services/crm"
               ckey={3}
               imgHref="/keyboard-open.svg"
               title="HRMS & CRM Software Services"
