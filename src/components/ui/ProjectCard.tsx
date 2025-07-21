@@ -15,8 +15,12 @@ function ProjectCard({
       <BackgroundBeams />
 
       <div className="mx-8 mt-8">
-        <h2 className="text-white font-bold text-xl md:text-3xl">{title}</h2>
-        <h4 className="text-white text:sm md:text-xl">{subtitle}</h4>
+        <h2 className="text-white font-avenir-bold font-bold text-xl md:text-3xl">
+          {title}
+        </h2>
+        <h4 className="text-white font-avenir-medium text:sm md:text-xl">
+          {subtitle}
+        </h4>
       </div>
 
       <Image

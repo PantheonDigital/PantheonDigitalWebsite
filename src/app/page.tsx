@@ -4,6 +4,7 @@ import Clients from "@/components/features/Clients";
 import FaqItem from "@/components/features/FaqItem";
 import OurProject from "@/components/features/OurProjects";
 import Testimonials from "@/components/features/Testimonials";
+import AboutNumerics from "@/components/ui/AboutNumerics";
 import Card from "@/components/ui/Card";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import Image from "next/image";
@@ -23,10 +24,10 @@ export default function Home() {
       {/* starting of main section */}
       <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
         <div className="w-[90%] h-auto rounded-b-4xl flex flex-col justify-center items-center mt-24 md:mt-44">
-          <h1 className="font-geometric font-bold  text-xl sm:text-4xl text-white text-center md:mt-0 ">
+          <h1 className="font-geometric font-bold text-xl sm:text-4xl text-white text-center md:mt-0 ">
             Powering possibility through digital innovation
           </h1>
-          <p className="text-white font-avenir sm:text-xl text-xs  w-[80vw] leading-6 md:leading-8  mt-6 md:mt-12 text-center">
+          <p className="text-white font-avenir-regular sm:text-xl text-xs  w-[80vw] leading-6 md:leading-8  mt-6 md:mt-12 text-center">
             At Pantheon Digital, we don't just adapt to the future — we create
             it. Pantheon Digital is where the future is imagined, engineered,
             and launched.
@@ -77,20 +78,23 @@ export default function Home() {
         {/* about us section */}
         <About />
 
+        {/* about numerics */}
+        <AboutNumerics />
+
         {/* Reason to choose use section */}
         <ChooseUs />
 
         {/* Project section */}
-        <div className="mt-24 sm:-mt-160 w-screen h-auto">
+        <div className="sm:mt-0 -mt-160 w-screen h-auto flex justify-center">
           <OurProject />
         </div>
 
         {/* Testimonial section */}
         <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
-          <h4 className="font-avenir-20 opacity-60 text-white text-xs md:text-xl text-center">
+          <h4 className="font-avenir-medium opacity-60 text-white text-xs md:text-xl text-center">
             Testimonials
           </h4>
-          <h1 className="font-geometric text-xl md:text-4xl text-white text-center my-4">
+          <h1 className="font-geometric font-bold text-xl md:text-4xl text-white text-center my-4">
             100+ satisfied clients worldwide
           </h1>
           <Testimonials speed="normal" direction="right" testimonials={[]} />
@@ -102,7 +106,7 @@ export default function Home() {
 
         {/* Faq Section */}
         <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
-          <h1 className="font-geometric text-lg md:text-4xl text-white text-center my-4 ">
+          <h1 className="font-geometric font-bold text-lg md:text-4xl text-white text-center my-4 ">
             Frequently Asked Questions
           </h1>
           <div className=" w-[80%] md:w-[60%] border-b-1 border-white mx-auto mb-8" />

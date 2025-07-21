@@ -14,11 +14,11 @@ function AboutNumerics() {
               height="0"
               className="w-[27] h-[27] md:w-[40] md:h-[40] "
             />
-            <span className="font-avenir font-extrabold text-xl md:text-4xl text-white">
+            <span className="font-geometric font-extrabold text-xl md:text-4xl text-white">
               112
             </span>
           </div>
-          <p className=" text-white font-avenir text-xs md:text-base align-top font-bold">
+          <p className=" text-white font-avenir-demi text-xs md:text-base align-top font-bold">
             Happy Client
           </p>
         </div>
@@ -36,11 +36,11 @@ function AboutNumerics() {
               height="0"
               className="w-[27] h-[27] md:w-[40] md:h-[40] "
             />
-            <span className="font-avenir font-extrabold text-xl md:text-4xl text-white">
+            <span className="font-geometric font-extrabold text-xl md:text-4xl text-white">
               98
             </span>
           </div>
-          <p className="text-white font-avenir text-xs md:text-base align-top font-bold">
+          <p className="text-white font-avenir-demi text-xs md:text-base align-top font-bold">
             Finished Projects
           </p>
         </div>
@@ -61,11 +61,11 @@ function AboutNumerics() {
               height="0"
               className="w-[27] h-[27] md:w-[40] md:h-[40]"
             />
-            <span className="font-avenir font-extrabold text-xl md:text-4xl text-white">
+            <span className="font-geometric font-extrabold text-xl md:text-4xl text-white">
               12
             </span>
           </div>
-          <p className="text-white font-avenir text-xs md:text-base align-top font-bold">
+          <p className="text-white font-avenir-demi text-xs md:text-base align-top font-bold">
             Skilled Experts
           </p>
         </div>
@@ -83,11 +83,11 @@ function AboutNumerics() {
               height="0"
               className="w-[27] h-[27] md:w-[40] md:h-[40]"
             />
-            <span className="font-avenir font-extrabold text-xl md:text-4xl text-white">
+            <span className="font-geometric font-extrabold text-xl md:text-4xl text-white">
               112
             </span>
           </div>
-          <p className="text-white font-avenir text-xs md:text-base align-top font-bold">
+          <p className="text-white font-avenir-demi text-xs md:text-base align-top font-bold">
             Years of Experience
           </p>
         </div>

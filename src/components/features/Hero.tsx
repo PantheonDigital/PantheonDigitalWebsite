@@ -22,7 +22,7 @@ const Hero = ({
   return (
     <>
       {!scrollAnimation && (
-        <div className="w-[90%] md:w-[80%] h-[60vh] flex mx-auto">
+        <div className="w-[90%] md:w-[80%] h-[70vh] flex mx-auto">
           <Image
             src={imageSrc}
             alt="Home Page Background Banner"
@@ -32,14 +32,14 @@ const Hero = ({
               imageStyle ? imageStyle : "w-full h-full"
             }`}
           />
-          <div className="lg:w-[40%] w-[90%] mx-auto md:mx-0">
-            <h1 className="text-white font-geometric text-xl sm:text-4xl  text-center lg:text-left ">
+          <div className="lg:w-[50%] w-[90%] mx-auto md:mx-0">
+            <h1 className="text-white font-geometric font-bold text-xl sm:text-4xl  text-center lg:text-left ">
               {title}
             </h1>
-            <p className="text-white font-avenir font-medium mt-8 text-base sm:text-sm lg:text-base leading-6 text-center lg:text-left">
+            <p className="text-white font-avenir-medium  mt-8 sm:text-base text-sm lg:text-base leading-7 text-center lg:text-left">
               {subTitle}
             </p>
-            <p className="text-white font-avenir font-regular mt-8 text-base sm:text-xs leading-6 text-center lg:text-left">
+            <p className="text-white font-avenir-regular  mt-8 sm:text-base text-xs leading-7 text-center lg:text-left">
               {description}
             </p>
             <PrimaryButton
@@ -56,13 +56,13 @@ const Hero = ({
           <ContainerScroll
             titleComponent={
               <>
-                <h1 className="text-white font-geometric text-xl sm:text-4xl  text-center">
+                <h1 className="text-white font-geometric font-bold text-xl sm:text-4xl  text-center">
                   {title}
                 </h1>
-                <p className="text-white font-avenir font-regular mt-8 text-base sm:text-sm lg:text-base leading-6 text-center ">
+                <p className="text-white font-avenir-regular font-regular mt-8 text-base sm:text-sm lg:text-base leading-6 text-center ">
                   {subTitle}
                 </p>
-                <p className="text-white sm:mb-24 mb-6  font-avenir font-regular mt-8 text-base sm:text-sm leading-6 text-center ">
+                <p className="text-white sm:mb-24 mb-6  font-avenir-regular font-regular mt-8 text-base sm:text-sm leading-6 text-center ">
                   {description}
                 </p>
               </>

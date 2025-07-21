@@ -1,5 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/avenir");
-@import url("https://fonts.cdnfonts.com/css/geometr415-blk-bt");
+/* @import url("https://fonts.cdnfonts.com/css/avenir"); */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -20,7 +19,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-avenir: "Avenir", sans-serif;
-  --font-geometric: "Geometr415 Blk BT", sans-serif;
+  /* --font-geometric: "Geometr415 Blk BT", sans-serif; */
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -125,6 +124,96 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+@font-face {
+  font-family: "Geometric";
+  src: url("/fonts/ufonts.com_geometr415-blk-bt-black 3.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-BoldItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Demi.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-DemiItalic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Heavy.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-HeavyItalic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Italic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Light.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-LightItalic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-MediumItalic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-Thin.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-ThinItalic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-UltraLight.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/AvenirNextCyr-UltraLightItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
 @layer utilities {
   .fade-bottom {
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -177,7 +266,7 @@
 }
 
 ul.styled-list li {
-  @apply my-2 font-avenir text-sm md:text-base text-white;
+  @apply my-2 text-sm md:text-base text-white;
 }
 
 .text-avenir-20 {

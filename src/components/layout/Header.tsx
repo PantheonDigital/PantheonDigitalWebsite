@@ -76,6 +76,7 @@ const Header = () => {
               type="outline"
               label="Services"
               rightIcon={isDropDownOpen ? "/arrow-up.svg" : "/DownArrow.svg"}
+              className={isDropDownOpen ? "bg-[#868686]" : "bg-transparent"}
             />
             <PrimaryButton
               href=""
@@ -105,7 +106,7 @@ const Header = () => {
           <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[80.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
           <div className="w-[75vw] min-w-[760] h-[80vh] overflow-y-scroll bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
-            <p className="font-avenir text-white font-base ">
+            <p className="font-avenir-regular text-white text-base ">
               Welcome to Pantheon Digital, where innovation meets excellence. As
               a leading player in the digital landscape, we specialize in
               crafting transformative solutions that empower businesses to
@@ -116,17 +117,73 @@ const Header = () => {
             <div className="grid grid-cols-3 mt-10 gap-6">
               {/* first service start */}
               <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359] rounded-3xl p-4">
-                <h1 className="text-avenir-20">Digital Marketing</h1>
+                <h1 className="font-avenir-bold text-white text-xl font-bold text-left">
+                  Digital Marketing
+                </h1>
                 <div className="my-4 border-[0.5] border-white"></div>
                 <ul className="text-left mt-4 h-full styled-list">
                   <li>
                     <Link
                       onClick={() => setIsDropDownOpen(false)}
                       href="/Services/social-management/"
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">
+                      <span className="font-avenir-medium font-medium text-base text-white">
                         Social Media Management
+                      </span>
+                      <Image
+                        src="/ArrowRight.svg"
+                        alt="arrow right"
+                        width="10"
+                        height="10"
+                        className="w-[10%] h-[10%]"
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/Services/google-ppc/"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                    >
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        Google PPC
+                      </span>
+                      <Image
+                        src="/ArrowRight.svg"
+                        alt="arrow right"
+                        width="10"
+                        height="10"
+                        className="w-[10%] h-[10%]"
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/Services/meta-ads/"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                    >
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        Meta Ads Campaign
+                      </span>
+                      <Image
+                        src="/ArrowRight.svg"
+                        alt="arrow right"
+                        width="10"
+                        height="10"
+                        className="w-[10%] h-[10%]"
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/Services/seo/"
+                      onClick={() => setIsDropDownOpen(false)}
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                    >
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        SEO & SMO
                       </span>
                       <Image
                         src="/ArrowRight.svg"
@@ -141,9 +198,11 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">Google PPC</span>
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        Posts & Reels
+                      </span>
                       <Image
                         src="/ArrowRight.svg"
                         alt="arrow right"
@@ -157,57 +216,9 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">Meta Ads Campaign</span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%]"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/seo/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                    >
-                      <span className="text-avenir-16">SEO & SMO</span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%]"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href=""
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                    >
-                      <span className="text-avenir-16">Posts & Reels</span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%]"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href=""
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
-                    >
-                      <span className="text-avenir-16">
+                      <span className="font-avenir-medium font-medium text-base text-white">
                         Branding & Advertising
                       </span>
                       <Image
@@ -225,16 +236,20 @@ const Header = () => {
 
               {/* second service start */}
               <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359] rounded-3xl p-4">
-                <h1 className="text-avenir-20">Graphic Designing</h1>
+                <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                  Graphic Designing
+                </h1>
                 <div className="my-4 border-[0.5] border-white"></div>
                 <ul className="text-left mt-4 h-full styled-list">
                   <li>
                     <Link
                       href="/Services/ui-ux"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">UX/UI Design</span>
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        UX/UI Design
+                      </span>
                       <Image
                         src="/ArrowRight.svg"
                         alt="arrow right"
@@ -248,9 +263,11 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">Brochure & PPT</span>
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        Brochure & PPT
+                      </span>
                       <Image
                         src="/ArrowRight.svg"
                         alt="arrow right"
@@ -264,9 +281,11 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">Logo Design</span>
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        Logo Design
+                      </span>
                       <Image
                         src="/ArrowRight.svg"
                         alt="arrow right"
@@ -280,9 +299,11 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">Posts & Banner</span>
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        Posts & Banner
+                      </span>
                       <Image
                         src="/ArrowRight.svg"
                         alt="arrow right"
@@ -298,16 +319,21 @@ const Header = () => {
 
               {/* third service start */}
               <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359] rounded-3xl p-4">
-                <h1 className="text-avenir-20">Tech & Software</h1>
+                <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                  Tech & Software
+                </h1>
                 <div className="my-4 border-[0.5] border-white"></div>
                 <ul className="text-left mt-4 h-full styled-list">
                   <li>
                     <Link
-                      href="/Services/hrms/"
+                      href="https://www.zfour.in/"
+                      target="_blank"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">HRMS Software</span>
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        HRMS Software
+                      </span>
                       <Image
                         src="/ArrowRight.svg"
                         alt="arrow right"
@@ -321,9 +347,11 @@ const Header = () => {
                     <Link
                       href="/Services/crm"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">CRM Software</span>
+                      <span className="font-avenir-medium font-medium text-base text-white">
+                        CRM Software
+                      </span>
                       <Image
                         src="/ArrowRight.svg"
                         alt="arrow right"
@@ -337,9 +365,9 @@ const Header = () => {
                     <Link
                       href="/Services/website-development/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">
+                      <span className="font-avenir-medium font-medium text-base text-white">
                         Website Development
                       </span>
                       <Image
@@ -355,9 +383,9 @@ const Header = () => {
                     <Link
                       href="/Services/application-development"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">
+                      <span className="font-avenir-medium font-medium text-base text-white">
                         Application Development
                       </span>
                       <Image
@@ -373,9 +401,9 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">
+                      <span className="font-avenir-medium font-medium text-base text-white">
                         Software Development
                       </span>
                       <Image
@@ -391,9 +419,9 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                     >
-                      <span className="text-avenir-16">
+                      <span className="font-avenir-medium font-medium text-base text-white">
                         Cloud & DevOps Services
                       </span>
                       <Image
@@ -484,22 +512,24 @@ const Header = () => {
               </div>
               <div className="col-span-2 bg-[#2A2A2A] min-h-[120] rounded-3xl justify-between flex-row flex px-6 py-2 items-center">
                 <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="text-avenir-16 underline">
+                  <span className="font-avenir-medium font-medium text-base text-white underline">
                     Privacy Policy
                   </span>
                 </Link>
                 <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="text-avenir-16 underline">
+                  <span className="font-avenir-medium font-medium text-base text-white underline">
                     Terms & Condition
                   </span>
                 </Link>
                 <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="text-avenir-16 underline">
+                  <span className="font-avenir-medium font-medium text-base text-white underline">
                     Cookie Policy
                   </span>
                 </Link>
                 <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="text-avenir-16 underline">Blogs</span>
+                  <span className="font-avenir-medium font-medium text-base text-white underline">
+                    Blogs
+                  </span>
                 </Link>
               </div>
             </div>
@@ -595,16 +625,18 @@ const Header = () => {
 
                     {/* first service start */}
                     <div className="bg-[#2A2A2A] min-w-[25%] rounded-3xl p-4">
-                      <h1 className="text-avenir-20">Digital Marketing</h1>
+                      <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                        Digital Marketing
+                      </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
                       <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
                             href="/Services/social-management/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Social Media Management
                             </span>
                             <Image
@@ -618,11 +650,13 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/google-ppc/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">Google PPC</span>
+                            <span className="font-avenir-medium font-medium text-base text-white">
+                              Google PPC
+                            </span>
                             <Image
                               src="/ArrowRight.svg"
                               alt="arrow right"
@@ -634,11 +668,11 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/meta-ads/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Meta Ads Campaign
                             </span>
                             <Image
@@ -654,9 +688,11 @@ const Header = () => {
                           <Link
                             href="/Services/seo/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">SEO & SMO</span>
+                            <span className="font-avenir-medium font-medium text-base text-white">
+                              SEO & SMO
+                            </span>
                             <Image
                               src="/ArrowRight.svg"
                               alt="arrow right"
@@ -670,9 +706,9 @@ const Header = () => {
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Posts & Reels
                             </span>
                             <Image
@@ -688,9 +724,9 @@ const Header = () => {
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Branding & Advertising
                             </span>
                             <Image
@@ -708,16 +744,20 @@ const Header = () => {
 
                     {/* second service start */}
                     <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
-                      <h1 className="text-avenir-20">Graphic Designing</h1>
+                      <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                        Graphic Designing
+                      </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
                       <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">UX/UI Design</span>
+                            <span className="font-avenir-medium font-medium text-base text-white">
+                              UX/UI Design
+                            </span>
                             <Image
                               src="/ArrowRight.svg"
                               alt="arrow right"
@@ -731,9 +771,9 @@ const Header = () => {
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Brochure & PPT
                             </span>
                             <Image
@@ -749,9 +789,11 @@ const Header = () => {
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">Logo Design</span>
+                            <span className="font-avenir-medium font-medium text-base text-white">
+                              Logo Design
+                            </span>
                             <Image
                               src="/ArrowRight.svg"
                               alt="arrow right"
@@ -765,9 +807,9 @@ const Header = () => {
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Posts & Banner
                             </span>
                             <Image
@@ -785,16 +827,19 @@ const Header = () => {
 
                     {/* third service start */}
                     <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
-                      <h1 className="text-avenir-20">Tech & Software</h1>
+                      <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                        Tech & Software
+                      </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
                       <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
-                            href="/Services/hrms/"
+                            href="https://www.zfour.in/"
+                            target="_blank"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               HRMS Software
                             </span>
                             <Image
@@ -810,9 +855,11 @@ const Header = () => {
                           <Link
                             href="/Services/crm/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">CRM Software</span>
+                            <span className="font-avenir-medium font-medium text-base text-white">
+                              CRM Software
+                            </span>
                             <Image
                               src="/ArrowRight.svg"
                               alt="arrow right"
@@ -826,9 +873,9 @@ const Header = () => {
                           <Link
                             href="/Services/website-development"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Website Development
                             </span>
                             <Image
@@ -844,9 +891,9 @@ const Header = () => {
                           <Link
                             href="/Services/application-development"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Application Development
                             </span>
                             <Image
@@ -862,9 +909,9 @@ const Header = () => {
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Software Development
                             </span>
                             <Image
@@ -880,9 +927,9 @@ const Header = () => {
                           <Link
                             href="/Services/"
                             onClick={closeMobileMenu}
-                            className="flex flex-row justify-between items-center hover:bg-black/25 py-2 px-1"
+                            className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="text-avenir-16">
+                            <span className="font-avenir-medium font-medium text-base text-white">
                               Cloud & DevOps Services
                             </span>
                             <Image

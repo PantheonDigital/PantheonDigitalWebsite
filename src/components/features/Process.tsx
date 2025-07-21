@@ -27,10 +27,10 @@ function Process({
           >
             {/* title and description */}
             <div className="w-full md:w-[60%]">
-              <h1 className="text-center md:text-left font-geometric text-md md:text-2xl text-white ">
+              <h1 className="text-center md:text-left font-geometric font-bold text-md md:text-2xl text-white ">
                 {item.title}
               </h1>
-              <p className="font-avenir mt-4 md:mt-8 leading-6 md:leading-8 text-white font-normal text-xs md:text-base">
+              <p className="font-avenir-medium mt-4 md:mt-8 leading-6 sm:leading-8 text-white text-xs md:text-base">
                 {item.description}
               </p>
             </div>

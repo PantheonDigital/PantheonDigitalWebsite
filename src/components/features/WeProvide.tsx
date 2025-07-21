@@ -15,7 +15,7 @@ const WeProvide = ({
       key={title}
       className="w-[90%] md:w-[80%]  sm:mt-24 flex flex-col items-center justify-center"
     >
-      <h4 className="text-white font-avenir opacity-60 font-medium text-sm md:text-xl ">
+      <h4 className="text-white font-avenir-medium opacity-60 text-sm md:text-xl ">
         {subtitle}
       </h4>
       <h1 className="text-white font-geometric font-bold text-xl md:text-3xl text-center mt-4">

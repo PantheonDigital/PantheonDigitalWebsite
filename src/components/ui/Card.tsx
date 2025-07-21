@@ -32,11 +32,11 @@ const Card = ({
         height="0"
         className={type !== "square" ? "w-[9%] h-auto" : "w-[10%] h-auto"}
       />
-      <h1 className="text-sm md:text-base font-avenir mt-3 font-extrabold">
+      <h1 className="text-sm md:text-base font-avenir-bold mt-3 font-bold">
         {title}
       </h1>
       <p
-        className={`text-xs md:text-sm font-avenir leading-6 font-medium mt-3 ${
+        className={`text-xs md:text-sm font-avenir-medium leading-6  mt-3 ${
           type === "square" && "mt-4"
         }`}
       >
@@ -67,7 +67,7 @@ const Card = ({
             <h4
               className={`${
                 type === "normal" && "group-hover:opacity-100 whitespace-nowrap"
-              } ml-2 font-avenir text-xs md:text-lg font-semibold  md:opacity-0 duration-300`}
+              } ml-2 font-avenir-regular text-xs md:text-lg md:opacity-0 duration-300`}
             >
               Read More
             </h4>

@@ -5,10 +5,10 @@ const OurProject = () => {
   return (
     <div className="w-full md:w-[80%] mt-32 md:mt-24 relative ">
       <div className="w-[90%] mx-auto">
-        <h4 className=" font-avenir-20 opacity-60 text-white text-center">
+        <h4 className="font-avenir-medium text-xl opacity-60 text-white text-center">
           Our best projects
         </h4>
-        <h1 className="font-geometric text-4xl text-white text-center mt-4">
+        <h1 className="font-geometric font-bold text-4xl text-white text-center mt-4">
           We delivered best solution
         </h1>
       </div>

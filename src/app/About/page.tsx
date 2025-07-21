@@ -10,8 +10,6 @@ const AboutUs = () => {
   return (
     <>
       <div className="mt-24 flex flex-col items-center w-screen">
-        {/* navigation bar */}
-
         {/* Hero Section */}
         <Hero
           buttonTitle="Contact Us"
@@ -27,10 +25,10 @@ const AboutUs = () => {
         <div className="w-[90%] md:w-[80%] h-auto flex flex-col md:flex-row justify-center items-start gap-6 md:gap-24">
           {/* left */}
           <div className="md:w-[50%] mt-12">
-            <h2 className="text-white font-avenir font-extrabold text-xl md:text-3xl text-center md:text-left">
+            <h2 className="text-white font-avenir-extrabold font-extrabold text-xl md:text-3xl text-center md:text-left">
               Nurturing Tomorrow: Crafting Digital Journeys with Passion
             </h2>
-            <p className="text-white font-avenir text-sm md:text-xl font-medium opacity-80 mt-8 text-center md:text-left">
+            <p className="text-white font-avenir-medium text-sm md:text-xl  opacity-80 mt-8 text-center md:text-left">
               We craft smart, scalable digital solutions that empower businesses
               to lead in a fast-changing world.
             </p>
@@ -70,10 +68,10 @@ const AboutUs = () => {
 
         {/* Testimonials */}
         <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
-          <h4 className="font-avenir-20 opacity-60 text-white text-xs md:text-xl text-center">
+          <h4 className="font-avenir-medium opacity-60 text-white text-xs md:text-xl text-center">
             Testimonials
           </h4>
-          <h1 className="font-geometric text-xl md:text-4xl text-white text-center my-4">
+          <h1 className="font-geometric font-bold text-xl md:text-4xl text-white text-center my-4">
             100+ satisfied clients worldwide
           </h1>
           <Testimonials speed="normal" direction="right" testimonials={[]} />
@@ -82,7 +80,7 @@ const AboutUs = () => {
 
         {/* Faq section */}
         <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
-          <h1 className="font-geometric text-lg md:text-4xl text-white text-center my-4 ">
+          <h1 className="font-geometric font-bold text-lg md:text-4xl text-white text-center my-4 ">
             Frequently Asked Questions
           </h1>
           <div className=" w-[80%] md:w-[60%] border-b-1 border-white mx-auto mb-8" />

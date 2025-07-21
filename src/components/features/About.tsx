@@ -8,13 +8,13 @@ const About = () => {
       <div className="flex items-center flex-col md:flex-row md:mx-40 mt-24 w-[80vw] gap-8">
         {/* left side */}
         <div className="md:w-[50%] w-full md:flex flex-col justify-center text-center md:text-left">
-          <h4 className="text-sm md:text-xl font-avenir text-white/50">
+          <h4 className="text-sm md:text-xl font-avenir-medium  text-white/50">
             About Us
           </h4>
           <h1 className="font-geometric text-white text-xl md:text-4xl font-extrabold mt-2">
             Nurturing Tomorrow: Crafting Digital Journeys with Passion
           </h1>
-          <p className="font-avenir text-white mt-8 md:text-xl font-medium leading-6 md:leading-9">
+          <p className="font-avenir-medium text-white mt-8 md:text-xl leading-6 md:leading-9">
             Welcome to Pantheon Digital, where innovation meets excellence. As a
             leading player in the digital landscape, we specialize in crafting
             transformative solutions that empower businesses to thrive in the
@@ -63,7 +63,7 @@ const About = () => {
       </div>
 
       {/* about information in numerical */}
-      <AboutNumerics />
+      {/* <AboutNumerics /> */}
     </div>
   );
 };

@@ -56,10 +56,10 @@ const Technology = ({
           {/* left */}
           <div className="w-full p-4 flex flex-col justify-around">
             <div className="w-full md:w-[70%]">
-              <h1 className="text-center md:text-left font-geometric text-xl md:text-4xl text-[#FFCC03]">
+              <h1 className="text-center md:text-left font-geometric font-bold text-xl md:text-4xl text-[#FFCC03]">
                 {title}
               </h1>
-              <h3 className="text-white font-avenir text-center md:text-left text-lg md:text-3xl mt-4">
+              <h3 className="text-white font-avenir-medium text-center md:text-left text-lg md:text-3xl mt-4">
                 {subtitle}
               </h3>
             </div>
@@ -88,7 +88,7 @@ const Technology = ({
                   key={idx}
                   className={`${idx === 0 ? "mt-0" : "mt-4 md:mt-6"} ml-8 `}
                 >
-                  <p className="text-white ml-2 font-avenir -translate-y-1">
+                  <p className="text-white ml-2 font-avenir-medium text-xl -translate-y-1">
                     {item} 
                   </p>
                 </li>

@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       {/* newsletter section / direct contact secion. */}
       <div className="w-[90%] md:w-[80%] mx-auto bg-[#202020] rounded-t-3xl md:rounded-t-5xl h-auto py-8 md:py-16 mt-24 flex flex-col gap-8 items-center justify-center">
-        <h4 className="font-geometric text-white text-xs md:text-2xl font-extrabold">
+        <h4 className="font-geometric text-white text-xs md:text-2xl font-bold">
           We’re Delivering the best customer Experience
         </h4>
         <PrimaryButton
@@ -27,7 +27,7 @@ const Footer = () => {
           height="0"
           className="md:w-[25%] md:h-[20%] w-[240] h-[30] my-8"
         />
-        <h1 className="mx-10 text-center font-avenir text-base text-white">
+        <h1 className="mx-10 text-center font-avenir-regular text-base text-white">
           Passionate digital crafting, limitless tomorrows. Join us in shaping
           innovative experiences with creativity and dedication.
         </h1>
@@ -36,76 +36,110 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 auto-cols-fr  w-[80%] mt-16">
           {/* section 1 */}
           <div className="h-auto text-center md:text-left">
-            <h4 className="font-avenir text-white text-lg font-extrabold text-center md:text-left">
+            <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Digital Marketing
             </h4>
             <ul className="styled-list">
               <li>
-                <Link href="">Social management</Link>
+                <Link className="font-avenir-medium" href="">
+                  Social management
+                </Link>
               </li>
               <li>
-                <Link href="">Google PPC</Link>
+                <Link className="font-avenir-medium" href="">
+                  Google PPC
+                </Link>
               </li>
               <li>
-                <Link href="">Meta Ads</Link>
+                <Link className="font-avenir-medium" href="">
+                  Meta Ads
+                </Link>
               </li>
               <li>
-                <Link href="">SEO & SMO</Link>
+                <Link className="font-avenir-medium" href="">
+                  SEO & SMO
+                </Link>
               </li>
               <li>
-                <Link href="">Post & Reels</Link>
+                <Link className="font-avenir-medium" href="">
+                  Post & Reels
+                </Link>
               </li>
               <li>
-                <Link href="">Branding & Advertising</Link>
+                <Link className="font-avenir-medium" href="">
+                  Branding & Advertising
+                </Link>
               </li>
             </ul>
           </div>
           {/* section 2 */}
-          <div className="h-auto text-center md:text-left mt-8">
-            <h4 className="font-avenir text-white text-lg font-extrabold text-center md:text-left">
+          <div className="h-auto text-center md:text-left mt-8 sm:mt-0">
+            <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Graphics
             </h4>
             <ul className="styled-list">
               <li>
-                <Link href="">UI/UX Designing</Link>
+                <Link className="font-avenir-medium" href="">
+                  UI/UX Designing
+                </Link>
               </li>
               <li>
-                <Link href="">Graphics Designing</Link>
+                <Link className="font-avenir-medium" href="">
+                  Graphics Designing
+                </Link>
               </li>
               <li>
-                <Link href="">Brochure Designing</Link>
+                <Link className="font-avenir-medium" href="">
+                  Brochure Designing
+                </Link>
               </li>
               <li>
-                <Link href="">Logo Designing</Link>
+                <Link className="font-avenir-medium" href="">
+                  Logo Designing
+                </Link>
               </li>
               <li>
-                <Link href="">Post Designing</Link>
+                <Link className="font-avenir-medium" href="">
+                  Post Designing
+                </Link>
               </li>
             </ul>
           </div>
           {/* section 3 */}
-          <div className="h-auto text-center md:text-left mt-8">
-            <h4 className="font-avenir text-white text-lg font-extrabold text-center md:text-left">
+          <div className="h-auto text-center md:text-left mt-8 sm:mt-0">
+            <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Software
             </h4>
             <ul className="styled-list">
               <li>
-                <Link href="">HRMS Software</Link>
+                <Link className="font-avenir-medium" href="">
+                  HRMS Software
+                </Link>
               </li>
               <li>
-                <Link href="">CRM Software</Link>
+                <Link className="font-avenir-medium" href="">
+                  CRM Software
+                </Link>
               </li>
               <li>
-                <Link href="">Website Development</Link>
+                <Link className="font-avenir-medium" href="">
+                  Website Development
+                </Link>
               </li>
               <li>
-                <Link href="">Application Development</Link>
+                <Link className="font-avenir-medium" href="">
+                  Application Development
+                </Link>
               </li>
               <li>
-                <Link href="">Software Development</Link>
+                <Link className="font-avenir-medium" href="">
+                  Software Development
+                </Link>
               </li>
               <li>
-                <Link href="">Cloud & DevOps Services</Link>
+                <Link className="font-avenir-medium" href="">
+                  Cloud & DevOps Services
+                </Link>
               </li>
             </ul>
           </div>
@@ -187,23 +221,23 @@ const Footer = () => {
 
         {/* for privacy policy and terms and condition */}
         <div className="w-[90%] md:w-[80%] flex justify-evenly mt-16">
-          <h4 className="text-white font-avenir font-semibold text-xs md:text-xl md:px-2 py-8 text-center underline">
+          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
             Privacy & Policy
           </h4>
-          <h4 className="text-white font-avenir font-semibold text-xs md:text-xl md:px-2 py-8 text-center underline">
+          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
             Terms & Condition
           </h4>
-          <h4 className="text-white font-avenir font-semibold text-xs md:text-xl md:px-2 py-8 text-center underline">
+          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
             Cookie Policy
           </h4>
-          <h4 className="text-white font-avenir font-semibold text-xs md:text-xl md:px-2 py-8 text-center underline">
+          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
             Blogs
           </h4>
         </div>
 
         {/* for copywrite and other details */}
-        <div className="bg-transparent border-none md:border-1 md:bg-black rounded-full w-[80%]  md:mb-16 border-primary">
-          <h4 className="text-white font-avenir font-normal font-base px-1 py-8 text-center">
+        <div className="bg-transparent border-0 md:border-1 md:bg-black rounded-full w-[80%] md:mb-16 border-gray-700">
+          <h4 className="text-white font-avenir-demi text-sm sm:text-xl px-1 py-8 text-center">
             CIN: U74999DL2021PTC379806 © Copyright 2016 - 2025, INT. All rights
             reserved.
           </h4>

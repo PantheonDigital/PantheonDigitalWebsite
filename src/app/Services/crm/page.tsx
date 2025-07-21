@@ -108,6 +108,9 @@ const page = () => {
         ]}
       />
 
+      {/* about numerics */}
+      <AboutNumerics />
+
       {/* Our Trusted Clients */}
       <Clients />
 
@@ -122,9 +125,6 @@ const page = () => {
         <Testimonials speed="normal" direction="right" testimonials={[]} />
         <Testimonials speed="normal" direction="left" testimonials={[]} />
       </div>
-
-      {/* About Numerics */}
-      <AboutNumerics />
 
       <div className="mt-12 md:mt-24" />
       {/* About Section */}

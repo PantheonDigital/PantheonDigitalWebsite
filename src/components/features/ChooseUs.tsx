@@ -3,17 +3,17 @@ import Image from "next/image";
 function ChooseUs() {
   return (
     <div className="md:w-[80%] w-[70%] mt-12 md:mt-24">
-      <h4 className="font-avenir text-sm md:text-xl opacity-60 text-white text-center">
+      <h4 className="font-avenir-medium text-sm md:text-xl opacity-60 text-white text-center">
         Reason to choose us
       </h4>
-      <h1 className="font-geometric text-xl md:text-4xl text-white text-center mt-4">
+      <h1 className="font-geometric font-bold text-xl md:text-4xl text-white text-center mt-4">
         We Provide Truly Prominent Software Solutions
       </h1>
       {/* cards for reason to choose us */}
       <div className=" w-full h-auto grid md:auto-cols-fr md:grid-flow-col gap-10 mt-12">
         {/* 1 card */}
         <div className="h-[468] border-1 rounded-2xl overflow-clip">
-          <h1 className="font-geometric text-base md:text-3xl text-white m-4">
+          <h1 className="font-geometric font-bold text-base md:text-3xl text-white m-4">
             Passionate <br /> Craftsmanship
           </h1>
           <Image
@@ -26,7 +26,7 @@ function ChooseUs() {
         </div>
         {/* 2 card */}
         <div className="h-[468] border-1 rounded-2xl overflow-clip md:translate-y-0 -translate-y-100 z-1 bg-black">
-          <h1 className="font-geometric text-base md:text-3xl text-white m-4">
+          <h1 className="font-geometric font-bold text-base md:text-3xl text-white m-4">
             Innovative <br /> Vision
           </h1>
           <Image
@@ -39,7 +39,7 @@ function ChooseUs() {
         </div>
         {/* 3 card */}
         <div className="md:h-[468] h-[400] border-1 rounded-2xl overflow-clip  md:translate-y-0  -translate-y-200 z-2 bg-black">
-          <h1 className="font-geometric text-base md:text-3xl text-white m-4">
+          <h1 className="font-geometric font-bold text-base md:text-3xl text-white m-4">
             Client-Centric <br /> Approach
           </h1>
           <Image

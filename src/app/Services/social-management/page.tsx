@@ -2,6 +2,7 @@ import About from "@/components/features/About";
 import Clients from "@/components/features/Clients";
 import FaqItem from "@/components/features/FaqItem";
 import Hero from "@/components/features/Hero";
+import OurProject from "@/components/features/OurProjects";
 import Process from "@/components/features/Process";
 import Technology from "@/components/features/Technology";
 import Testimonials from "@/components/features/Testimonials";
@@ -167,6 +168,11 @@ const page = () => {
       <div className="mt-12 md:mt-24" />
       {/* About Section */}
       <About />
+
+      {/* Project section */}
+      <div className="sm:mt-0 -mt-160 w-screen h-auto flex justify-center">
+        <OurProject />
+      </div>
 
       {/* Faq Section */}
       <div className="w-[90%] md:w-[80%] mt-12 md:mt-24">
