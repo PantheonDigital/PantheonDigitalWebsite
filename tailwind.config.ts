@@ -16,6 +16,7 @@ const config: Config = {
       },
       fontFamily: {
          avenir: ['"Avenir"', 'sans-serif'],
+          geometric: ['"Geometric"', "sans-serif"],
       },
     },
   },
