@@ -297,11 +297,11 @@ ul.styled-list li {
   display: none;
 } */
 
-/* Minimal macOS-like scrollbars */
+/* Mac-style scrollbar (always visible, thin, rounded) */
+
 .macos-scrollbar {
   scrollbar-width: thin; /* Firefox */
-  scrollbar-color: rgba(0, 0, 0, 0.4) transparent; /* Firefox */
-  overflow: overlay; /* For Chromium-based browsers (optional) */
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Firefox */
 }
 
 /* WebKit (Chrome, Safari, Edge) */
@@ -312,8 +312,9 @@ ul.styled-list li {
 
 .macos-scrollbar::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-  transition: background 0.3s ease;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }
 
 .macos-scrollbar::-webkit-scrollbar-thumb:hover {
