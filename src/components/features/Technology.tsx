@@ -88,7 +88,7 @@ const Technology = ({
                   key={idx}
                   className={`${idx === 0 ? "mt-0" : "mt-4 md:mt-6"} ml-8 `}
                 >
-                  <p className="text-white ml-2 font-avenir-medium text-xl -translate-y-1">
+                  <p className="text-white ml-2 font-avenir-medium text-sm sm:text-xl -translate-y-1">
                     {item} 
                   </p>
                 </li>

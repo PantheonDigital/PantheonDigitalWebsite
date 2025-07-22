@@ -262,7 +262,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      href=""
+                      href="/Services/brochure-and-ppt/"
                       onClick={() => setIsDropDownOpen(false)}
                       className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
@@ -804,7 +804,7 @@ const Header = () => {
                       <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/ui-ux/"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
@@ -822,7 +822,7 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/brochure-and-ppt/"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
@@ -840,7 +840,7 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/logo"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
@@ -858,7 +858,7 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/post-and-banner/"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >

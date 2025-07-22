@@ -14,7 +14,7 @@ export default function Home() {
     <>
       {/* starting of main section */}
       <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
-        <div className="w-[90%] h-auto rounded-b-4xl flex flex-col justify-center items-center mt-24 md:mt-44">
+        <div className="w-[90%] h-auto rounded-b-4xl flex flex-col justify-center items-center mt-32">
           {/* hero section background image */}
           <Image
             src="/BackgroundImageHomePage.svg"

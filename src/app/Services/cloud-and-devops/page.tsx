@@ -36,7 +36,7 @@ const page = () => {
       id: 4,
       title: "Cloud Migration Services",
       description:
-        "SSeamlessly move your apps, data, and workloads to the cloud with minimal downtime and maximum security.",
+        "Seamlessly move your apps, data, and workloads to the cloud with minimal downtime and maximum security.",
       icon: "/ui/4.svg",
     },
     {

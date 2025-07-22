@@ -64,7 +64,7 @@ const page = () => {
       {/* what we provide for web dev */}
       <div className="w-screen  flex flex-col justify-center items-center bg-black rounded-b-4xl shadow-[0_0_100px_rgba(236,19,19,0.2)] translate-y-10 z-10">
         <WeProvide
-          title={"What We Offer in Application Development"}
+          title={"What We Offer in UI/UX"}
           subtitle={"What we provide"}
           cardsData={cardsData}
         />
@@ -97,7 +97,7 @@ const page = () => {
           "Transforming Ideas into Intuitive Designs.",
           "Improved User Satisfaction",
           "Increased Conversion Rates",
-          "Cross  -Device Consistency",
+          "Cross-Device Consistency",
           "Enhanced Brand Perception",
           "Higher Retention",
           "Data-Driven Design Decisions",
