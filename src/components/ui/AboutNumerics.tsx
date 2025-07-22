@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function AboutNumerics() {
   return (
-    <div className="w-full flex items-center justify-center mt-24">
+    <div className="w-full flex items-center justify-center mt-12 sm:mt-24">
       <div className="grid w-[90%] md:w-[80%] place-items-center gap-4 md:gap-8 grid-cols-[2fr_1fr_2fr] md:grid-cols-7 auto-cols-fr  p-8 md:px-24 rounded-4xl bg-[#313131] shadow-[inset_-10px_10px_8px_rgba(0,0,0,.25)]">
         {/* 1 */}
         <div className="ml-[25%] sm:ml-0 flex flex-col gap-2">

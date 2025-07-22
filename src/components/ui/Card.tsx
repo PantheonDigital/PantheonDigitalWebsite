@@ -67,7 +67,7 @@ const Card = ({
             <h4
               className={`${
                 type === "normal" && "group-hover:opacity-100 whitespace-nowrap"
-              } ml-2 font-avenir-regular text-xs md:text-lg md:opacity-0 duration-300`}
+              } ml-2 font-avenir-demi text-xs md:text-base md:opacity-0 font-medium hover:text-red-500 duration-300`}
             >
               Read More
             </h4>

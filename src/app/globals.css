@@ -300,12 +300,12 @@ ul.styled-list li {
 /* Mac-style scrollbar (always visible, thin, rounded) */
 
 .macos-scrollbar {
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
 
 /* WebKit (Chrome, Safari, Edge) */
-.macos-scrollbar::-webkit-scrollbar {
+/* .macos-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
@@ -323,4 +323,4 @@ ul.styled-list li {
 
 .macos-scrollbar::-webkit-scrollbar-track {
   background: transparent;
-}
+} */

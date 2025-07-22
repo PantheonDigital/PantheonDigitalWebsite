@@ -20,7 +20,7 @@ const Technology = ({
   showCards?: boolean;
 }) => {
   return (
-    <div className="w-screen h-auto flex justify-center pt-12 md:pt-24 bg-gradient-to-b from-[#202020] via-[#202020] to-[#86868600] z-0">
+    <div className="w-screen h-auto flex justify-center pt-12 md:pt-24  bg-gradient-to-b from-[#202020] via-[#202020] to-[#86868600] z-0">
       <div className="w-[90%] md:w-[80%] flex items-center flex-col gap-8 md:gap-16 mt-12">
         {heading?.length > 0 && (
           <h1 className="font-geometric font-bold text-xl md:text-4xl text-white">
@@ -54,9 +54,9 @@ const Technology = ({
           }`}
         >
           {/* left */}
-          <div className="w-full p-4 flex flex-col justify-around">
+          <div className="w-full  flex flex-col justify-around">
             <div className="w-full md:w-[70%]">
-              <h1 className="text-center md:text-left font-geometric font-bold text-xl md:text-4xl text-[#FFCC03]">
+              <h1 className="text-center md:text-left font-geometric  text-xl md:text-4xl text-[#FFCC03]">
                 {title}
               </h1>
               <h3 className="text-white font-avenir-medium text-center md:text-left text-lg md:text-3xl mt-4">
@@ -98,7 +98,7 @@ const Technology = ({
 
         <Link
           href={href}
-          className="w-full flex md:hidden mt-2 mb-6 md:mt-0 flex-row justify-center md:justify-normal gap-8 group"
+          className="w-full flex md:hidden mb-2 md:my-0 flex-row justify-center md:justify-normal gap-8 group"
         >
           <span className="text-white">Connect with us</span>
           <Image

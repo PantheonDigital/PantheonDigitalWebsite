@@ -70,7 +70,7 @@ const page = () => {
       />
 
       {/* what we provide for web dev */}
-      <div className="w-screen mt-24 md:mt-6 flex flex-col justify-center items-center bg-black rounded-b-4xl shadow-[0_0_100px_rgba(236,19,19,0.2)] translate-y-10 z-10">
+      <div className="w-screen  flex flex-col justify-center items-center bg-black rounded-b-4xl shadow-[0_0_100px_rgba(236,19,19,0.2)] translate-y-10 z-10">
         <WeProvide
           title={"What We Offer in Application Development"}
           subtitle={"What we provide"}
@@ -170,7 +170,7 @@ const page = () => {
       <About />
 
       {/* Project section */}
-      <div className="sm:mt-0 -mt-160 w-screen h-auto flex justify-center">
+      <div className="sm:mt-0 w-screen h-auto flex justify-center">
         <OurProject />
       </div>
 

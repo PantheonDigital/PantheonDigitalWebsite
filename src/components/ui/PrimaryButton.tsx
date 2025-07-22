@@ -54,7 +54,7 @@ const PrimaryButton = ({
       </div>
       {rightIcon && (
         <Image
-          className="ml-4 justify-self-end-safe group-hover:scale-110 duration-300"
+          className="ml-2 justify-self-end-safe group-hover:scale-110 duration-300"
           src={rightIcon}
           alt="right icon"
           width={20}

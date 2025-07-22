@@ -5,12 +5,12 @@ const MissionVision = () => {
   return (
     <>
       {/* heading */}
-      <h1 className="font-geometric font-bold text-xl md:text-4xl font-bold text-white mt-32">
+      <h1 className="font-geometric font-bold text-xl md:text-4xl  text-white mt-12 sm:mt-24">
         Our Mission & Vision
       </h1>
 
       {/* Mission */}
-      <div className="w-[90%] md:w-[80%] h-auto px-7 pb-7 py-10 md:py-20 flex flex-col md:flex-row mt-12 bg-[#202020] rounded-3xl gap-8 md:gap-16">
+      <div className="w-[90%] md:w-[80%] h-auto px-7 pb-7 py-7 md:py-20 flex flex-col md:flex-row mt-12 bg-[#202020] rounded-3xl gap-8 md:gap-16">
         {/* left side =========================== */}
         <div className="md:w-[40%] w-full h-auto flex flex-col gap-8 md:gap-24 justify-between">
           <div className="flex gap-4 items-center justify-center md:justify-normal">
@@ -83,7 +83,7 @@ const MissionVision = () => {
       </div>
 
       {/* Vision */}
-      <div className="w-[90%] md:w-[80%] h-auto px-7 pb-7 py-10 md:py-20 flex flex-col md:flex-row mt-12 bg-[#202020] rounded-3xl gap-8 md:gap-16">
+      <div className="w-[90%] md:w-[80%] h-auto px-7 pb-7 py-7 md:py-20 flex flex-col md:flex-row mt-12 bg-[#202020] rounded-3xl gap-8 md:gap-16">
         {/* left side =========================== */}
         <div className="md:w-[40%] w-full h-auto flex flex-col gap-8 md:gap-16 justify-between">
           <div className="flex gap-4 items-center justify-center md:justify-normal">

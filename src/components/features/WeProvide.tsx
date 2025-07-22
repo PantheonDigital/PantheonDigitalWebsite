@@ -13,7 +13,7 @@ const WeProvide = ({
   return (
     <div
       key={title}
-      className="w-[90%] md:w-[80%]  sm:mt-24 flex flex-col items-center justify-center"
+      className="w-[90%] md:w-[80%] mt-12 sm:mt-24 pb-6 flex flex-col items-center justify-center"
     >
       <h4 className="text-white font-avenir-medium opacity-60 text-sm md:text-xl ">
         {subtitle}

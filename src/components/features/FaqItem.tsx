@@ -26,7 +26,7 @@ const FaqItem = ({ ques, ans }: { ques: string; ans: string }) => {
 
       {/* Animated answer */}
       <p
-        className={`text-white mt-2 relative font-avenir-medium text-xs md:text-base overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`text-white mt-2 relative font-avenir-medium text-xs md:text-base overflow-hidden transition-all duration-700 ease-initial ${
           open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

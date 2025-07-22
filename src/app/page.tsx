@@ -84,7 +84,7 @@ export default function Home() {
         <ChooseUs />
 
         {/* Project section */}
-        <div className="sm:mt-0 -mt-160 w-screen h-auto flex justify-center">
+        <div className="sm:mt-0 -mt-200 w-screen h-auto flex justify-center">
           <OurProject />
         </div>
 

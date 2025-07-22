@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       {/* newsletter section / direct contact secion. */}
-      <div className="w-[90%] md:w-[80%] mx-auto bg-[#202020] rounded-t-3xl md:rounded-t-5xl h-auto py-8 md:py-16 mt-24 flex flex-col gap-8 items-center justify-center">
+      <div className="w-[90%] md:w-[80%] mx-auto bg-[#202020] rounded-t-3xl md:rounded-t-5xl h-auto py-8 sm:py-16 mt-12 sm:mt-24 flex flex-col gap-8 items-center justify-center">
         <h4 className="font-geometric text-white text-xs md:text-2xl font-bold">
           We’re Delivering the best customer Experience
         </h4>
@@ -39,34 +39,52 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Digital Marketing
             </h4>
-            <ul className="styled-list">
+            <ul className="styled-list mt-4">
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Social management
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Google PPC
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Meta Ads
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   SEO & SMO
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Post & Reels
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Branding & Advertising
                 </Link>
               </li>
@@ -77,29 +95,44 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Graphics
             </h4>
-            <ul className="styled-list">
+            <ul className="styled-list mt-4">
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   UI/UX Designing
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Graphics Designing
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Brochure Designing
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Logo Designing
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Post Designing
                 </Link>
               </li>
@@ -110,34 +143,52 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Software
             </h4>
-            <ul className="styled-list">
+            <ul className="styled-list mt-4">
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   HRMS Software
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   CRM Software
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Website Development
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Application Development
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Software Development
                 </Link>
               </li>
               <li>
-                <Link className="font-avenir-medium" href="">
+                <Link
+                  className="font-avenir-medium hover:underline duration-300"
+                  href=""
+                >
                   Cloud & DevOps Services
                 </Link>
               </li>
@@ -220,24 +271,32 @@ const Footer = () => {
         </div>
 
         {/* for privacy policy and terms and condition */}
-        <div className="w-[90%] md:w-[80%] flex justify-evenly mt-16">
-          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
-            Privacy & Policy
-          </h4>
-          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
-            Terms & Condition
-          </h4>
-          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
-            Cookie Policy
-          </h4>
-          <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline">
-            Blogs
-          </h4>
+        <div className="w-[90%] md:w-[80%] flex justify-evenly mt-1 sm:mt-4">
+          <Link href="">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+              Privacy & Policy
+            </h4>
+          </Link>
+          <Link href="">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+              Terms & Condition
+            </h4>
+          </Link>
+          <Link href="">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+              Cookie Policy
+            </h4>
+          </Link>
+          <Link href="">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+              Blogs
+            </h4>
+          </Link>
         </div>
 
         {/* for copywrite and other details */}
-        <div className="bg-transparent border-0 md:border-1 md:bg-black rounded-full w-[80%] md:mb-16 border-gray-700">
-          <h4 className="text-white font-avenir-demi text-sm sm:text-xl px-1 py-8 text-center">
+        <div className="bg-transparent border-0 md:border-1 md:bg-black rounded-full w-[80%]  sm:mt-4 md:mb-4 border-gray-700">
+          <h4 className="text-white font-avenir-demi text-sm sm:text-xl px-1 pb-2 sm:py-8 text-center">
             CIN: U74999DL2021PTC379806 © Copyright 2016 - 2025, INT. All rights
             reserved.
           </h4>

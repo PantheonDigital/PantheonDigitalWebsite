@@ -22,7 +22,7 @@ const AboutUs = () => {
         />
 
         {/* descriptive section */}
-        <div className="w-[90%] md:w-[80%] h-auto flex flex-col md:flex-row justify-center items-start gap-6 md:gap-24">
+        <div className="w-[90%] md:w-[80%] mt-12 sm:mt-0 h-auto flex flex-col md:flex-row justify-center items-start gap-6 md:gap-24">
           {/* left */}
           <div className="md:w-[50%] mt-12">
             <h2 className="text-white font-avenir-extrabold font-extrabold text-xl md:text-3xl text-center md:text-left">

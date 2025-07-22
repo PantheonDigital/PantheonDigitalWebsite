@@ -22,13 +22,13 @@ const Hero = ({
   return (
     <>
       {!scrollAnimation && (
-        <div className="w-[90%] md:w-[80%] h-[70vh] flex mx-auto">
+        <div className="w-[90%] md:w-[80%] sm:h-[70vh] flex mx-auto mt-6 sm:mt-0 ">
           <Image
             src={imageSrc}
             alt="Home Page Background Banner"
             width="0"
             height="0"
-            className={`blur-xs mask-radial-at-center mask-radial-from-100% md:blur-none absolute top-[2%] right-0 fade-bottom object-cover md:object-contain -z-10  ${
+            className={`blur-xs mask-x-from-70% mask-x-to-100% mask-y-from-70% mask-y-to-100% md:blur-none absolute top-[2%] right-0  object-cover -z-10  ${
               imageStyle ? imageStyle : "w-full h-full"
             }`}
           />
@@ -52,7 +52,7 @@ const Hero = ({
       )}
 
       {scrollAnimation && (
-        <div className="w-[90%] md:w-[80%] h-auto flex mx-auto">
+        <div className="w-[90%] md:w-[80%] h-[70vh] sm:h-[105vh] flex mx-auto">
           <ContainerScroll
             titleComponent={
               <>

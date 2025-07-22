@@ -96,7 +96,8 @@ const Header = () => {
         </header>
 
         {/* dropdown body -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-= */}
-        <div
+        <button
+          onClick={() => setIsDropDownOpen(false)}
           className={`${
             isDropDownOpen
               ? "opacity-100 translate-y-3 block"
@@ -126,7 +127,7 @@ const Header = () => {
                     <Link
                       onClick={() => setIsDropDownOpen(false)}
                       href="/Services/social-management/"
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Social Media Management
@@ -136,7 +137,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -144,9 +145,9 @@ const Header = () => {
                     <Link
                       href="/Services/google-ppc/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
-                      <span className="font-avenir-medium font-medium text-base text-white">
+                      <span className="font-avenir-medium font-medium text-base text-white ">
                         Google PPC
                       </span>
                       <Image
@@ -154,7 +155,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -162,7 +163,7 @@ const Header = () => {
                     <Link
                       href="/Services/meta-ads/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Meta Ads Campaign
@@ -172,7 +173,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -180,7 +181,7 @@ const Header = () => {
                     <Link
                       href="/Services/seo/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         SEO & SMO
@@ -190,15 +191,15 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href=""
+                      href="/Services/posts-and-reels/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Posts & Reels
@@ -208,15 +209,15 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href=""
+                      href="/Services/branding-and-ads/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Branding & Advertising
@@ -226,7 +227,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -245,7 +246,7 @@ const Header = () => {
                     <Link
                       href="/Services/ui-ux"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         UX/UI Design
@@ -255,7 +256,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -263,7 +264,7 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Brochure & PPT
@@ -273,7 +274,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -281,7 +282,7 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Logo Design
@@ -291,7 +292,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -299,7 +300,7 @@ const Header = () => {
                     <Link
                       href=""
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Posts & Banner
@@ -309,7 +310,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -329,7 +330,7 @@ const Header = () => {
                       href="https://www.zfour.in/"
                       target="_blank"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         HRMS Software
@@ -339,7 +340,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -347,7 +348,7 @@ const Header = () => {
                     <Link
                       href="/Services/crm"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         CRM Software
@@ -357,7 +358,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -365,7 +366,7 @@ const Header = () => {
                     <Link
                       href="/Services/website-development/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Website Development
@@ -375,7 +376,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -383,7 +384,7 @@ const Header = () => {
                     <Link
                       href="/Services/application-development"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Application Development
@@ -393,15 +394,15 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href=""
+                      href="/Services/software-development/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Software Development
@@ -411,15 +412,15 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href=""
+                      href="/Services/cloud-and-devops/"
                       onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
+                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
                     >
                       <span className="font-avenir-medium font-medium text-base text-white">
                         Cloud & DevOps Services
@@ -429,7 +430,7 @@ const Header = () => {
                         alt="arrow right"
                         width="10"
                         height="10"
-                        className="w-[10%] h-[10%]"
+                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
                       />
                     </Link>
                   </li>
@@ -466,75 +467,127 @@ const Header = () => {
                 </div>
                 {/* social icons */}
                 <div className="flex flex-row w-full justify-evenly mt-4">
-                  <Image
-                    src="/social-icons/facebook.svg"
-                    alt="facebook icon"
-                    width="10"
-                    height="10"
-                    className="w-[7%] h-[7%]"
-                  />
-                  <Image
-                    src="/social-icons/x.svg"
-                    alt="x icon"
-                    width="10"
-                    height="10"
-                    className="w-[7%] h-[7%]"
-                  />
-                  <Image
-                    src="/social-icons/insta.svg"
-                    alt="instagram icon"
-                    width="10"
-                    height="10"
-                    className="w-[7%] h-[7%]"
-                  />
-                  <Image
-                    src="/social-icons/linkedin.svg"
-                    alt="linkedin icon"
-                    width="10"
-                    height="10"
-                    className="w-[7%] h-[7%]"
-                  />
-                  <Image
-                    src="/social-icons/youtube.svg"
-                    alt="youtube icon"
-                    width="10"
-                    height="10"
-                    className="w-[7%] h-[7%]"
-                  />
-                  <Image
-                    src="/social-icons/pinterest.svg"
-                    alt="pinterest icon"
-                    width="10"
-                    height="10"
-                    className="w-[7%] h-[7%]"
-                  />
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/facebook.svg"
+                      alt="facebook icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://x.com/PantheonDigi"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/x.svg"
+                      alt="x icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.instagram.com/pantheondigitals/"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/insta.svg"
+                      alt="instagram icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0bqQBFX6_kAAAAZgwY1kQJ_M9XEiW2MgEn9JGXzKTXud2Y708iYiT2Mjj6zTHnUYndWoWgeHoi2QqDr1vYMG3a6d3hIcV5OOcdhKWInnOeyIh0J58gE15Ws1MwNTcsg57jWg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpantheon-digitals%2F"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/linkedin.svg"
+                      alt="linkedin icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.youtube.com/@pantheondigital"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/youtube.svg"
+                      alt="youtube icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://in.pinterest.com/pantheondigitals/"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/pinterest.svg"
+                      alt="pinterest icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="col-span-2 bg-[#2A2A2A] min-h-[120] rounded-3xl justify-between flex-row flex px-6 py-2 items-center">
-                <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="font-avenir-medium font-medium text-base text-white underline">
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium hover:font-avenir-bold font-medium text-base text-white underline">
                     Privacy Policy
                   </span>
                 </Link>
-                <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="font-avenir-medium font-medium text-base text-white underline">
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium hover:font-avenir-bold font-medium  text-base text-white underline">
                     Terms & Condition
                   </span>
                 </Link>
-                <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="font-avenir-medium font-medium text-base text-white underline">
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium hover:font-avenir-bold font-medium  text-base text-white underline">
                     Cookie Policy
                   </span>
                 </Link>
-                <Link href="" onClick={() => setIsDropDownOpen(false)}>
-                  <span className="font-avenir-medium font-medium text-base text-white underline">
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium hover:font-avenir-bold font-medium  text-base text-white underline">
                     Blogs
                   </span>
                 </Link>
               </div>
             </div>
           </div>
-        </div>
+        </button>
       </div>
 
       {/* ====================================================================================================================== */}
@@ -582,7 +635,7 @@ const Header = () => {
         )}
 
         <div
-          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[60] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-y-scroll  ${
+          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[60] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-x-hidden overflow-y-scroll  ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -618,14 +671,14 @@ const Header = () => {
             />
 
             {isMobileDropDown && (
-              <div className="flex w-full h-auto min-h-[400px] justify-center bg-black z-[60] overflow-y-scroll">
+              <div className="flex w-full h-auto min-h-[400px] justify-center bg-black z-[60] overflow-x-hidden overflow-y-scroll">
                 <div className="w-full bg-black rounded-3xl ">
                   <div className="grid grid-cols-1 mt-6 gap-4">
                     {/* Categories */}
 
                     {/* first service start */}
                     <div className="bg-[#2A2A2A] min-w-[25%] rounded-3xl p-4">
-                      <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                      <h1 className="font-avenir-bold font-bold text-lg text-left text-white">
                         Digital Marketing
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
@@ -636,7 +689,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Social Media Management
                             </span>
                             <Image
@@ -654,7 +707,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Google PPC
                             </span>
                             <Image
@@ -672,7 +725,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Meta Ads Campaign
                             </span>
                             <Image
@@ -690,7 +743,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               SEO & SMO
                             </span>
                             <Image
@@ -704,11 +757,11 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/posts-and-reels/"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Posts & Reels
                             </span>
                             <Image
@@ -722,11 +775,11 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/branding-and-ads/"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Branding & Advertising
                             </span>
                             <Image
@@ -744,7 +797,7 @@ const Header = () => {
 
                     {/* second service start */}
                     <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
-                      <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                      <h1 className="font-avenir-bold font-bold text-lg text-left text-white">
                         Graphic Designing
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
@@ -755,7 +808,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               UX/UI Design
                             </span>
                             <Image
@@ -773,7 +826,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Brochure & PPT
                             </span>
                             <Image
@@ -791,7 +844,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Logo Design
                             </span>
                             <Image
@@ -809,7 +862,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Posts & Banner
                             </span>
                             <Image
@@ -827,7 +880,7 @@ const Header = () => {
 
                     {/* third service start */}
                     <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4">
-                      <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
+                      <h1 className="font-avenir-bold font-bold text-lg text-left text-white">
                         Tech & Software
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
@@ -839,7 +892,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               HRMS Software
                             </span>
                             <Image
@@ -857,7 +910,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               CRM Software
                             </span>
                             <Image
@@ -875,7 +928,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Website Development
                             </span>
                             <Image
@@ -893,7 +946,7 @@ const Header = () => {
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Application Development
                             </span>
                             <Image
@@ -907,11 +960,11 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/software-development/"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Software Development
                             </span>
                             <Image
@@ -925,11 +978,11 @@ const Header = () => {
                         </li>
                         <li>
                           <Link
-                            href="/Services/"
+                            href="/Services/cloud-and-devops/"
                             onClick={closeMobileMenu}
                             className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1"
                           >
-                            <span className="font-avenir-medium font-medium text-base text-white">
+                            <span className="font-avenir-medium font-medium text-sm sm:text-base text-white">
                               Cloud & DevOps Services
                             </span>
                             <Image
@@ -968,50 +1021,84 @@ const Header = () => {
           </div>
           {/* social icons */}
           <div className=" flex flex-row w-full  justify-evenly mt-4 left-0">
-            <Link href="/https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#">
+            <Link
+              target="_blank"
+              className="w-[30%] h-[30%]"
+              href="https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#"
+            >
               <Image
                 src="/social-icons/facebook.svg"
                 alt="facebook icon"
                 width="10"
                 height="10"
-                className="w-[30%] h-[30%]"
+                className="w-full h-full"
               />
             </Link>
-            <Image
-              src="/social-icons/x.svg"
-              alt="x icon"
-              width="10"
-              height="10"
+            <Link
+              target="_blank"
+              href="https://x.com/PantheonDigi"
               className="w-[30%] h-[30%]"
-            />
-            <Image
-              src="/social-icons/insta.svg"
-              alt="instagram icon"
-              width="10"
-              height="10"
+            >
+              <Image
+                src="/social-icons/x.svg"
+                alt="x icon"
+                width="10"
+                height="10"
+                className="w-full h-full"
+              />
+            </Link>
+            <Link
               className="w-[30%] h-[30%]"
-            />
-            <Image
-              src="/social-icons/linkedin.svg"
-              alt="linkedin icon"
-              width="10"
-              height="10"
+              href="https://www.instagram.com/pantheondigitals/"
+              target="_blank"
+            >
+              <Image
+                src="/social-icons/insta.svg"
+                alt="instagram icon"
+                width="10"
+                height="10"
+                className="w-full h-full"
+              />
+            </Link>
+            <Link
               className="w-[30%] h-[30%]"
-            />
-            <Image
-              src="/social-icons/youtube.svg"
-              alt="youtube icon"
-              width="10"
-              height="10"
+              href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0bqQBFX6_kAAAAZgwY1kQJ_M9XEiW2MgEn9JGXzKTXud2Y708iYiT2Mjj6zTHnUYndWoWgeHoi2QqDr1vYMG3a6d3hIcV5OOcdhKWInnOeyIh0J58gE15Ws1MwNTcsg57jWg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpantheon-digitals%2F"
+              target="_blank"
+            >
+              <Image
+                src="/social-icons/linkedin.svg"
+                alt="linkedin icon"
+                width="10"
+                height="10"
+                className="w-full h-full"
+              />
+            </Link>
+            <Link
               className="w-[30%] h-[30%]"
-            />
-            <Image
-              src="/social-icons/pinterest.svg"
-              alt="pinterest icon"
-              width="10"
-              height="10"
+              href="https://www.youtube.com/@pantheondigital"
+              target="_blank"
+            >
+              <Image
+                src="/social-icons/youtube.svg"
+                alt="youtube icon"
+                width="10"
+                height="10"
+                className="w-full h-full"
+              />
+            </Link>
+            <Link
               className="w-[30%] h-[30%]"
-            />
+              href="https://in.pinterest.com/pantheondigitals/"
+              target="_blank"
+            >
+              <Image
+                src="/social-icons/pinterest.svg"
+                alt="pinterest icon"
+                width="10"
+                height="10"
+                className="w-full h-full"
+              />
+            </Link>
           </div>
         </div>
       </div>
