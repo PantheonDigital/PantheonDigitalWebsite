@@ -28,7 +28,7 @@ const Hero = ({
             alt="Home Page Background Banner"
             width="0"
             height="0"
-            className={`blur-xs mask-x-from-70% mask-x-to-100% mask-y-from-70% mask-y-to-100% md:blur-none absolute top-[2%] right-0  object-cover -z-10  ${
+            className={`blur-xs mask-x-from-80% mask-x-to-100% mask-y-from-80% mask-y-to-100% md:blur-none absolute top-[2%] right-0  object-cover -z-10  ${
               imageStyle ? imageStyle : "w-full h-full"
             }`}
           />

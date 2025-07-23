@@ -15,42 +15,42 @@ const page = () => {
       id: 1,
       title: "Custom Brochure Design",
       description:
-        "Build and operate secure, scalable cloud environments tailored to your business, leveraging AWS, Azure, Google Cloud, or hybrid setups.",
+        "We begin by understanding your brand, goals, target audience, and desired outcomes. This stage sets the foundation for impactful, relevant designs.",
       icon: "/ui/1.svg",
     },
     {
       id: 2,
       title: "Business & Corporate Presentations",
       description:
-        "Set up automated continuous integration and delivery pipelines for faster, more reliable code deployment and quick feature rollouts.",
+        "Engaging PowerPoint decks for pitches, sales, training, or meetings. We combine visuals, infographics, and crisp content to deliver your message effectively.",
       icon: "/ui/2.svg",
     },
     {
       id: 3,
       title: "Content Structuring & Copywriting",
       description:
-        "Automate infrastructure provisioning and configuration with tools like Terraform and CloudFormation, ensuring consistency across environments.",
+        "We turn complex info into simple, audience-friendly messages. Headlines, clear flow, and strong calls-to-action ensure better engagement.",
       icon: "/ui/3.svg",
     },
     {
       id: 4,
       title: "Visual Storytelling",
       description:
-        "Leverage infographics, icons, and imagery to make statistics and facts memorable, supporting your story visually as well as verbally.",
+        "We use consistent colors, fonts, and styles across all materials. Infographics and icons bring your data and stories to life visually.",
       icon: "/ui/4.svg",
     },
     {
       id: 5,
       title: "Brand Consistency",
       description:
-        "Proactively monitor performance, manage resources, and optimize costs with advanced analytics and alerting.",
+        "Make data easy to understand with clear, creative visuals. Charts and graphics highlight results, insights, and case studies powerfully.",
       icon: "/ui/5.svg",
     },
     {
       id: 6,
       title: "Data Visualization",
       description:
-        "Simplify intricate data with charts and graphics that make insights instantly understandable and persuasive.",
+        "We enhance your existing brochures or presentations with fresh design and content. Boost clarity, impact, and professionalism with our expert revamp.",
       icon: "/ui/1.svg",
     },
   ];

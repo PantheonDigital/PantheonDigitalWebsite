@@ -39,51 +39,51 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Digital Marketing
             </h4>
-            <ul className="styled-list mt-4">
-              <li>
+            <ul className="styled-list mt-4 ">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline   duration-300"
+                  href="/Services/social-management/"
                 >
                   Social management
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/google-ppc/"
                 >
                   Google PPC
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/meta-ads/"
                 >
                   Meta Ads
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/seo"
                 >
                   SEO & SMO
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/posts-and-reels"
                 >
                   Post & Reels
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/branding-and-ads"
                 >
                   Branding & Advertising
                 </Link>
@@ -95,43 +95,35 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Graphics
             </h4>
-            <ul className="styled-list mt-4">
-              <li>
+            <ul className="styled-list mt-4 slide-right">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/ui-ux"
                 >
                   UI/UX Designing
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
-                >
-                  Graphics Designing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/brochure-and-ppt"
                 >
                   Brochure Designing
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/logo-designing"
                 >
                   Logo Designing
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/post-designing"
                 >
                   Post Designing
                 </Link>
@@ -143,51 +135,52 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Software
             </h4>
-            <ul className="styled-list mt-4">
-              <li>
+            <ul className="styled-list mt-4 slide-right">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="https://www.zfour.in/"
+                  target="_blank"
                 >
                   HRMS Software
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/crm/"
                 >
                   CRM Software
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/website-development/"
                 >
                   Website Development
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/application-development/"
                 >
                   Application Development
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/software-development"
                 >
                   Software Development
                 </Link>
               </li>
-              <li>
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline duration-300"
-                  href=""
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  href="/Services/cloud-and-devops/"
                 >
                   Cloud & DevOps Services
                 </Link>
@@ -224,48 +217,84 @@ const Footer = () => {
 
             {/* row 2 for social icons */}
             <div className="flex flex-row justify-between mt-8">
-              <Image
-                src="/social-icons/facebook.svg"
-                alt="facebook icon"
-                width="10"
-                height="10"
-                className="w-[9%] h-[9%]"
-              />
-              <Image
-                src="/social-icons/x.svg"
-                alt="x icon"
-                width="10"
-                height="10"
-                className="w-[9%] h-[9%]"
-              />
-              <Image
-                src="/social-icons/insta.svg"
-                alt="instagram icon"
-                width="10"
-                height="10"
-                className="w-[9%] h-[9%]"
-              />
-              <Image
-                src="/social-icons/linkedin.svg"
-                alt="linkedin icon"
-                width="10"
-                height="10"
-                className="w-[9%] h-[9%]"
-              />
-              <Image
-                src="/social-icons/youtube.svg"
-                alt="youtube icon"
-                width="10"
-                height="10"
-                className="w-[9%] h-[9%]"
-              />
-              <Image
-                src="/social-icons/pinterest.svg"
-                alt="pinterest icon"
-                width="10"
-                height="10"
-                className="w-[9%] h-[9%]"
-              />
+              <Link
+                href="https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#"
+                className="w-[9%] h-[9%] hover:scale-120 duration-300"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/facebook.svg"
+                  alt="facebook icon"
+                  width="10"
+                  height="10"
+                  className="w-full h-full"
+                />
+              </Link>
+              <Link
+                href="https://x.com/PantheonDigi"
+                className="w-[9%] h-[9%] hover:scale-120 duration-300"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/x.svg"
+                  alt="x icon"
+                  width="10"
+                  height="10"
+                  className="w-full h-full"
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/pantheondigitals/"
+                className="w-[9%] h-[9%] hover:scale-120 duration-300"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/insta.svg"
+                  alt="instagram icon"
+                  width="10"
+                  height="10"
+                  className="w-full h-full"
+                />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0bqQBFX6_kAAAAZgwY1kQJ_M9XEiW2MgEn9JGXzKTXud2Y708iYiT2Mjj6zTHnUYndWoWgeHoi2QqDr1vYMG3a6d3hIcV5OOcdhKWInnOeyIh0J58gE15Ws1MwNTcsg57jWg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpantheon-digitals%2F"
+                className="w-[9%] h-[9%] hover:scale-120 duration-300"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/linkedin.svg"
+                  alt="linkedin icon"
+                  width="10"
+                  height="10"
+                  className="w-full h-full"
+                />
+              </Link>
+              <Link
+                href="https://www.youtube.com/@pantheondigital"
+                className="w-[9%] h-[9%] hover:scale-120 duration-300"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/youtube.svg"
+                  alt="youtube icon"
+                  width="10"
+                  height="10"
+                  className="w-full h-full"
+                />
+              </Link>
+              <Link
+                href="https://in.pinterest.com/pantheondigitals/"
+                className="w-[9%] h-[9%] hover:scale-120 duration-300"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/pinterest.svg"
+                  alt="pinterest icon"
+                  width="10"
+                  height="10"
+                  className="w-full h-full"
+                />
+              </Link>
             </div>
           </div>
         </div>
