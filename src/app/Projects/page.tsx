@@ -189,7 +189,7 @@ const Page = () => {
   return (
     <div className="w-full h-full flex flex-col items-center">
       {/* project section starts */}
-      <div className="bg-[#212121] w-[90%] sm:w-[80%] h-full mt-32 flex flex-col items-center rounded-4xl sm:p-8 p-4">
+      <div className="bg-[#212121] w-[90%] sm:w-[80%] h-full sm:mt-24 mt-32 flex flex-col items-center rounded-4xl sm:p-8 p-4">
         <h1 className="font-geometric font-bold text-white text-xl sm:text-5xl sm:mt-12 mt-4">
           Works & Projects
         </h1>

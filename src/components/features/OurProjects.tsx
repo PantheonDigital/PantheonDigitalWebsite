@@ -25,7 +25,7 @@ const OurProject = () => {
           subtitle="ZFour HRMS Software"
         />
         <Link
-          href="/"
+          href="/Projects/"
           className="absolute  px-1 py-5 md:px-4 md:py-11 rounded-full bg-white md:top-[50%] md:left-[50%] -top-20 left-[75%] z-20 md:-translate-x-[50%] -rotate-20 transition-all hover:scale-110"
         >
           <div className="border-2 border-red-500 absolute p-8 md:p-16 rounded-full translate-x-[-8%] md:translate-x-[-15%] translate-y-[-32%] md:translate-y-[-37%] custom-ping " />
