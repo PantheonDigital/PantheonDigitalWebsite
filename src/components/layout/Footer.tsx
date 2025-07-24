@@ -13,7 +13,7 @@ const Footer = () => {
         <PrimaryButton
           label="+91 93547 61565"
           type="normal"
-          href=""
+          href="tel: +91 93547 61565"
           className="rounded-lg"
         />
       </div>
