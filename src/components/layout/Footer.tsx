@@ -39,50 +39,50 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Digital Marketing
             </h4>
-            <ul className="styled-list mt-4 ">
-              <li className="hover:translate-x-5 duration-300">
+            <ul className="styled-list mt-4 slide-right">
+              <li className="">
                 <Link
-                  className="font-avenir-medium hover:underline   duration-300"
+                  className="flex w-fit font-avenir-medium hover:underline duration-300"
                   href="/Services/social-management/"
                 >
                   Social management
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/google-ppc/"
                 >
                   Google PPC
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/meta-ads/"
                 >
                   Meta Ads
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/seo"
                 >
                   SEO & SMO
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/posts-and-reels"
                 >
                   Post & Reels
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/branding-and-ads"
                 >
                   Branding & Advertising
@@ -96,33 +96,33 @@ const Footer = () => {
               Graphics
             </h4>
             <ul className="styled-list mt-4 slide-right">
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/ui-ux"
                 >
                   UI/UX Designing
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/brochure-and-ppt"
                 >
                   Brochure Designing
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/logo-designing"
                 >
                   Logo Designing
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/post-designing"
                 >
                   Post Designing
@@ -136,50 +136,50 @@ const Footer = () => {
               Software
             </h4>
             <ul className="styled-list mt-4 slide-right">
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="https://www.zfour.in/"
                   target="_blank"
                 >
                   HRMS Software
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/crm/"
                 >
                   CRM Software
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/website-development/"
                 >
                   Website Development
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/application-development/"
                 >
                   Application Development
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/software-development"
                 >
                   Software Development
                 </Link>
               </li>
-              <li className="hover:translate-x-5 duration-300">
+              <li className=" duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/cloud-and-devops/"
                 >
                   Cloud & DevOps Services

@@ -324,3 +324,12 @@ ul.styled-list li {
 .macos-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 } */
+.slide-right li {
+  width: fit-content;
+  transition: all 0.1s linear;
+}
+
+.slide-right > li:hover {
+  transform: translateX(10px);
+  /* transition: all 0.3s linear; */
+}
