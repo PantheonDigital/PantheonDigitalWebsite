@@ -65,7 +65,7 @@ const page = () => {
       />
 
       {/* what we provide for web dev */}
-      <div className="w-screen flex flex-col justify-center items-center bg-black rounded-b-4xl shadow-[0_0_100px_rgba(236,19,19,0.2)] translate-y-10 z-10">
+      <div className="w-screen flex flex-col justify-center items-center bg-black rounded-b-4xl shadow-[0_40px_100px_rgba(236,19,19,0.1)] translate-y-10 z-10">
         <WeProvide
           title={"What You Get with Pantheon CRM"}
           subtitle={"What we provide"}
