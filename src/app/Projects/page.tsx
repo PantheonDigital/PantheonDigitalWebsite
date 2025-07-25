@@ -179,9 +179,11 @@ const Page = () => {
     { id: 1, type: "All" },
     { id: 2, type: "Website" },
     { id: 3, type: "Application" },
-    { id: 4, type: "UI/UX" },
-    { id: 5, type: "Designing" },
-    { id: 6, type: "Marketing" },
+    { id: 4, type: "Software" },
+    { id: 5, type: "UI/UX" },
+    { id: 6, type: "Designing" },
+    { id: 7, type: "Ads" },
+    { id: 8, type: "Marketing" },
   ];
 
   const [type, setType] = useState(1);

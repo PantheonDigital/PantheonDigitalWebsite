@@ -113,7 +113,7 @@ const MissionVision = () => {
         {/* right side =========================== */}
         <ul className="w-full md:p-5 flex flex-col justify-between gap-4 md:gap-12">
           <li>
-            <p className="font-avenir-regular text-sm md:text-xl md:ml-4  text-white ">
+            <p className="font-avenir-light text-sm md:text-xl md:ml-4  text-white ">
               To harness the{" "}
               <span className="font-extrabold">
                 power of AI and emerging technologies
@@ -126,7 +126,7 @@ const MissionVision = () => {
           </li>
 
           <li>
-            <p className="font-avenir-regular text-sm md:text-xl md:ml-4  text-white ">
+            <p className="font-avenir-light text-sm md:text-xl md:ml-4  text-white ">
               By integrating intelligent automation, data-driven insights, and
               advanced digital solutions, we empower brands to create meaningful
               customer interactions, streamline operations, and unlock new
@@ -135,7 +135,7 @@ const MissionVision = () => {
           </li>
 
           <li>
-            <p className="font-avenir-regular text-sm md:text-xl md:ml-4  text-white ">
+            <p className="font-avenir-light text-sm md:text-xl md:ml-4  text-white ">
               As the digital landscape evolves, we remain agile and
               forward-thinking, ensuring that businesses not only keep pace with
               change but stay ahead of the curve. 

@@ -43,7 +43,7 @@ const PrimaryButton = ({
           />
         )}
         <span
-          className={`font-avenir-bold font-extrabold text-sm md:text-base  group-hover:scale-110 duration-300 ${
+          className={`font-avenir-bold  text-sm md:text-base  group-hover:scale-110 duration-300 ${
             type === "variant2" ? "text-black" : "text-white"
           }
         ${type === "red-outline" && "underline"}

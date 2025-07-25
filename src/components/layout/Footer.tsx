@@ -13,7 +13,7 @@ const Footer = () => {
         <PrimaryButton
           label="+91 93547 61565"
           type="normal"
-          href="tel: +91 93547 61565"
+          href=""
           className="rounded-lg"
         />
       </div>
@@ -40,7 +40,7 @@ const Footer = () => {
               Digital Marketing
             </h4>
             <ul className="styled-list mt-4 slide-right">
-              <li className="">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="flex w-fit font-avenir-medium hover:underline duration-300"
                   href="/Services/social-management/"
@@ -48,7 +48,7 @@ const Footer = () => {
                   Social management
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/google-ppc/"
@@ -56,7 +56,7 @@ const Footer = () => {
                   Google PPC
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/meta-ads/"
@@ -64,7 +64,7 @@ const Footer = () => {
                   Meta Ads
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/seo"
@@ -72,7 +72,7 @@ const Footer = () => {
                   SEO & SMO
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/posts-and-reels"
@@ -80,7 +80,7 @@ const Footer = () => {
                   Post & Reels
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/branding-and-ads"
@@ -96,7 +96,7 @@ const Footer = () => {
               Graphics
             </h4>
             <ul className="styled-list mt-4 slide-right">
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/ui-ux"
@@ -104,7 +104,7 @@ const Footer = () => {
                   UI/UX Designing
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/brochure-and-ppt"
@@ -112,7 +112,7 @@ const Footer = () => {
                   Brochure Designing
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/logo-designing"
@@ -120,7 +120,7 @@ const Footer = () => {
                   Logo Designing
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="/Services/post-designing"
@@ -136,7 +136,7 @@ const Footer = () => {
               Software
             </h4>
             <ul className="styled-list mt-4 slide-right">
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
                   className="font-avenir-medium hover:underline  duration-300"
                   href="https://www.zfour.in/"
@@ -145,41 +145,41 @@ const Footer = () => {
                   HRMS Software
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
                   href="/Services/crm/"
                 >
                   CRM Software
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
                   href="/Services/website-development/"
                 >
                   Website Development
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
                   href="/Services/application-development/"
                 >
                   Application Development
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
                   href="/Services/software-development"
                 >
                   Software Development
                 </Link>
               </li>
-              <li className=" duration-300">
+              <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
                   href="/Services/cloud-and-devops/"
                 >
                   Cloud & DevOps Services

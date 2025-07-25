@@ -12,11 +12,17 @@ const config: Config = {
   theme: {
     extend: {
       fontWeight: {
-        'avenir-medium': '500'
+        avenirThin: '100',
+        avenirLight: '300',
+        avenirRegular: '400',
+        avenirMedium: '500',
+        avenirDemi: '600',
+        avenirBold: '700',
+        avenirHeavy: '800',
       },
       fontFamily: {
-         avenir: ['"Avenir"', 'sans-serif'],
-          geometric: ['"Geometric"', "sans-serif"],
+          avenir: ["Avenir", 'sans-serif'],
+          geometric: ['Geometric', "sans-serif"],
       },
     },
   },

@@ -7,7 +7,7 @@ const GetInTouch = () => {
         Ready to bring your project to life with a touch of creative magic?
       </h1>
 
-      <p className="text-white font-avenir-medium text-sm sm:text-2xl mt-4 sm:mt-8 text-center sm:w-[70%] w-full ">
+      <p className="text-white font-avenir-medium text-sm sm:text-2xl mt-4 sm:mt-8 text-center sm:w-[60%] w-full ">
         Let’s connect and bring bold ideas to life✨! I’m available for
         full-time or part-time opportunities where design meets purpose and
         passion.

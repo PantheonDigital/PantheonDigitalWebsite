@@ -86,7 +86,7 @@ const Header = () => {
               label="Blogs"
             />
             <PrimaryButton
-              href=""
+              href="/Contact_Us/"
               onClick={closeDropDownMenu}
               leftIcon="/Contact-Us.svg"
               label="Contact Us"
@@ -98,10 +98,11 @@ const Header = () => {
         {/* dropdown body -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-= */}
         <button
           onClick={() => setIsDropDownOpen(false)}
-          className={`${isDropDownOpen
-            ? "opacity-100 translate-y-3 block"
-            : "opacity-0 -translate-y-3 hidden"
-            } absolute flex w-screen h-screen justify-center duration-300 bg-[#00000080] top-23 z-[51]`}
+          className={`${
+            isDropDownOpen
+              ? "opacity-100 translate-y-3 block"
+              : "opacity-0 -translate-y-3 hidden"
+          } absolute flex w-screen h-screen justify-center duration-300 bg-[#00000080] top-23 z-[51]`}
         >
           <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[80.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
@@ -617,8 +618,9 @@ const Header = () => {
               src="/MenuIcon.svg"
               width="20"
               height="20"
-              className={`w-[20] h-[20] duration-300 ${isMobileMenuOpen ? "-translate-y-100" : "translate-y-0"
-                }`}
+              className={`w-[20] h-[20] duration-300 ${
+                isMobileMenuOpen ? "-translate-y-100" : "translate-y-0"
+              }`}
               alt="menu icon"
             />
           </button>
@@ -633,8 +635,9 @@ const Header = () => {
         )}
 
         <div
-          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[60] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-x-hidden overflow-y-scroll  ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[60] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-x-hidden overflow-y-scroll  ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         >
           <button
             className="absolute top-1 -right-1"
@@ -1009,7 +1012,7 @@ const Header = () => {
             />
 
             <PrimaryButton
-              href=""
+              href="/Contact_Us/"
               onClick={closeMobileMenu}
               leftIcon="/Contact-Us.svg"
               label="Contact Us"
