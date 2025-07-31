@@ -4,7 +4,7 @@ import Link from "next/link";
 interface PrimaryButtonProps {
   leftIcon?: string;
   rightIcon?: string;
-  type?: "outline" | "normal" | "variant2" | "red-outline";
+  type?: "outline" | "normal" | "variant2" | "red-outline" | "gradient-outline";
   label: string;
   href?: string;
   onClick?: () => void;
@@ -20,11 +20,11 @@ const PrimaryButton = ({
   onClick,
   className = "",
 }: PrimaryButtonProps) => {
-  const commonStyles = ` flex cursor-pointer text-nowrap flex-row items-center justify-between gap-3 ${className} ${
+  const commonStyles = `flex cursor-pointer text-nowrap flex-row items-center justify-between gap-2 text-sm ${className} ${
     type === "normal" &&
-    "button rounded-3xl shadow-[2px_2px_0px_rgba(246,19,19,0.4)] shadow-red-900 hover:ring-2 ring-red-500 border-l-2 border-t-2 border-black duration-300 hover:border-2"
-  } ${type === "variant2" && "btn-variant2"}
-    ${type === "outline" && "btn-outline group"}
+    "button rounded-3xl px-4 py-2 shadow-[2px_2px_0px_rgba(246,19,19,0.4)] shadow-red-900 hover:ring-2 ring-red-500 border-l-2 border-t-2 border-black duration-300 hover:border-2"
+  } ${type === "variant2" && "btn-variant2 px-4 py-2"}
+    ${type === "outline" && "btn-outline group px-4 py-2"}
     ${
       type === "red-outline" &&
       "px-8 py-4 shadow-[1px_1px_5px_rgba(246,19,19,0.4)] shadow-[#F61313] rounded-2xl"
@@ -32,18 +32,18 @@ const PrimaryButton = ({
 
   const content = (
     <>
-      <div className="flex gap-3">
+      <div className="flex gap-2 items-center">
         {leftIcon && (
           <Image
             src={leftIcon}
             alt="left icon"
-            width={20}
-            height={20}
-            className="group-hover:scale-150 duration-300"
+            width={16}
+            height={16}
+            className="group-hover:scale-125 duration-300"
           />
         )}
         <span
-          className={`font-avenir-bold  text-sm md:text-base  group-hover:scale-110 duration-300 ${
+          className={`font-avenir-bold text-sm group-hover:scale-105 duration-300 ${
             type === "variant2" ? "text-black" : "text-white"
           }
         ${type === "red-outline" && "underline"}
@@ -54,11 +54,11 @@ const PrimaryButton = ({
       </div>
       {rightIcon && (
         <Image
-          className="ml-2 justify-self-end-safe group-hover:scale-110 duration-300"
+          className="ml-2 group-hover:scale-105 duration-300"
           src={rightIcon}
           alt="right icon"
-          width={20}
-          height={20}
+          width={16}
+          height={16}
         />
       )}
     </>

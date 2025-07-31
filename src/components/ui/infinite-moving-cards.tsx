@@ -111,16 +111,16 @@ export const InfiniteMovingCards = ({
                   />
                   {/* title and name */}
                   <div className="ml-2 md:ml-4 flex flex-col">
-                    <span className=" font-avenir-bold font-bold leading-[1.6] text-base text-white">
+                    <span className="font-avenir-bold font-bold leading-[1.6] text-md sm:text-base text-white">
                       {item.name}
                     </span>
-                    <span className="text-lg md:text-xs leading-[1.6] font-avenir-medium font-medium text-white">
+                    <span className="sm:text-lg text-xs leading-[1.6] font-avenir-medium font-medium text-white">
                       {item.title}
                     </span>
                   </div>
                 </div>
 
-                <span className="relative top-2 z-20 text-xs md:text-sm leading-[1.6] font-avenir-medium text-white ">
+                <span className="relative top-2 z-20 text-xs sm:text-sm leading-[1.6] font-avenir-medium text-white ">
                   {item.quote}
                 </span>
 

@@ -3,8 +3,11 @@ import Image from "next/image";
 import PrimaryButton from "../ui/PrimaryButton";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+  console.log(pathname);
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [isMobileDropDown, setIsMobileDropDown] = useState<boolean>(false);
@@ -63,11 +66,20 @@ const Header = () => {
           {/* button list */}
           <div className="flex flex-row gap-3">
             <PrimaryButton
+              href="/Projects/"
+              label="Projects"
+              type="outline"
+              className={
+                pathname === "/Projects" ? "ring-2 ring-white" : "ring-0"
+              }
+            />
+            <PrimaryButton
               onClick={closeDropDownMenu}
               href="/About/"
               leftIcon="/About-Us.svg"
               type="outline"
               label="About Us"
+              className={pathname === "/About" ? "ring-2 ring-white" : "ring-0"}
             />
             <PrimaryButton
               onClick={toggleServices}
@@ -84,13 +96,18 @@ const Header = () => {
               leftIcon="/Blogs.svg"
               type="outline"
               label="Blogs"
+              className={pathname === "/Blogs" ? "ring-2 ring-white" : "ring-0"}
             />
             <PrimaryButton
               href="/Contact_Us/"
               onClick={closeDropDownMenu}
               leftIcon="/Contact-Us.svg"
               label="Contact Us"
-              className="rounded-3xl"
+              className={`rounded-3xl ${
+                pathname === "/Contact_Us"
+                  ? "border-2 shadow-none ring-2"
+                  : "ring-0"
+              }`}
             />
           </div>
         </header>
@@ -117,323 +134,151 @@ const Header = () => {
             {/* category */}
             <div className="grid grid-cols-3 mt-10 gap-6">
               {/* first service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold text-white text-xl font-bold text-left">
                   Digital Marketing
                 </h1>
-                <div className="my-4 border-[0.5] border-white"></div>
+                <div className="my-4 border-[0.5px] border-white"></div>
                 <ul className="text-left mt-4 h-full styled-list">
-                  <li>
-                    <Link
-                      onClick={() => setIsDropDownOpen(false)}
-                      href="/Services/social-management/"
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Social Media Management
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/google-ppc/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white ">
-                        Google PPC
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/meta-ads/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Meta Ads Campaign
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/seo/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        SEO & SMO
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/posts-and-reels/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Posts & Reels
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/branding-and-ads/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Branding & Advertising
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
+                  {[
+                    {
+                      href: "/Services/social-management",
+                      label: "Social Media Management",
+                    },
+                    { href: "/Services/google-ppc", label: "Google PPC" },
+                    { href: "/Services/meta-ads", label: "Meta Ads Campaign" },
+                    { href: "/Services/seo", label: "SEO & SMO" },
+                    {
+                      href: "/Services/posts-and-reels",
+                      label: "Posts & Reels",
+                    },
+                    {
+                      href: "/Services/branding-and-ads",
+                      label: "Branding & Advertising",
+                    },
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        onClick={() => setIsDropDownOpen(false)}
+                        href={link.href}
+                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                          pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
+                      >
+                        <span className="font-avenir-medium font-medium text-base text-white">
+                          {link.label}
+                        </span>
+                        <Image
+                          src="/ArrowRight.svg"
+                          alt="arrow right"
+                          width="10"
+                          height="10"
+                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                        />
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               {/* first service close */}
 
               {/* second service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
                   Graphic Designing
                 </h1>
-                <div className="my-4 border-[0.5] border-white"></div>
+                <div className="my-4 border-[0.5px] border-white"></div>
                 <ul className="text-left mt-4 h-full styled-list">
-                  <li>
-                    <Link
-                      href="/Services/ui-ux"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        UX/UI Design
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/brochure-and-ppt/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Brochure & PPT
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/logo-designing/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Logo Design
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/post-designing/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Posts & Banner
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
+                  {[
+                    { href: "/Services/ui-ux", label: "UX/UI Design" },
+                    {
+                      href: "/Services/brochure-and-ppt",
+                      label: "Brochure & PPT",
+                    },
+                    { href: "/Services/logo-designing", label: "Logo Design" },
+                    {
+                      href: "/Services/post-designing",
+                      label: "Posts & Banner",
+                    },
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        onClick={() => setIsDropDownOpen(false)}
+                        href={link.href}
+                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                          pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
+                      >
+                        <span className="font-avenir-medium font-medium text-base text-white">
+                          {link.label}
+                        </span>
+                        <Image
+                          src="/ArrowRight.svg"
+                          alt="arrow right"
+                          width="10"
+                          height="10"
+                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                        />
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               {/* second service close */}
 
               {/* third service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
                   Tech & Software
                 </h1>
-                <div className="my-4 border-[0.5] border-white"></div>
+                <div className="my-4 border-[0.5px] border-white"></div>
                 <ul className="text-left mt-4 h-full styled-list">
-                  <li>
-                    <Link
-                      href="https://www.zfour.in/"
-                      target="_blank"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        HRMS Software
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/crm"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        CRM Software
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/website-development/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Website Development
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/application-development"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Application Development
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/software-development/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Software Development
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Services/cloud-and-devops/"
-                      onClick={() => setIsDropDownOpen(false)}
-                      className="flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group"
-                    >
-                      <span className="font-avenir-medium font-medium text-base text-white">
-                        Cloud & DevOps Services
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-[10%] h-[10%] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
-                  </li>
+                  {[
+                    {
+                      href: "https://www.zfour.in/",
+                      label: "HRMS Software",
+                      target: "_blank",
+                    },
+                    { href: "/Services/crm", label: "CRM Software" },
+                    {
+                      href: "/Services/website-development",
+                      label: "Website Development",
+                    },
+                    {
+                      href: "/Services/application-development",
+                      label: "Application Development",
+                    },
+                    {
+                      href: "/Services/software-development",
+                      label: "Software Development",
+                    },
+                    {
+                      href: "/Services/cloud-and-devops",
+                      label: "Cloud & DevOps Services",
+                    },
+                  ].map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        onClick={() => setIsDropDownOpen(false)}
+                        href={link.href}
+                        target={link.target || "_self"}
+                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                          pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
+                      >
+                        <span className="font-avenir-medium font-medium text-base text-white">
+                          {link.label}
+                        </span>
+                        <Image
+                          src="/ArrowRight.svg"
+                          alt="arrow right"
+                          width="10"
+                          height="10"
+                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                        />
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               {/* third service close */}
@@ -553,7 +398,7 @@ const Header = () => {
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium hover:font-avenir-bold font-medium text-base text-white underline">
+                  <span className="font-avenir-medium font-medium text-base text-white underline underline-offset-4">
                     Privacy Policy
                   </span>
                 </Link>
@@ -562,7 +407,7 @@ const Header = () => {
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium hover:font-avenir-bold font-medium  text-base text-white underline">
+                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
                     Terms & Condition
                   </span>
                 </Link>
@@ -571,7 +416,7 @@ const Header = () => {
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium hover:font-avenir-bold font-medium  text-base text-white underline">
+                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
                     Cookie Policy
                   </span>
                 </Link>
@@ -580,7 +425,7 @@ const Header = () => {
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium hover:font-avenir-bold font-medium  text-base text-white underline">
+                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
                     Blogs
                   </span>
                 </Link>

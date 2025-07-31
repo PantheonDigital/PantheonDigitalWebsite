@@ -390,6 +390,18 @@ html::-webkit-scrollbar-thumb {
   min-height: 50px;
   margin-top: 12px;
 }
+.error-input-box {
+  border: 0.5px solid #ff0000;
+  background-color: #210000;
+  font-family: "avenir", "sans-serif";
+  font-weight: bold;
+  color: white;
+  padding: 4px 9px;
+  outline: none;
+  border-radius: 6px;
+  min-height: 50px;
+  margin-top: 12px;
+}
 
 .input-box:active {
   border: 0.5px solid #ccc;

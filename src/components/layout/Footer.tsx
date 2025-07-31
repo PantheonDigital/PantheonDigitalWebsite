@@ -25,7 +25,7 @@ const Footer = () => {
           alt=""
           width="0"
           height="0"
-          className="md:w-[25%] md:h-[20%] w-[240] h-[30] my-8"
+          className="md:w-[25%] md:h-[20%] w-[240] h-[30] mt-8"
         />
         <h1 className="mx-10 text-center font-avenir-regular text-base text-white">
           Passionate digital crafting, limitless tomorrows. Join us in shaping
@@ -39,10 +39,10 @@ const Footer = () => {
             <h4 className="font-avenir-bold text-white text-xl font-bold text-center md:text-left">
               Digital Marketing
             </h4>
-            <ul className="styled-list mt-4 slide-right">
+            <ul className="styled-list mt-4">
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="flex w-fit font-avenir-medium hover:underline duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4 duration-300"
                   href="/Services/social-management/"
                 >
                   Social management
@@ -50,7 +50,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/google-ppc/"
                 >
                   Google PPC
@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/meta-ads/"
                 >
                   Meta Ads
@@ -66,7 +66,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/seo"
                 >
                   SEO & SMO
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/posts-and-reels"
                 >
                   Post & Reels
@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/branding-and-ads"
                 >
                   Branding & Advertising
@@ -98,7 +98,7 @@ const Footer = () => {
             <ul className="styled-list mt-4 slide-right">
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/ui-ux"
                 >
                   UI/UX Designing
@@ -106,7 +106,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/brochure-and-ppt"
                 >
                   Brochure Designing
@@ -114,7 +114,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/logo-designing"
                 >
                   Logo Designing
@@ -122,7 +122,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="/Services/post-designing"
                 >
                   Post Designing
@@ -138,7 +138,7 @@ const Footer = () => {
             <ul className="styled-list mt-4 slide-right">
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline  duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4  duration-300"
                   href="https://www.zfour.in/"
                   target="_blank"
                 >
@@ -147,7 +147,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4 hover:translate-x-10 duration-300"
                   href="/Services/crm/"
                 >
                   CRM Software
@@ -155,7 +155,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4 hover:translate-x-10 duration-300"
                   href="/Services/website-development/"
                 >
                   Website Development
@@ -163,7 +163,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4 hover:translate-x-10 duration-300"
                   href="/Services/application-development/"
                 >
                   Application Development
@@ -171,7 +171,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4 hover:translate-x-10 duration-300"
                   href="/Services/software-development"
                 >
                   Software Development
@@ -179,7 +179,7 @@ const Footer = () => {
               </li>
               <li className="hover:translate-x-5 duration-300">
                 <Link
-                  className="font-avenir-medium hover:underline hover:translate-x-10 duration-300"
+                  className="font-avenir-medium hover:underline underline-offset-4 hover:translate-x-10 duration-300"
                   href="/Services/cloud-and-devops/"
                 >
                   Cloud & DevOps Services
@@ -302,30 +302,30 @@ const Footer = () => {
         {/* for privacy policy and terms and condition */}
         <div className="w-[90%] md:w-[80%] flex justify-evenly mt-1 sm:mt-4">
           <Link href="">
-            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline underline-offset-4 hover:scale-110 duration-300">
               Privacy & Policy
             </h4>
           </Link>
           <Link href="">
-            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline underline-offset-4 hover:scale-110 duration-300">
               Terms & Condition
             </h4>
           </Link>
           <Link href="">
-            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline underline-offset-4 hover:scale-110 duration-300">
               Cookie Policy
             </h4>
           </Link>
           <Link href="">
-            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline hover:scale-110 duration-300">
+            <h4 className="text-white font-avenir-demi text-xs md:text-base md:px-2 py-8 text-center underline underline-offset-4 hover:scale-110 duration-300">
               Blogs
             </h4>
           </Link>
         </div>
 
         {/* for copywrite and other details */}
-        <div className="bg-transparent border-0 md:border-1 md:bg-black rounded-full w-[80%]  sm:mt-4 md:mb-4 border-gray-700">
-          <h4 className="text-white font-avenir-demi text-sm sm:text-xl px-1 pb-2 sm:py-8 text-center">
+        <div className="bg-transparent border-0 md:border-1 md:bg-black rounded-full w-[80%]  sm:mt-8 md:mb-2 border-gray-700">
+          <h4 className="text-white font-avenir-demi text-sm sm:text-xl px-1 sm:py-4 text-center">
             CIN: U74999DL2021PTC379806 © Copyright 2016 - 2025, INT. All rights
             reserved.
           </h4>

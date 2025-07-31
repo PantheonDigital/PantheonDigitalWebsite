@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import GetInTouch from "@/components/features/GetInTouch";
 import Testimonials from "@/components/features/Testimonials";
@@ -24,154 +24,133 @@ const Page = () => {
       type: 2,
       title: "Loading Walla",
       category: "Website Development",
-      img: "/Project1.svg",
+      img: "/projects/1.svg",
     },
     {
       id: 2,
       type: 3,
       title: "Loading Walla",
       category: "Application Development",
-      img: "/Project1.svg",
+      img: "/projects/2.svg",
     },
     {
       id: 3,
       type: 2,
       title: "Utility Choice",
       category: "Website Development",
-      img: "/Project1.svg",
+      img: "/projects/3.svg",
     },
     {
       id: 4,
       type: 4,
       title: "Scale CRMS",
       category: "Software Development",
-      img: "/Project1.svg",
+      img: "/projects/4.svg",
     },
     {
       id: 5,
       type: 4,
       title: "Employee Track CRMS",
       category: "Software Development",
-      img: "/Project1.svg",
+      img: "/projects/5.svg",
     },
     {
       id: 6,
       type: 4,
       title: "ZFour HRMS",
       category: "Software Development",
-      img: "/Project1.svg",
+      img: "/projects/6.svg",
     },
     {
       id: 7,
       type: 2,
       title: "Britannia Nutrition",
       category: "Website Development",
-      img: "/Project1.svg",
+      img: "/projects/7.svg",
     },
     {
       id: 8,
       type: 2,
       title: "Power Market",
       category: "Website Development",
-      img: "/Project1.svg",
+      img: "/projects/8.svg",
     },
     {
       id: 9,
       type: 5,
       title: "Thought Power",
       category: "UI/UX",
-      img: "/Project1.svg",
+      img: "/projects/9.svg",
     },
     {
       id: 10,
       type: 6,
       title: "Thought Power",
       category: "Logo Designing",
-      img: "/Project1.svg",
+      img: "/projects/10.svg",
     },
     {
       id: 11,
       type: 6,
       title: "Prashidhi",
       category: "Logo Designing",
-      img: "/Project1.svg",
+      img: "/projects/11.svg",
     },
     {
       id: 12,
       type: 2,
       title: "Connecting VoIP",
       category: "Website Development",
-      img: "/Project1.svg",
+      img: "/projects/12.svg",
     },
     {
       id: 13,
       type: 2,
       title: "Dsmart Services",
       category: "Website Development",
-      img: "/Project1.svg",
+      img: "/projects/13.svg",
     },
     {
       id: 14,
       type: 2,
       title: "Select My College",
       category: "Website Development",
-      img: "/Project1.svg",
+      img: "/projects/14.svg",
     },
     {
       id: 15,
       type: 6,
       title: "Select My College",
       category: "Logo Designing",
-      img: "/Project1.svg",
+      img: "/projects/15.svg",
     },
     {
       id: 16,
-      type: 7,
-      title: "Utility Choice",
-      category: "Ads",
-      img: "/Project1.svg",
+      type: 6,
+      title: "Power Market",
+      category: "Logo Designing",
+      img: "/projects/16.svg",
     },
     {
       id: 17,
-      type: 7,
-      title: "Power Market",
-      category: "Ads",
-      img: "/Project1.svg",
+      type: 6,
+      title: "Utility Choice",
+      category: "Logo Designing",
+      img: "/projects/17.svg",
     },
     {
       id: 18,
-      type: 7,
-      title: "ZFour",
-      category: "Ads",
-      img: "/Project1.svg",
-    },
-    {
-      id: 19,
-      type: 7,
-      title: "Power Market",
-      category: "Ads",
-      img: "/Project1.svg",
-    },
-    {
-      id: 20,
-      type: 6,
-      title: "Select My College",
-      category: "Logo Designing",
-      img: "/Project1.svg",
-    },
-    {
-      id: 21,
       type: 6,
       title: "Loading Walla",
       category: "Logo Designing",
-      img: "/Project1.svg",
+      img: "/projects/18.svg",
     },
     {
-      id: 22,
-      type: 8,
-      title: "Social post designing",
-      category: "Marketing",
-      img: "/Project1.svg",
+      id: 19,
+      type: 5,
+      title: "GoHotels UI",
+      category: "UI/UX",
+      img: "/projects/19.svg",
     },
   ];
 
@@ -182,14 +161,61 @@ const Page = () => {
     { id: 4, type: "Software" },
     { id: 5, type: "UI/UX" },
     { id: 6, type: "Designing" },
-    { id: 7, type: "Ads" },
-    { id: 8, type: "Marketing" },
+    { id: 7, type: "Marketing" },
   ];
 
   const [type, setType] = useState(1);
+  const [isPopUpOpen, setIsPopUpOpen] = useState<boolean>(false);
+  const [popUpImg, setPopUpImg] = useState<string>("/Logo.svg");
+
+  useEffect(() => {
+    if (isPopUpOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isPopUpOpen]);
 
   return (
     <div className="w-full h-full flex flex-col items-center">
+      {/* image pop up */}
+      <button
+        className={`fixed left-[50%] top-[50%] translate-[-50%]  bg-[#00000080] duration-300  ${
+          isPopUpOpen
+            ? "opacity-100 z-[99] w-screen h-screen"
+            : "opacity-0 w-0 h-0 -z-10 "
+        }`}
+      >
+        <button
+          className="w-10 h-10 rounded-full absolute bg-white top-5 right-13 z-[100] border border-red-800 hover:scale-110 duration-300 cursor-pointer"
+          onClick={() => setIsPopUpOpen(false)}
+        >
+          <Image
+            src="/crossIcon.svg"
+            alt="cross icon"
+            width={0}
+            height={0}
+            className="bg-red-500 w-full h-full rounded-full"
+          />
+        </button>
+        <div
+          className={`absolute w-[90%] p-8 rounded-3xl h-[90%] left-[50%] top-[50%] translate-[-50%] bg-[#d8d8d8]`}
+        >
+          <Image
+            src={popUpImg}
+            alt={popUpImg}
+            width="0"
+            height="0"
+            className="w-full h-full"
+          />
+        </div>
+      </button>
+      {/* image pop up close */}
+
       {/* project section starts */}
       <div className="bg-[#212121] w-[90%] sm:w-[80%] h-full sm:mt-24 mt-32 flex flex-col items-center rounded-4xl sm:p-8 p-4">
         <h1 className="font-geometric font-bold text-white text-xl sm:text-5xl sm:mt-12 mt-4">
@@ -202,15 +228,15 @@ const Page = () => {
         </p>
 
         {/* all types */}
-        <div className="flex w-full  mt-12 sm:mt-24 pb-2 sm:pb-4 overflow-y-scroll">
+        <div className="flex w-full mt-12 sm:mt-24 pb-2 sm:pb-4 overflow-y-scroll">
           {list.map((item) => (
             <button
               key={item.id}
-              className="ml-4"
+              className="ml-6 "
               onClick={() => setType(item.id)}
             >
               <span
-                className={`font-avenir-demi sm:text-xl text-xs cursor-pointer duration-300 ${
+                className={`font-avenir-demi sm:text-xl text-xs cursor-pointer duration-300 hover:underline underline-offset-4 ${
                   type === item.id ? "text-[#FF4D4D] underline" : "text-white"
                 } `}
               >
@@ -223,18 +249,22 @@ const Page = () => {
         <div className="w-full mt-4 sm:mt-12 grid sm:grid-cols-3 grid-cols-1 gap-8 place-items-center">
           {type === 1
             ? projects.map((item) => (
-                <div
+                <button
+                  onClick={() => {
+                    setIsPopUpOpen(true);
+                    setPopUpImg(item.img);
+                  }}
                   key={item.id}
-                  className="min-w-[282] min-h-[241] w-full h-auto flex flex-col rounded-3xl overflow-clip"
+                  className="max-w-[282] min-w-[200] h-[241] w-full  flex flex-col rounded-2xl overflow-clip group cursor-pointer"
                 >
                   {/* image */}
-                  <div className="w-full h-full min-w-full min-h-[60%] bg-white">
+                  <div className="w-full h-full min-w-full min-h-[60%] p-6 pb-0 bg-[#D9D9D9] overflow-clip">
                     <Image
                       src={item.img}
                       alt={item.title + "image"}
                       width="0"
                       height="0"
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain group-hover:scale-110 duration-300"
                     />
                   </div>
 
@@ -242,33 +272,35 @@ const Page = () => {
                     <h4 className="text-white font-avenir-demi text-sm sm:text-xl">
                       {item.title}
                     </h4>
-                    <p className="text-white opacity-50 font-avenir-light sm:text-md text-xs">
+                    <p className="text-[#A8A8A8] font-avenir-light sm:text-sm text-xs">
                       {item.category}
                     </p>
                   </div>
-                </div>
+                </button>
               ))
             : projects
                 .filter((item) => item.type === type)
                 .map((item) => (
                   <div
                     key={item.id}
-                    className="min-w-[282] min-h-[241] w-full h-auto flex flex-col rounded-3xl overflow-clip"
+                    className="max-w-[282] min-w-[200] h-[241] w-full flex flex-col rounded-2xl group overflow-clip"
                   >
                     {/* image */}
-                    <Image
-                      src={item.img}
-                      alt=""
-                      width="0"
-                      height="0"
-                      className="w-full h-full min-w-full min-h-[60%] bg-white"
-                    />
+                    <div className="w-full h-full min-w-full min-h-[60%] p-6 pb-0 bg-[#D9D9D9] overflow-clip">
+                      <Image
+                        src={item.img}
+                        alt=""
+                        width="0"
+                        height="0"
+                        className="w-full h-full min-w-full min-h-[60%] group-hover:scale-110 duration-300"
+                      />
+                    </div>
 
                     <div className="w-full flex flex-col bg-black p-2 sm:p-4">
                       <h4 className="text-white font-avenir-demi text-sm sm:text-xl">
                         {item.title}
                       </h4>
-                      <p className="text-white opacity-50 font-avenir-light sm:text-md text-xs">
+                      <p className="text-[#a8a8a8] font-avenir-light sm:text-sm text-xs">
                         {item.category}
                       </p>
                     </div>
