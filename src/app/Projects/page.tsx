@@ -183,7 +183,7 @@ const Page = () => {
   return (
     <div className="w-full h-full flex flex-col items-center">
       {/* image pop up */}
-      <button
+      <div
         className={`fixed left-[50%] top-[50%] translate-[-50%]  bg-[#00000080] duration-300  ${
           isPopUpOpen
             ? "opacity-100 z-[99] w-screen h-screen"
@@ -213,7 +213,7 @@ const Page = () => {
             className="w-full h-full"
           />
         </div>
-      </button>
+      </div>
       {/* image pop up close */}
 
       {/* project section starts */}
@@ -249,53 +249,107 @@ const Page = () => {
         <div className="w-full mt-4 sm:mt-12 grid sm:grid-cols-3 grid-cols-1 gap-8 place-items-center">
           {type === 1
             ? projects.map((item) => (
-                <button
+                <div
+                  key={item.id}
                   onClick={() => {
                     setIsPopUpOpen(true);
                     setPopUpImg(item.img);
                   }}
-                  key={item.id}
-                  className="max-w-[282] min-w-[200] h-[241] w-full  flex flex-col rounded-2xl overflow-clip group cursor-pointer"
+                  className="max-w-[282px] cursor-pointer min-w-[200px] h-[241px] w-full flex flex-col rounded-2xl group overflow-hidden"
                 >
-                  {/* image */}
-                  <div className="w-full h-full min-w-full min-h-[60%] p-6 pb-0 bg-[#D9D9D9] overflow-clip">
+                  {/* Image Section */}
+                  <div className="relative w-full h-full min-h-[60%] bg-[#D9D9D9] overflow-hidden p-6 pb-0">
+                    {/* Image */}
                     <Image
                       src={item.img}
-                      alt={item.title + "image"}
-                      width="0"
-                      height="0"
-                      className="w-full h-full object-contain group-hover:scale-110 duration-300"
+                      alt=""
+                      width={0}
+                      height={0}
+                      className="w-full h-full min-w-full min-h-[60%] group-hover:scale-110 duration-300 object-contain"
                     />
+
+                    {/* Backdrop on hover */}
+                    <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+
+                    {/* Arrow Button */}
+                    <div className="absolute top-[50%] left-[50%] translate-[-50%] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setIsPopUpOpen(true);
+                          setPopUpImg(item.img);
+                        }}
+                        className="cursor-pointer"
+                      >
+                        <Image
+                          src="/arrow-up.svg"
+                          alt="arrow right"
+                          width="0"
+                          height="0"
+                          className="w-[40] h-auto rotate-30 "
+                        />
+                      </button>
+                    </div>
                   </div>
 
+                  {/* Text Section */}
                   <div className="w-full flex flex-col bg-black p-2 sm:p-4">
                     <h4 className="text-white font-avenir-demi text-sm sm:text-xl">
                       {item.title}
                     </h4>
-                    <p className="text-[#A8A8A8] font-avenir-light sm:text-sm text-xs">
+                    <p className="text-[#a8a8a8] font-avenir-light sm:text-sm text-xs">
                       {item.category}
                     </p>
                   </div>
-                </button>
+                </div>
               ))
             : projects
                 .filter((item) => item.type === type)
                 .map((item) => (
                   <div
                     key={item.id}
-                    className="max-w-[282] min-w-[200] h-[241] w-full flex flex-col rounded-2xl group overflow-clip"
+                    onClick={() => {
+                      setIsPopUpOpen(true);
+                      setPopUpImg(item.img);
+                    }}
+                    className="max-w-[282px] cursor-pointer min-w-[200px] h-[241px] w-full flex flex-col rounded-2xl group overflow-hidden"
                   >
-                    {/* image */}
-                    <div className="w-full h-full min-w-full min-h-[60%] p-6 pb-0 bg-[#D9D9D9] overflow-clip">
+                    {/* Image Section */}
+                    <div className="relative w-full h-full min-h-[60%] bg-[#D9D9D9] overflow-hidden p-6 pb-0">
+                      {/* Image */}
                       <Image
                         src={item.img}
                         alt=""
-                        width="0"
-                        height="0"
-                        className="w-full h-full min-w-full min-h-[60%] group-hover:scale-110 duration-300"
+                        width={0}
+                        height={0}
+                        className="w-full h-full min-w-full min-h-[60%] group-hover:scale-110 duration-300 object-contain"
                       />
+
+                      {/* Backdrop on hover */}
+                      <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+
+                      {/* Yellow Arrow Button */}
+                      <div className="absolute top-[50%] left-[50%] translate-[-50%] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setIsPopUpOpen(true);
+                            setPopUpImg(item.img);
+                          }}
+                          className="cursor-pointer"
+                        >
+                          <Image
+                            src="/arrow-up.svg"
+                            alt="arrow right"
+                            width="0"
+                            height="0"
+                            className="w-[40] h-auto rotate-30 "
+                          />
+                        </button>
+                      </div>
                     </div>
 
+                    {/* Text Section */}
                     <div className="w-full flex flex-col bg-black p-2 sm:p-4">
                       <h4 className="text-white font-avenir-demi text-sm sm:text-xl">
                         {item.title}

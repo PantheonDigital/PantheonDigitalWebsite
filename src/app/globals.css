@@ -83,6 +83,9 @@
 }
 
 :root {
+  /* my custom cursor */
+  /* --my-cursor: url("/cursor.png"), pointer; */
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
@@ -407,6 +410,6 @@ html::-webkit-scrollbar-thumb {
   border: 0.5px solid #ccc;
 }
 
-/* html {
-  font-family: "avenir", "sans-serif";
-} */
+.custom-cursor {
+  cursor: url("/cursor.png"), auto;
+}

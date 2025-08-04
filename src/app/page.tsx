@@ -41,7 +41,7 @@ export default function Home() {
         />
 
         {/* informational card */}
-        <div className="w-screen relative bg-gradient-to-b from-[#0000] to-[#000]  h-auto rounded-b-4xl flex items-center justify-center pb-8 shadow-2xl/10 shadow-[#F61313] md:pb-32 mt-8 md:pt-8 z-40 translate-y-12">
+        <div className="w-screen  relative bg-gradient-to-b from-[#0000] to-[#000]  h-auto rounded-b-4xl flex items-center justify-center pb-8 shadow-2xl/10 shadow-[#F61313] md:pb-32 mt-8 md:pt-8 z-40 translate-y-12">
           <div className="w-[90%] md:w-[80%] md:grid md:grid-cols-2 sm:items-center place-items-center flex flex-col gap-8 ">
             <Card
               href="/Services/seo/"

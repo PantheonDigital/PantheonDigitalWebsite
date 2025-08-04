@@ -19,11 +19,12 @@ const Card = ({
   return (
     <div
       key={ckey}
-      className={` bg-white rounded-2xl group p-4 ${
-        type === "square"
-          ? "w-[100%] md:min-h-[300px] h-auto"
-          : "md:w-[37vw] md:min-h-[240] w-[90vw]"
-      }`}
+      className={`relative custom-cursor bg-white 
+        rounded-2xl group p-4 ${
+          type === "square"
+            ? "w-[100%] md:min-h-[300px] h-auto"
+            : "md:w-[37vw] md:min-h-[240] w-[90vw]"
+        }`}
     >
       <Image
         src={imgHref}
@@ -52,7 +53,7 @@ const Card = ({
             height="0"
             className={`md:opacity-100 opacity-0 w-[7%] h-[7%] translate-x-20 ${
               type === "normal" &&
-              "group-hover:translate-x-0 group-hover:rotate-30"
+              "group-hover:translate-x-0  group-hover:rotate-30"
             } duration-300`}
           />
           <Image

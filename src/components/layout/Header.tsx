@@ -91,7 +91,8 @@ const Header = () => {
               className={isDropDownOpen ? "bg-[#868686]" : "bg-transparent"}
             />
             <PrimaryButton
-              href=""
+              nextPage
+              href="https://blogs.pantheondigitals.com/"
               onClick={closeDropDownMenu}
               leftIcon="/Blogs.svg"
               type="outline"

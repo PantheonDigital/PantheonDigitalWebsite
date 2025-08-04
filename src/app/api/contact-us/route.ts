@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: email,
-      to: "laurel.bahringer41@ethereal.email",
+      to: "yash.pantheondigitals@gmail.com",
       subject: `New contact enquiry from ${name}`,
       text: message,
     };

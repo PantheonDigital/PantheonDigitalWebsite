@@ -9,6 +9,7 @@ interface PrimaryButtonProps {
   href?: string;
   onClick?: () => void;
   className?: string;
+  nextPage?: boolean;
 }
 
 const PrimaryButton = ({
@@ -19,6 +20,7 @@ const PrimaryButton = ({
   href,
   onClick,
   className = "",
+  nextPage,
 }: PrimaryButtonProps) => {
   const commonStyles = `flex cursor-pointer text-nowrap flex-row items-center justify-between gap-2 text-sm ${className} ${
     type === "normal" &&
@@ -66,7 +68,12 @@ const PrimaryButton = ({
 
   if (href) {
     return (
-      <Link href={href} onClick={onClick} className={commonStyles}>
+      <Link
+        target={nextPage && ("_blank" as any)}
+        href={href}
+        onClick={onClick}
+        className={commonStyles}
+      >
         {content}
       </Link>
     );
