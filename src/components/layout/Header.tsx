@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const pathname = usePathname();
-  console.log(pathname);
   const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [isMobileDropDown, setIsMobileDropDown] = useState<boolean>(false);
@@ -20,9 +19,7 @@ const Header = () => {
     setIsMobileDropDown(!isMobileDropDown);
   };
 
-  useEffect(() => {
-    console.log("isMobileDropDown changed to:", isMobileDropDown);
-  }, [isMobileDropDown]);
+  useEffect(() => {}, [isMobileDropDown]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -55,6 +52,7 @@ const Header = () => {
         <header className="bg-black flex flex-row p-4 items-center justify-between px-0 md:px-16">
           <Link href="/">
             <Image
+              priority
               src="/Logo.svg"
               width="0"
               height="0"
@@ -453,6 +451,7 @@ const Header = () => {
               height="150"
               alt="Pantheon Digitals Logo"
               className={`
+                w-auto
                 duration-300
                 ${isMobileMenuOpen ? "-translate-y-100" : "translate-y-0"}
                 `}

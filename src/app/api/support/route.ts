@@ -1,4 +1,3 @@
-// app/api/send-email/route.ts
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
@@ -6,31 +5,37 @@ export async function POST(req: Request) {
     const { name, email, contact, companyName, issueType, issue_description,projectId, priority_level, attachment } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
-      },
-    });
+         host: 'smtp.hostinger.com',
+         port: 465,
+         auth: {
+           user: process.env.EMAIL_USER,
+           pass: process.env.EMAIL_PASS,
+         },
+       });
+
+    const today = new Date(Date.now());
+    const formattedDate = today.toISOString().split("T")[0];
+
 
     const message = `
-    name: ${name},<br />
-    email: ${email}, <br />
-    contact: ${contact}, <br />
-    company name: ${companyName}, <br />
-    issue type: ${issueType}, <br /> 
-    project id/name: ${projectId}, <br />
-    date: ${Date.now()}, <br />
-    issue description: ${issue_description}, <br />
-    priority level: ${priority_level}, <br />
-    attachment: ${attachment}, <br />
+    Support:-
+    name: ${name}
+    email: ${email}
+    contact: ${contact}
+    company name: ${companyName}
+    issue type: ${issueType} 
+    project id/name: ${projectId}
+    date: ${formattedDate}
+    issue description: ${issue_description}
+    priority level: ${priority_level}
+    attachment: ${attachment}
     `;
 
     const mailOptions = {
-      from: email,
-      to: "laurel.bahringer41@ethereal.email",
-      subject: `New contact enquiry from ${name}`,
+      from: process.env.EMAIL_USER,
+      to: "atul@pantheondigitals.com, admin@pantheondigitals.com, ashutosh@pantheondigitals.com, yash.pantheondigitals@gmail.com",
+      // to: "yash.pantheondigitals@gmail.com",
+      subject: `New support enquiry from ${name}`,
       text: message,
     };
 

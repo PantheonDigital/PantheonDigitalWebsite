@@ -10,7 +10,7 @@ const Clients = () => {
           alt="clients image"
           width="127"
           height="50"
-          className="flex justify-center items-center"
+          className="flex justify-center items-center w-auto h-auto"
         />
       ))}
     </div>

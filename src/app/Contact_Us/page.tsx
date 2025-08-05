@@ -9,6 +9,7 @@ import Clients from "@/components/features/Clients";
 import Testimonials from "@/components/features/Testimonials";
 import AboutNumerics from "@/components/ui/AboutNumerics";
 import FaqItem from "@/components/features/FaqItem";
+import Toast from "@/components/ui/Toast";
 
 const Contact_Us = () => {
   useEffect(() => {
@@ -54,23 +55,29 @@ const Contact_Us = () => {
     "DevOps or Cloud Services",
   ];
 
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [countryCode, setCountryCode] = useState("+91");
-  const [contact, setContact] = useState<number>();
-  const [companyName, setCompanyName] = useState<string>();
+  const [contact, setContact] = useState<string>("");
+  const [companyName, setCompanyName] = useState<string>("");
   const [serviceType, setServiceType] = useState("Select one");
   const [date, setDate] = useState("");
-  const [time, setTime] = useState<string>();
+  const [time, setTime] = useState<string>("");
   const [isServiceDropDownOpen, setIsServiceDropDownOpen] =
     useState<boolean>(false);
   const [timeZ, setTimeZ] = useState("IST");
   const [isTimeZOpen, setIsTimeZOpen] = useState<boolean>(false);
-  const [description, setDescription] = useState<string>();
+  const [description, setDescription] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [attachment, setAttachment] = useState<File | null>(null);
   const [method, setMethod] = useState<"Phone Call" | "Email" | "Whatsapp">();
   const [accept, setAccept] = useState<boolean>(false);
+
+  const [toast, setToast] = useState<{ success: number; msg: string }>({
+    success: 0,
+    msg: "",
+  });
 
   const [errors, setErrors] = useState({
     name: "",
@@ -116,9 +123,8 @@ const Contact_Us = () => {
   };
 
   const onHandleSubmit = async () => {
-    console.log("button is clicked");
-
     if (validateForm()) {
+      setLoading(true);
       const res = await fetch("/api/contact-us", {
         method: "POST",
         headers: {
@@ -139,16 +145,38 @@ const Contact_Us = () => {
       });
 
       const data = await res.json();
+
       if (data.success) {
-        alert("Email sent!");
+        setLoading(false);
+        setToast({
+          success: 200,
+          msg: "Message sent! We’ll get back to you soon – stay tuned!",
+        });
+        // empty inputs
+        setName("");
+        setEmail("");
+        setContact("");
+        setCompanyName("");
+        setServiceType("Select one");
+        setDate("");
+        setTime("");
+        setDescription("");
+        setMethod("Phone Call");
+        setAttachment(null);
+        setAccept(false);
       } else {
-        alert("Failed to send email");
+        setLoading(false);
+        setToast({
+          success: 400,
+          msg: "Something went wrong! Please try again later.",
+        });
       }
     }
   };
 
   return (
     <div className="w-full h-full flex flex-col items-center">
+      <Toast toast={toast} />
       <div className="bg-[#212121] w-[90%] sm:w-[80%] h-full sm:mt-24 mt-32 flex flex-col items-center rounded-4xl sm:p-8 p-4">
         <h1 className="font-geometric font-bold text-white text-xl sm:text-5xl sm:mt-12 mt-4">
           Contact Us
@@ -220,6 +248,7 @@ const Contact_Us = () => {
               />
               <input
                 type="tel"
+                minLength={10}
                 maxLength={10}
                 className={`${
                   errors.contact ? "error-input-box" : "input-box"
@@ -227,8 +256,11 @@ const Contact_Us = () => {
                 placeholder="000  000  0000"
                 value={contact}
                 onChange={(e) => {
-                  setContact(Number(e.target.value));
-                  setErrors((prev) => ({ ...prev, contact: "" }));
+                  const value = e.target.value;
+                  if (/^\d*$/.test(value)) {
+                    setContact(value);
+                    setErrors((prev) => ({ ...prev, contact: "" }));
+                  }
                 }}
               />
               {errors.contact && (
@@ -519,9 +551,10 @@ const Contact_Us = () => {
           {/* Submit Button */}
           <div className="sm:w-[60%] w-full flex justify-self-end">
             <PrimaryButton
+              loading={loading}
               onClick={onHandleSubmit}
-              label="Submit"
-              className="w-full rounded-lg justify-center"
+              label={"Submit"}
+              className="w-full rounded-lg justify-center max-h-24 overflow-clip"
             />
           </div>
         </div>
@@ -535,7 +568,7 @@ const Contact_Us = () => {
           alt="youtube logo"
           width="40"
           height="40"
-          className="sm:w-[80] sm:h-auto absolute right-5 top-5 sm:right-15 sm:top-15 cursor-pointer hover:scale-110 duration-300"
+          className="sm:w-[80] sm:h-auto absolute right-5 top-5  sm:right-15 sm:top-15 cursor-pointer hover:scale-110 duration-300"
         />
         <h1 className="text-white font-avenir-demi text-lg sm:text-4xl ">
           Talk to our expert now!
@@ -557,7 +590,8 @@ const Contact_Us = () => {
           and raise a issue
         </p>
 
-        <div className="h-[.5] bg-[#c1c1c1] sm:my-8 my-4" />
+        {/* horizontal rule */}
+        <div className="h-[.5] bg-[#626262] sm:my-8 my-4" />
 
         {/* contact details */}
         <div>
@@ -573,7 +607,7 @@ const Contact_Us = () => {
             </div>
             <div className="flex flex-col sm:flex-row sm:gap-8">
               <Link href="tel:+91 93547 61565">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
+                <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
                   +91 93547 61565
                 </span>
               </Link>
@@ -581,7 +615,7 @@ const Contact_Us = () => {
               <p className="text-white text-4xl sm:block hidden">|</p>
 
               <Link href="tel:+91 93547 61565">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
+                <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
                   +91 93547 61565
                 </span>
               </Link>
@@ -605,7 +639,7 @@ const Contact_Us = () => {
 
             <div className="flex flex-col sm:flex-row sm:gap-8">
               <Link href="mailto:info@pantheondigitals.com">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
+                <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
                   info@pantheondigitals.com
                 </span>
               </Link>
@@ -613,7 +647,7 @@ const Contact_Us = () => {
               <p className="text-white text-4xl hidden sm:block">|</p>
 
               <Link href="mailto:business@pantheondigitals.com">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
+                <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
                   business@pantheondigitals.com
                 </span>
               </Link>

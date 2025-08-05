@@ -12,12 +12,12 @@ function ChooseUs() {
       {/* cards for reason to choose us */}
       <div className=" w-full h-auto grid md:auto-cols-fr md:grid-flow-col gap-10 mt-12">
         {/* 1 card */}
-        <div className="h-[468] border-1 rounded-2xl overflow-clip">
-          <h1 className="font-geometric font-bold text-base md:text-3xl text-white m-4">
+        <div className="h-[468] border-1 rounded-2xl overflow-clip group">
+          <h1 className="font-geometric font-bold z-10 relative text-base md:text-3xl text-white m-4">
             Passionate <br /> Craftsmanship
           </h1>
           <Image
-            className="w-full h-full pb-24 cover"
+            className="w-full h-full pb-24 cover group-hover:scale-110 duration-300 -z-10"
             src="/ChooseUs1.svg"
             alt="first choose us image"
             width="0"
@@ -25,12 +25,12 @@ function ChooseUs() {
           />
         </div>
         {/* 2 card */}
-        <div className="h-[468] border-1 rounded-2xl overflow-clip md:translate-y-0 -translate-y-100 z-1 bg-black">
-          <h1 className="font-geometric font-bold text-base md:text-3xl text-white m-4">
+        <div className="h-[468] border-1 rounded-2xl overflow-clip md:translate-y-0 -translate-y-100 z-1 bg-black group">
+          <h1 className="font-geometric font-bold z-10 relative text-base md:text-3xl text-white m-4">
             Innovative <br /> Vision
           </h1>
           <Image
-            className="w-full h-full pb-24"
+            className="w-full h-full pb-24 group-hover:scale-110 duration-300 -z-10"
             src="/ChooseUs2.svg"
             alt="second choose us image"
             width="0"
@@ -38,12 +38,12 @@ function ChooseUs() {
           />
         </div>
         {/* 3 card */}
-        <div className="md:h-[468] h-[400] border-1 rounded-2xl overflow-clip  md:translate-y-0  -translate-y-200 z-2 bg-black">
-          <h1 className="font-geometric font-bold text-base md:text-3xl text-white m-4">
+        <div className="md:h-[468] h-[400] border-1 rounded-2xl overflow-clip  md:translate-y-0  -translate-y-200 z-2 bg-black group">
+          <h1 className="font-geometric font-bold z-10 relative text-base md:text-3xl text-white m-4">
             Client-Centric <br /> Approach
           </h1>
           <Image
-            className="w-full h-full md:pb-24"
+            className="w-full h-full md:pb-24 group-hover:scale-110 duration-300 -z-10"
             src="/ChooseUs3.svg"
             alt="third choose us image"
             width="0"

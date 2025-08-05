@@ -13,7 +13,11 @@ const GetInTouch = () => {
         passion.
       </p>
 
-      <PrimaryButton label={"Get In Touch"} className="mt-12 rounded-lg" />
+      <PrimaryButton
+        href="/Contact_Us"
+        label={"Get In Touch"}
+        className="mt-12 rounded-lg"
+      />
     </div>
   );
 };

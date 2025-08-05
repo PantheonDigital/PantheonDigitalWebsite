@@ -10,6 +10,7 @@ interface PrimaryButtonProps {
   onClick?: () => void;
   className?: string;
   nextPage?: boolean;
+  loading?: boolean;
 }
 
 const PrimaryButton = ({
@@ -21,6 +22,7 @@ const PrimaryButton = ({
   onClick,
   className = "",
   nextPage,
+  loading,
 }: PrimaryButtonProps) => {
   const commonStyles = `flex cursor-pointer text-nowrap flex-row items-center justify-between gap-2 text-sm ${className} ${
     type === "normal" &&
@@ -34,7 +36,7 @@ const PrimaryButton = ({
 
   const content = (
     <>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center relative">
         {leftIcon && (
           <Image
             src={leftIcon}
@@ -44,15 +46,30 @@ const PrimaryButton = ({
             className="group-hover:scale-125 duration-300"
           />
         )}
-        <span
-          className={`font-avenir-bold text-sm group-hover:scale-105 duration-300 ${
-            type === "variant2" ? "text-black" : "text-white"
-          }
+        {loading ? (
+          <div className="relative flex gap-4 items-center justify-around">
+            <span className="font-avenir-bold text-sm text-white mr-4">
+              Please wait
+            </span>
+            <Image
+              src="/lottie/loading.gif"
+              alt="loading"
+              width="60"
+              height="60"
+              className="absolute left-16"
+            />
+          </div>
+        ) : (
+          <span
+            className={`font-avenir-bold text-sm group-hover:scale-105 duration-300 ${
+              type === "variant2" ? "text-black" : "text-white"
+            }
         ${type === "red-outline" && "underline"}
         `}
-        >
-          {label}
-        </span>
+          >
+            {label}
+          </span>
+        )}
       </div>
       {rightIcon && (
         <Image

@@ -1,35 +1,38 @@
-// app/api/send-email/route.ts
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
     const { name, email, contact, companyName, serviceType, date, time, project_brief, contact_method, attachment } = await req.json();
 
+
     const transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
+      host: 'smtp.hostinger.com',
+      port: 465,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     const message = `
-    name: ${name},<br />
-    email: ${email}, <br />
-    contact: ${contact}, <br />
-    company name: ${companyName}, <br />
-    service type: ${serviceType}, <br />
-    date: ${date}, <br />
-    time: ${time}, <br />
-    project brief: ${project_brief}, <br />
-    contact method: ${contact_method}, <br />
-    attachment: ${attachment}, <br />
+    Contact:-
+    name: ${name}
+    email: ${email} 
+    contact: ${contact}
+    company name: ${companyName}
+    service type: ${serviceType}
+    date: ${date}
+    time: ${time}
+    project brief: ${project_brief}
+    contact method: ${contact_method}
+    attachment: ${attachment}
     `;
 
+    //  
     const mailOptions = {
-      from: email,
-      to: "yash.pantheondigitals@gmail.com",
+      from: process.env.EMAIL_USER,
+      to: "atul@pantheondigitals.com, admin@pantheondigitals.com, ashutosh@pantheondigitals.com, yash.pantheondigitals@gmail.com",
+      // to: "yash.pantheondigitals@gmail.com",
       subject: `New contact enquiry from ${name}`,
       text: message,
     };

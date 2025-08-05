@@ -23,7 +23,7 @@ const About = () => {
           <div className=" hidden md:flex flex-row-reverse md:flex-row items-center justify-evenly md:justify-normal w-full mt-12 gap-4">
             <PrimaryButton
               label={"Get in touch"}
-              href={""}
+              href={"/Contact_Us"}
               className="rounded-lg"
             />
             <PrimaryButton

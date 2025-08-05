@@ -16,12 +16,20 @@ export default function Home() {
       <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
         <div className="w-[90%] h-auto rounded-b-4xl flex flex-col justify-center items-center mt-32">
           {/* hero section background image */}
-          <Image
+          {/* <Image
             src="/BackgroundImageHomePage.svg"
             alt="Home Page Background Banner"
             width="0"
             height="0"
             className="w-screen h-screen absolute -z-10 top-[-3%]  object-cover mask-b-from-90% mask-b-to-100%"
+          /> */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            src="/video/background.mp4"
+            className="w-screen h-screen absolute -z-10 top-[-3%] sm:blur-none blur-[2.5px] object-cover mask-b-from-90% mask-b-to-100%"
           />
           <h1 className="font-geometric font-bold text-xl sm:text-4xl text-white text-center md:mt-0 ">
             Powering possibility through digital innovation
@@ -36,7 +44,7 @@ export default function Home() {
         <PrimaryButton
           className={"my-12 md:my-18"}
           label={"Get with us"}
-          href={""}
+          href={"/Contact_Us"}
           type="variant2"
         />
 

@@ -9,14 +9,16 @@ import Clients from "@/components/features/Clients";
 import Testimonials from "@/components/features/Testimonials";
 import AboutNumerics from "@/components/ui/AboutNumerics";
 import FaqItem from "@/components/features/FaqItem";
+import Toast from "@/components/ui/Toast";
 
 const Support = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [countryCode, setCountryCode] = useState("+91");
-  const [contact, setContact] = useState<number>();
+  const [contact, setContact] = useState<string>("");
   const [companyName, setCompanyName] = useState<string>("");
   const [issueType, setIssueType] = useState("Select one");
   const [isIssueDropDownOpen, setIsIssueDropDownOpen] =
@@ -28,6 +30,10 @@ const Support = () => {
     "Low" | "Medium" | "High" | "Urgent"
   >();
   const [accept, setAccept] = useState<boolean>(false);
+  const [toast, setToast] = useState<{ success: number; msg: string }>({
+    success: 0,
+    msg: "",
+  });
 
   const [errors, setErrors] = useState({
     name: "",
@@ -104,9 +110,8 @@ const Support = () => {
   };
 
   const onHandleSubmit = async () => {
-    console.log("button is clicked");
-
     if (validateForm()) {
+      setLoading(true);
       const res = await fetch("/api/support", {
         method: "POST",
         headers: {
@@ -127,15 +132,35 @@ const Support = () => {
 
       const data = await res.json();
       if (data.success) {
-        alert("Support ticket submitted!");
+        // alert("Support ticket submitted!");
+        setLoading(false);
+        setToast({
+          success: 200,
+          msg: "Thanks for contacting us! We'll get in touch with you within 24–48 hours.",
+        });
+
+        setName("");
+        setEmail("");
+        setContact("");
+        setCompanyName("");
+        setIssueType("Select one");
+        setDescription("");
+        setPriority("Low");
+        setAttachment(null);
+        setAccept(false);
       } else {
-        alert("Failed to submit support ticket");
+        setLoading(false);
+        setToast({
+          success: 400,
+          msg: "Something went wrong! Please try again later.",
+        });
       }
     }
   };
 
   return (
     <div className="w-full h-full flex flex-col items-center">
+      <Toast toast={toast} />
       <div className="bg-[#212121] w-[90%] sm:w-[80%] h-full sm:mt-24 mt-32 flex flex-col items-center rounded-4xl sm:p-8 p-4">
         <h1 className="font-geometric font-bold text-white text-xl sm:text-5xl sm:mt-12 mt-4">
           Support
@@ -213,8 +238,11 @@ const Support = () => {
                 placeholder="000  000  0000"
                 value={contact}
                 onChange={(e) => {
-                  setContact(Number(e.target.value));
-                  setErrors((prev) => ({ ...prev, contact: "" }));
+                  const value = e.target.value;
+                  if (/^\d*$/.test(value)) {
+                    setContact(value);
+                    setErrors((prev) => ({ ...prev, contact: "" }));
+                  }
                 }}
               />
               {errors.contact && (
@@ -383,7 +411,7 @@ const Support = () => {
               Priority Level <sup>*</sup>
             </h4>
             <div
-              className={`flex flex-col sm:flex-row sm:gap-16 gap-4 ${
+              className={`sm:flex grid grid-cols-2 place-items-center sm:flex-row sm:gap-16 gap-4 ${
                 errors.priority ? "bg-[#210000]" : "bg-black"
               } p-4 mt-4`}
             >
@@ -401,7 +429,7 @@ const Support = () => {
                       setErrors((prev) => ({ ...prev, priority: "" }));
                     }}
                   />
-                  <span className="text-white text-sm sm:text-xl">{p}</span>
+                  <span className="text-white text-sm lg:text-xl ">{p}</span>
                 </label>
               ))}
             </div>
@@ -444,6 +472,7 @@ const Support = () => {
           {/* Submit Button */}
           <div className="sm:w-[60%] w-full flex justify-self-end">
             <PrimaryButton
+              loading={loading}
               onClick={onHandleSubmit}
               label="Submit Ticket"
               className="w-full rounded-lg justify-center"
@@ -453,98 +482,122 @@ const Support = () => {
       </div>
 
       {/* Talk to expert */}
-      <div className="w-[90%] sm:w-[80%] bg-[#212121] p-8 sm:p-12 mt-12 sm:mt-24 rounded-3xl flex flex-col relative">
-        <Image
-          src="/YoutubeLogo.svg"
-          alt="youtube logo"
-          width="30"
-          height="30"
-          className="sm:w-[80] sm:h-auto absolute right-15 top-15 cursor-pointer hover:scale-110 duration-300"
-        />
+      <div className="w-[90%] sm:w-[80%] bg-[#212121] p-8 sm:p-12 mt-12 sm:mt-24 rounded-3xl flex flex-col relative overflow-clip">
         <h1 className="text-white font-avenir-demi text-lg sm:text-4xl ">
           Talk to our expert now!
         </h1>
 
-        <p className="text-[#c1c1c1]  text-sm sm:text-2xl mt-4 sm:mt-8  sm:w-[60%] w-full ">
-          note: the person you’re about to call is a technical project expert
-          and may or may not have knowledge about support of the particular
-          project.
-        </p>
-        <p className="text-[#c1c1c1] font-avenir-medium text-sm sm:text-2xl mt-4 sm:mt-8  sm:w-[60%] w-full">
-          {" "}
-          If you’re facing issue with any project, visit{" "}
-          <Link href="/Support/">
-            <span className="underline  font-avenir-bold text-white text-sm sm:text-2xl">
-              support page
-            </span>
-          </Link>{" "}
-          and raise a issue
+        <h1 className="text-sm sm:text-2xl mt-4 sm:mt-8  underline underline-offset-4 font-avenir-demi text-white mb-4">
+          Our working hours are Monday to Friday, 9:00 AM – 8:00 PM IST.
+        </h1>
+
+        <p className="text-[#c1c1c1]  text-sm sm:text-2xl w-full sm:w-[90%] leading-10">
+          If you're facing an issue outside these hours, please fill out the
+          support form. Our TAT (Turnaround Time) is{" "}
+          <span className="font-avenir-demi text-white">6 hours</span>, except
+          for urgent fixes, which will be prioritized accordingly.
         </p>
 
-        <div className="h-[.5] bg-[#c1c1c1] sm:my-8 my-4" />
+        {/* horizontal rule */}
+        <div className="h-[.5] bg-[#626262] sm:my-8 my-4" />
 
         {/* contact details */}
-        <div>
-          <div className="flex gap-4 sm:gap-8 items-center">
-            <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
-              <Image
-                className=""
-                src="/Contact-Us.svg"
-                alt="telephone"
-                width="15"
-                height="15"
-              />
-            </div>
-            <div className="flex flex-col sm:flex-row sm:gap-8">
-              <Link href="tel:+91 93547 61565">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
-                  +91 93547 61565
-                </span>
-              </Link>
+        <div className="flex gap-4 sm:gap-8 items-center">
+          <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
+            <Image
+              className=""
+              src="/Contact-Us.svg"
+              alt="telephone"
+              width="15"
+              height="15"
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row sm:gap-8">
+            <Link href="tel:+91 93547 61565">
+              <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
+                +91 93547 61565
+              </span>
+            </Link>
 
-              <p className="text-white text-4xl sm:block hidden">|</p>
+            <p className="text-white text-4xl sm:block hidden">|</p>
 
-              <Link href="tel:+91 93547 61565">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
-                  +91 93547 61565
-                </span>
-              </Link>
-            </div>
+            <Link href="tel:+91 93547 61565">
+              <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
+                +91 93547 61565
+              </span>
+            </Link>
           </div>
         </div>
         {/* contact details close */}
 
         {/* contact details */}
-        <div className="mt-4">
-          <div className="flex gap-4 sm:gap-8 items-center">
-            <div className="w-10 min-w-10 min-h-10 h-10 rounded-full bg-black flex items-center justify-center">
-              <Image
-                className=""
-                src="/mail.svg"
-                alt="mail"
-                width="20"
-                height="20"
-              />
-            </div>
+        <div className="flex gap-4 mt-4 sm:gap-8 items-center">
+          <div className="w-10 min-w-10 min-h-10 h-10 rounded-full bg-black flex items-center justify-center">
+            <Image
+              className=""
+              src="/mail.svg"
+              alt="mail"
+              width="20"
+              height="20"
+            />
+          </div>
 
-            <div className="flex flex-col sm:flex-row sm:gap-8">
-              <Link href="mailto:info@pantheondigitals.com">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
-                  info@pantheondigitals.com
-                </span>
-              </Link>
+          <div className="flex flex-col sm:flex-row sm:gap-8">
+            <Link href="mailto:info@pantheondigitals.com">
+              <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
+                info@pantheondigitals.com
+              </span>
+            </Link>
 
-              <p className="text-white text-4xl hidden sm:block">|</p>
+            <p className="text-white text-4xl hidden sm:block">|</p>
 
-              <Link href="mailto:business@pantheondigitals.com">
-                <span className="text-white font-avenir-demi text-xs sm:text-2xl">
-                  business@pantheondigitals.com
-                </span>
-              </Link>
-            </div>
+            <Link href="mailto:business@pantheondigitals.com">
+              <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
+                business@pantheondigitals.com
+              </span>
+            </Link>
           </div>
         </div>
         {/* contact details close */}
+
+        {/* contact details */}
+        <div className="flex gap-4 sm:gap-8 items-center mt-4">
+          <div className="w-10 h-10 rounded-full bg-black flex items-center justify-center">
+            <Image
+              className=""
+              src="/whatsapp.svg"
+              alt="telephone"
+              width="25"
+              height="25"
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row sm:gap-8">
+            <Link
+              target="_blank"
+              href={`https://api.whatsapp.com/send?phone=15551234567`}
+            >
+              <span className="text-white font-avenir-demi text-xs lg:text-2xl md:text-xl">
+                +91 93547 61565
+              </span>
+            </Link>
+          </div>
+        </div>
+        {/* contact details close */}
+
+        {/* horizontal rule */}
+        <div className="h-[.5] bg-[#626262] sm:my-8 my-4" />
+
+        {/* Note section */}
+        <h2 className="font-avenir-demi text-white text-sm sm:text-2xl">
+          Note:
+          <span className="font-avenir-demi-italic text-white text-sm sm:text-2xl">
+            {" "}
+            Ticket resolve timing information have been shared in the proposal
+            /email
+          </span>
+        </h2>
+
+        {/* end of support expert div  */}
       </div>
 
       {/* Get in touch */}
