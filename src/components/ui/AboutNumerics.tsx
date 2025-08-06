@@ -84,7 +84,7 @@ function AboutNumerics() {
               className="w-[27] h-[27] md:w-[40] md:h-[40]"
             />
             <span className="font-geometric font-extrabold text-xl md:text-4xl text-white">
-              112
+              05
             </span>
           </div>
           <p className="text-white font-avenir-demi text-xs md:text-base align-top font-bold">

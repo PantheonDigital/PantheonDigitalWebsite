@@ -118,9 +118,9 @@ const Header = () => {
             isDropDownOpen ? "block" : "hidden"
           } absolute flex w-screen h-screen justify-center duration-1000 bg-[#00000095] z-[51]`}
         >
-          <div className="-top-0.5 w-full h-[70.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
+          <div className="-top-0.5 w-full h-[40.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
-          <div className="w-[99.8%] h-[70vh] bg-neutral-800 p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
+          <div className="w-[99.8%] h-[40vh] bg-neutral-800 p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
             {/* category */}
             <div className="grid grid-cols-5 gap-6">
               <div className="col-span-2 border-r border-white p-6 flex flex-col justify-between">
