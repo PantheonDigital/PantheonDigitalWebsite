@@ -120,9 +120,9 @@ const Header = () => {
               : "opacity-0 -translate-y-3 hidden"
           } absolute flex w-screen h-screen justify-center duration-300 bg-[#00000080] top-23 z-[51]`}
         >
-          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[80.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
+          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[575] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
-          <div className="w-[75vw] min-w-[760] h-[80vh] macos-scrollbar overflow-y-scroll bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
+          <div className="w-[75vw] min-w-[760] h-[570]  bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
             <p className="font-avenir-regular text-white text-base ">
               Welcome to Pantheon Digital, where innovation meets excellence. As
               a leading player in the digital landscape, we specialize in
@@ -131,14 +131,14 @@ const Header = () => {
             </p>
 
             {/* category */}
-            <div className="grid grid-cols-3 mt-10 gap-6">
+            <div className="grid grid-cols-3 mt-6 gap-6">
               {/* first service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[340px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold text-white text-xl font-bold text-left">
                   Digital Marketing
                 </h1>
-                <div className="my-4 border-[0.5px] border-white"></div>
-                <ul className="text-left mt-4 h-full styled-list">
+                <div className="my-4 border-[0.5px] border-white" />
+                <div className="text-left mt-4 h-auto styled-list">
                   {[
                     {
                       href: "/Services/social-management",
@@ -156,38 +156,37 @@ const Header = () => {
                       label: "Branding & Advertising",
                     },
                   ].map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        onClick={() => setIsDropDownOpen(false)}
-                        href={link.href}
-                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                          pathname === link.href ? "bg-black/25 rounded-md" : ""
-                        }`}
-                      >
-                        <span className="font-avenir-medium font-medium text-base text-white">
-                          {link.label}
-                        </span>
-                        <Image
-                          src="/ArrowRight.svg"
-                          alt="arrow right"
-                          width="10"
-                          height="10"
-                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                        />
-                      </Link>
-                    </li>
+                    <Link
+                      key={link.label}
+                      onClick={() => setIsDropDownOpen(false)}
+                      href={link.href}
+                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                        pathname === link.href ? "bg-black/25 rounded-md" : ""
+                      }`}
+                    >
+                      <span className="font-avenir-medium font-medium text-sm text-white">
+                        {link.label}
+                      </span>
+                      <Image
+                        src="/ArrowRight.svg"
+                        alt="arrow right"
+                        width="10"
+                        height="10"
+                        className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                      />
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
               {/* first service close */}
 
               {/* second service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[340px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
                   Graphic Designing
                 </h1>
                 <div className="my-4 border-[0.5px] border-white"></div>
-                <ul className="text-left mt-4 h-full styled-list">
+                <div className="text-left mt-4 h-auto styled-list">
                   {[
                     { href: "/Services/ui-ux", label: "UX/UI Design" },
                     {
@@ -200,38 +199,37 @@ const Header = () => {
                       label: "Posts & Banner",
                     },
                   ].map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        onClick={() => setIsDropDownOpen(false)}
-                        href={link.href}
-                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                          pathname === link.href ? "bg-black/25 rounded-md" : ""
-                        }`}
-                      >
-                        <span className="font-avenir-medium font-medium text-base text-white">
-                          {link.label}
-                        </span>
-                        <Image
-                          src="/ArrowRight.svg"
-                          alt="arrow right"
-                          width="10"
-                          height="10"
-                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                        />
-                      </Link>
-                    </li>
+                    <Link
+                      key={link.href}
+                      onClick={() => setIsDropDownOpen(false)}
+                      href={link.href}
+                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                        pathname === link.href ? "bg-black/25 rounded-md" : ""
+                      }`}
+                    >
+                      <span className="font-avenir-medium font-medium text-sm text-white">
+                        {link.label}
+                      </span>
+                      <Image
+                        src="/ArrowRight.svg"
+                        alt="arrow right"
+                        width="10"
+                        height="10"
+                        className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                      />
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
               {/* second service close */}
 
               {/* third service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] h-auto rounded-3xl p-4">
                 <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
                   Tech & Software
                 </h1>
                 <div className="my-4 border-[0.5px] border-white"></div>
-                <ul className="text-left mt-4 h-full styled-list">
+                <div className="text-left mt-4 h-auto group-hover:scale-110 duration-300 styled-list">
                   {[
                     {
                       href: "https://www.zfour.in/",
@@ -256,29 +254,28 @@ const Header = () => {
                       label: "Cloud & DevOps Services",
                     },
                   ].map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        onClick={() => setIsDropDownOpen(false)}
-                        href={link.href}
-                        target={link.target || "_self"}
-                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                          pathname === link.href ? "bg-black/25 rounded-md" : ""
-                        }`}
-                      >
-                        <span className="font-avenir-medium font-medium text-base text-white">
-                          {link.label}
-                        </span>
-                        <Image
-                          src="/ArrowRight.svg"
-                          alt="arrow right"
-                          width="10"
-                          height="10"
-                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                        />
-                      </Link>
-                    </li>
+                    <Link
+                      key={link.href}
+                      onClick={() => setIsDropDownOpen(false)}
+                      href={link.href}
+                      target={link.target || "_self"}
+                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                        pathname === link.href ? "bg-black/25 rounded-md" : ""
+                      }`}
+                    >
+                      <span className="font-avenir-medium font-medium text-sm text-white">
+                        {link.label}
+                      </span>
+                      <Image
+                        src="/ArrowRight.svg"
+                        alt="arrow right"
+                        width="10"
+                        height="10"
+                        className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                      />
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
               {/* third service close */}
             </div>
@@ -321,7 +318,7 @@ const Header = () => {
                       alt="facebook icon"
                       width="10"
                       height="10"
-                      className="w-full h-full"
+                      className="w-full group-hover:scale-110 duration-300"
                     />
                   </Link>
                   <Link
@@ -334,7 +331,7 @@ const Header = () => {
                       alt="x icon"
                       width="10"
                       height="10"
-                      className="w-full h-full"
+                      className="w-full group-hover:scale-110 duration-300"
                     />
                   </Link>
                   <Link
@@ -347,7 +344,7 @@ const Header = () => {
                       alt="instagram icon"
                       width="10"
                       height="10"
-                      className="w-full h-full"
+                      className="w-full group-hover:scale-110 duration-300"
                     />
                   </Link>
                   <Link
@@ -360,7 +357,7 @@ const Header = () => {
                       alt="linkedin icon"
                       width="10"
                       height="10"
-                      className="w-full h-full"
+                      className="w-full group-hover:scale-110 duration-300"
                     />
                   </Link>
                   <Link
@@ -373,7 +370,7 @@ const Header = () => {
                       alt="youtube icon"
                       width="10"
                       height="10"
-                      className="w-full h-full"
+                      className="w-full group-hover:scale-110 duration-300"
                     />
                   </Link>
                   <Link
@@ -386,18 +383,18 @@ const Header = () => {
                       alt="pinterest icon"
                       width="10"
                       height="10"
-                      className="w-full h-full"
+                      className="w-full group-hover:scale-110 duration-300"
                     />
                   </Link>
                 </div>
               </div>
-              <div className="col-span-2 bg-[#2A2A2A] min-h-[120] rounded-3xl justify-between flex-row flex px-6 py-2 items-center">
+              <div className="col-span-2 bg-[#2A2A2A]  rounded-3xl justify-between flex-row flex p-4 px-8 items-center">
                 <Link
                   href=""
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium font-medium text-base text-white underline underline-offset-4">
+                  <span className="font-avenir-medium font-medium text-sm text-white underline underline-offset-4">
                     Privacy Policy
                   </span>
                 </Link>
@@ -406,7 +403,7 @@ const Header = () => {
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
+                  <span className="font-avenir-medium font-medium  text-sm text-white underline underline-offset-4">
                     Terms & Condition
                   </span>
                 </Link>
@@ -415,7 +412,7 @@ const Header = () => {
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
+                  <span className="font-avenir-medium font-medium  text-sm text-white underline underline-offset-4">
                     Cookie Policy
                   </span>
                 </Link>
@@ -424,7 +421,7 @@ const Header = () => {
                   onClick={() => setIsDropDownOpen(false)}
                   className="hover:scale-110 duration-300"
                 >
-                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
+                  <span className="font-avenir-medium font-medium  text-sm text-white underline underline-offset-4">
                     Blogs
                   </span>
                 </Link>
@@ -527,7 +524,7 @@ const Header = () => {
                         Digital Marketing
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
-                      <ul className="text-left mt-4 h-full styled-list">
+                      <ul className="text-left mt-4 group-hover:scale-110 duration-300 styled-list">
                         <li>
                           <Link
                             href="/Services/social-management/"
@@ -646,7 +643,7 @@ const Header = () => {
                         Graphic Designing
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
-                      <ul className="text-left mt-4 h-full styled-list">
+                      <ul className="text-left mt-4 group-hover:scale-110 duration-300 styled-list">
                         <li>
                           <Link
                             href="/Services/ui-ux/"
@@ -729,7 +726,7 @@ const Header = () => {
                         Tech & Software
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
-                      <ul className="text-left mt-4 h-full styled-list">
+                      <ul className="text-left mt-4 group-hover:scale-110 duration-300 styled-list">
                         <li>
                           <Link
                             href="https://www.zfour.in/"
@@ -876,7 +873,7 @@ const Header = () => {
                 alt="facebook icon"
                 width="10"
                 height="10"
-                className="w-full h-full"
+                className="w-full group-hover:scale-110 duration-300"
               />
             </Link>
             <Link
@@ -889,7 +886,7 @@ const Header = () => {
                 alt="x icon"
                 width="10"
                 height="10"
-                className="w-full h-full"
+                className="w-full group-hover:scale-110 duration-300"
               />
             </Link>
             <Link
@@ -902,7 +899,7 @@ const Header = () => {
                 alt="instagram icon"
                 width="10"
                 height="10"
-                className="w-full h-full"
+                className="w-full group-hover:scale-110 duration-300"
               />
             </Link>
             <Link
@@ -915,7 +912,7 @@ const Header = () => {
                 alt="linkedin icon"
                 width="10"
                 height="10"
-                className="w-full h-full"
+                className="w-full group-hover:scale-110 duration-300"
               />
             </Link>
             <Link
@@ -928,7 +925,7 @@ const Header = () => {
                 alt="youtube icon"
                 width="10"
                 height="10"
-                className="w-full h-full"
+                className="w-full group-hover:scale-110 duration-300"
               />
             </Link>
             <Link
@@ -941,7 +938,7 @@ const Header = () => {
                 alt="pinterest icon"
                 width="10"
                 height="10"
-                className="w-full h-full"
+                className="w-full group-hover:scale-110 duration-300"
               />
             </Link>
           </div>
