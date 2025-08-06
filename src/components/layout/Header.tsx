@@ -120,9 +120,9 @@ const Header = () => {
               : "opacity-0 -translate-y-3 hidden"
           } absolute flex w-screen h-screen justify-center duration-300 bg-[#00000080] top-23 z-[51]`}
         >
-          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[575] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
+          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[495] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
-          <div className="w-[75vw] min-w-[760] h-[570]  bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
+          <div className="w-[75vw] min-w-[760] h-[490]  bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
             <p className="font-avenir-regular text-white text-base ">
               Welcome to Pantheon Digital, where innovation meets excellence. As
               a leading player in the digital landscape, we specialize in
@@ -281,152 +281,89 @@ const Header = () => {
             </div>
 
             {/* nav footer */}
-            <div className="grid grid-cols-3 gap-6 mt-6">
-              <div className="my-auto">
-                <div className="flex flex-row w-full justify-evenly">
-                  <Image
-                    src="/social-icons/iso1.svg"
-                    alt="iso 1"
-                    width="10"
-                    height="10"
-                    className="w-[15%] h-[15%]"
-                  />
-                  <Image
-                    src="/social-icons/iso2.svg"
-                    alt="iso 2"
-                    width="10"
-                    height="10"
-                    className="w-[15%] h-[15%]"
-                  />
-                  <Image
-                    src="/social-icons/aicpa.svg"
-                    alt="aicpa"
-                    width="10"
-                    height="10"
-                    className="w-[15%] h-[15%]"
-                  />
-                </div>
-                {/* social icons */}
-                <div className="flex flex-row w-full justify-evenly mt-4">
-                  <Link
-                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
-                    href="https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/social-icons/facebook.svg"
-                      alt="facebook icon"
-                      width="10"
-                      height="10"
-                      className="w-full group-hover:scale-110 duration-300"
-                    />
-                  </Link>
-                  <Link
-                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
-                    href="https://x.com/PantheonDigi"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/social-icons/x.svg"
-                      alt="x icon"
-                      width="10"
-                      height="10"
-                      className="w-full group-hover:scale-110 duration-300"
-                    />
-                  </Link>
-                  <Link
-                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
-                    href="https://www.instagram.com/pantheondigitals/"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/social-icons/insta.svg"
-                      alt="instagram icon"
-                      width="10"
-                      height="10"
-                      className="w-full group-hover:scale-110 duration-300"
-                    />
-                  </Link>
-                  <Link
-                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
-                    href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0bqQBFX6_kAAAAZgwY1kQJ_M9XEiW2MgEn9JGXzKTXud2Y708iYiT2Mjj6zTHnUYndWoWgeHoi2QqDr1vYMG3a6d3hIcV5OOcdhKWInnOeyIh0J58gE15Ws1MwNTcsg57jWg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpantheon-digitals%2F"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/social-icons/linkedin.svg"
-                      alt="linkedin icon"
-                      width="10"
-                      height="10"
-                      className="w-full group-hover:scale-110 duration-300"
-                    />
-                  </Link>
-                  <Link
-                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
-                    href="https://www.youtube.com/@pantheondigital"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/social-icons/youtube.svg"
-                      alt="youtube icon"
-                      width="10"
-                      height="10"
-                      className="w-full group-hover:scale-110 duration-300"
-                    />
-                  </Link>
-                  <Link
-                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
-                    href="https://in.pinterest.com/pantheondigitals/"
-                    target="_blank"
-                  >
-                    <Image
-                      src="/social-icons/pinterest.svg"
-                      alt="pinterest icon"
-                      width="10"
-                      height="10"
-                      className="w-full group-hover:scale-110 duration-300"
-                    />
-                  </Link>
-                </div>
-              </div>
-              <div className="col-span-2 bg-[#2A2A2A]  rounded-3xl justify-between flex-row flex p-4 px-8 items-center">
-                <Link
-                  href=""
-                  onClick={() => setIsDropDownOpen(false)}
-                  className="hover:scale-110 duration-300"
-                >
-                  <span className="font-avenir-medium font-medium text-sm text-white underline underline-offset-4">
-                    Privacy Policy
-                  </span>
-                </Link>
-                <Link
-                  href=""
-                  onClick={() => setIsDropDownOpen(false)}
-                  className="hover:scale-110 duration-300"
-                >
-                  <span className="font-avenir-medium font-medium  text-sm text-white underline underline-offset-4">
-                    Terms & Condition
-                  </span>
-                </Link>
-                <Link
-                  href=""
-                  onClick={() => setIsDropDownOpen(false)}
-                  className="hover:scale-110 duration-300"
-                >
-                  <span className="font-avenir-medium font-medium  text-sm text-white underline underline-offset-4">
-                    Cookie Policy
-                  </span>
-                </Link>
-                <Link
-                  href=""
-                  onClick={() => setIsDropDownOpen(false)}
-                  className="hover:scale-110 duration-300"
-                >
-                  <span className="font-avenir-medium font-medium  text-sm text-white underline underline-offset-4">
-                    Blogs
-                  </span>
-                </Link>
-              </div>
+            {/* social icons */}
+            <div className="flex flex-row w-full justify-evenly mt-4">
+              <Link
+                className="w-[2%] h-[2%] hover:scale-120 duration-300"
+                href="https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/facebook.svg"
+                  alt="facebook icon"
+                  width="10"
+                  height="10"
+                  className="w-full group-hover:scale-110 duration-300"
+                />
+              </Link>
+              <Link
+                className="w-[2%] h-[2%] hover:scale-120 duration-300"
+                href="https://x.com/PantheonDigi"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/x.svg"
+                  alt="x icon"
+                  width="10"
+                  height="10"
+                  className="w-full group-hover:scale-110 duration-300"
+                />
+              </Link>
+              <Link
+                className="w-[2%] h-[2%] hover:scale-120 duration-300"
+                href="https://www.instagram.com/pantheondigitals/"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/insta.svg"
+                  alt="instagram icon"
+                  width="10"
+                  height="10"
+                  className="w-full group-hover:scale-110 duration-300"
+                />
+              </Link>
+              <Link
+                className="w-[2%] h-[2%] hover:scale-120 duration-300"
+                href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0bqQBFX6_kAAAAZgwY1kQJ_M9XEiW2MgEn9JGXzKTXud2Y708iYiT2Mjj6zTHnUYndWoWgeHoi2QqDr1vYMG3a6d3hIcV5OOcdhKWInnOeyIh0J58gE15Ws1MwNTcsg57jWg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpantheon-digitals%2F"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/linkedin.svg"
+                  alt="linkedin icon"
+                  width="10"
+                  height="10"
+                  className="w-full group-hover:scale-110 duration-300"
+                />
+              </Link>
+              <Link
+                className="w-[2%] h-[2%] hover:scale-120 duration-300"
+                href="https://www.youtube.com/@pantheondigital"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/youtube.svg"
+                  alt="youtube icon"
+                  width="10"
+                  height="10"
+                  className="w-full group-hover:scale-110 duration-300"
+                />
+              </Link>
+              <Link
+                className="w-[2%] h-[2%] hover:scale-120 duration-300"
+                href="https://in.pinterest.com/pantheondigitals/"
+                target="_blank"
+              >
+                <Image
+                  src="/social-icons/pinterest.svg"
+                  alt="pinterest icon"
+                  width="10"
+                  height="10"
+                  className="w-full group-hover:scale-110 duration-300"
+                />
+              </Link>
             </div>
+
+            {/* bottom bar close */}
           </div>
         </button>
       </div>
