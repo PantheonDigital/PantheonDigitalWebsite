@@ -170,7 +170,7 @@ const Support = () => {
           reach out to our dedicated support team below.
         </p>
 
-        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-16 mt-12 sm:mt-24">
+        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12 mt-12 sm:mt-16">
           {/* Full name */}
           <div className="w-full">
             <h4 className="font-avenir-demi text-white text-sm sm:text-xl">
@@ -290,7 +290,7 @@ const Support = () => {
                 setIsIssueDropDownOpen(!isIssueDropDownOpen);
               }}
             >
-              <p className="flex grow text-white font-avenir-medium text-md">
+              <p className="flex grow text-white font-avenir-medium text-base">
                 {issueType}
               </p>
               <Image
@@ -323,7 +323,7 @@ const Support = () => {
                   }}
                   className="w-full hover:bg-zinc-700 text-left px-4 py-2"
                 >
-                  <p className="text-white font-avenir-medium text-sm sm:text-xl">
+                  <p className="text-white font-avenir-medium text-sm sm:text-base">
                     {item}
                   </p>
                 </button>
@@ -429,7 +429,9 @@ const Support = () => {
                       setErrors((prev) => ({ ...prev, priority: "" }));
                     }}
                   />
-                  <span className="text-white text-sm lg:text-xl ">{p}</span>
+                  <span className="text-white text-sm lg:text-base font-avenir-medium">
+                    {p}
+                  </span>
                 </label>
               ))}
             </div>

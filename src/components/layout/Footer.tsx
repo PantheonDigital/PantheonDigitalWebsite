@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
 
       {/* main footer section for full page */}
-      <footer className="flex flex-col items-center rounded-t-4xl md:rounded-t-5xl shadow-[0_0px_200px_rgba(246,19,19,.3)] w-screen sm:h-auto md:h-screen bg-linear-to-br from-[#000] via-[#000] to-[#F61313]">
+      <footer className="flex flex-col items-center rounded-t-4xl md:rounded-t-5xl shadow-[0_0px_200px_rgba(246,19,19,.3)] w-screen sm:h-[90vh] bg-linear-to-br from-[#000] via-[#000] to-[#F61313]">
         <Image
           src="/Logo.svg"
           alt=""

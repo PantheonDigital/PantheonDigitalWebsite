@@ -56,7 +56,7 @@ const Header = () => {
               src="/Logo.svg"
               width="0"
               height="0"
-              className="w-[200px] h-auto mr-32"
+              className="w-[230px] h-auto mr-32"
               alt="Pantheon Digitals Logo"
             />
           </Link>

@@ -177,7 +177,7 @@ const Contact_Us = () => {
   return (
     <div className="w-full h-full flex flex-col items-center">
       <Toast toast={toast} />
-      <div className="bg-[#212121] w-[90%] sm:w-[80%] h-full sm:mt-24 mt-32 flex flex-col items-center rounded-4xl sm:p-8 p-4">
+      <div className="bg-[#212121] w-[90%] sm:w-[80%] h-full  mt-32 sm:24 flex flex-col items-center rounded-4xl sm:p-8 p-4">
         <h1 className="font-geometric font-bold text-white text-xl sm:text-5xl sm:mt-12 mt-4">
           Contact Us
         </h1>
@@ -187,7 +187,7 @@ const Contact_Us = () => {
           innovation and creativity.
         </p>
 
-        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-16 mt-12 sm:mt-24">
+        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12 mt-12 sm:mt-16">
           {/* Full name */}
           <div className="w-full">
             <h4 className="font-avenir-demi text-white text-sm sm:text-xl">
@@ -305,7 +305,7 @@ const Contact_Us = () => {
               } w-full flex items-center cursor-pointer`}
               onClick={() => setIsServiceDropDownOpen(!isServiceDropDownOpen)}
             >
-              <p className="flex grow text-white font-avenir-medium text-md">
+              <p className="flex grow text-white font-avenir-medium text-base text-md">
                 {serviceType}
               </p>
               <Image
@@ -338,7 +338,7 @@ const Contact_Us = () => {
                   }}
                   className="w-full hover:bg-zinc-700 text-left px-4 py-2 cursor-pointer "
                 >
-                  <p className="text-white font-avenir-medium text-sm sm:text-xl">
+                  <p className="text-white font-avenir-medium text-xs sm:text-base">
                     {item}
                   </p>
                 </button>
@@ -391,7 +391,7 @@ const Contact_Us = () => {
                 onClick={() => setIsTimeZOpen(!isTimeZOpen)}
                 className="flex input-box items-center w-[200px] justify-between cursor-pointer"
               >
-                <span className="font-avenir-medium text-white text-md">
+                <span className="font-avenir-medium text-white text-base">
                   {timeZ}
                 </span>
                 <Image
@@ -420,7 +420,7 @@ const Contact_Us = () => {
                     }}
                     className="w-full hover:bg-zinc-700 text-left px-4 py-2"
                   >
-                    <p className="text-white font-avenir-medium text-sm sm:text-xl">
+                    <p className="text-white font-avenir-medium text-sm sm:text-base">
                       {item.label}
                     </p>
                   </button>

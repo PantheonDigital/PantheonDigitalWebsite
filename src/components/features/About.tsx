@@ -36,11 +36,8 @@ const About = () => {
 
         {/* right side */}
         <div className=" md:w-[50%] md:h-[500px] w-full h-ful mt-12 md:mt-0 flex justify-end">
-          {/* <div className="border-2 border-red-500 absolute md:p-10 rounded-full md:left-[61.4%] md:bottom-[77.5%] bottom-[75.5%] custom-ping " />
-          <div className="border-2 border-red-500 absolute md:p-10 rounded-full md:left-[61.4%] md:bottom-[77.5%] bottom-[75.5%] custom-ping custom-delay-1" />
-          <div className="border-2 border-red-500 absolute md:p-10 rounded-full md:left-[61.4%] md:bottom-[77.5%] bottom-[75.5%]  custom-ping custom-delay-2" /> */}
           <Image
-            src="/YoutubeLogo.svg"
+            src="/lottie/youtubeAnimation.gif"
             alt="Youtube logo"
             width="0"
             height="0"
