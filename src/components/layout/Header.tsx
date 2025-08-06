@@ -120,9 +120,9 @@ const Header = () => {
               : "opacity-0 -translate-y-3 hidden"
           } absolute flex w-screen h-screen justify-center duration-300 bg-[#00000080] top-23 z-[51]`}
         >
-          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[475] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
+          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[80.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
-          <div className="w-[75vw] min-w-[760] h-[470]  bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
+          <div className="w-[75vw] min-w-[760] h-[80vh] macos-scrollbar overflow-y-scroll bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
             <p className="font-avenir-regular text-white text-base ">
               Welcome to Pantheon Digital, where innovation meets excellence. As
               a leading player in the digital landscape, we specialize in
@@ -131,14 +131,14 @@ const Header = () => {
             </p>
 
             {/* category */}
-            <div className="grid grid-cols-3 mt-6 gap-6">
+            <div className="grid grid-cols-3 mt-10 gap-6">
               {/* first service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] h-auto rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold text-white text-xl font-bold text-left">
                   Digital Marketing
                 </h1>
-                <div className="my-4 border-[0.5px] border-white" />
-                <div className="text-left mt-4 h-auto styled-list">
+                <div className="my-4 border-[0.5px] border-white"></div>
+                <ul className="text-left mt-4 h-full styled-list">
                   {[
                     {
                       href: "/Services/social-management",
@@ -156,37 +156,38 @@ const Header = () => {
                       label: "Branding & Advertising",
                     },
                   ].map((link) => (
-                    <Link
-                      key={link.label}
-                      onClick={() => setIsDropDownOpen(false)}
-                      href={link.href}
-                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                        pathname === link.href ? "bg-black/25 rounded-md" : ""
-                      }`}
-                    >
-                      <span className="font-avenir-medium font-medium text-sm text-white">
-                        {link.label}
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
+                    <li key={link.href}>
+                      <Link
+                        onClick={() => setIsDropDownOpen(false)}
+                        href={link.href}
+                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                          pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
+                      >
+                        <span className="font-avenir-medium font-medium text-base text-white">
+                          {link.label}
+                        </span>
+                        <Image
+                          src="/ArrowRight.svg"
+                          alt="arrow right"
+                          width="10"
+                          height="10"
+                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                        />
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
               {/* first service close */}
 
               {/* second service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] h-auto rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
                   Graphic Designing
                 </h1>
                 <div className="my-4 border-[0.5px] border-white"></div>
-                <div className="text-left mt-4 h-auto styled-list">
+                <ul className="text-left mt-4 h-full styled-list">
                   {[
                     { href: "/Services/ui-ux", label: "UX/UI Design" },
                     {
@@ -199,37 +200,38 @@ const Header = () => {
                       label: "Posts & Banner",
                     },
                   ].map((link) => (
-                    <Link
-                      key={link.href}
-                      onClick={() => setIsDropDownOpen(false)}
-                      href={link.href}
-                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                        pathname === link.href ? "bg-black/25 rounded-md" : ""
-                      }`}
-                    >
-                      <span className="font-avenir-medium font-medium text-sm text-white">
-                        {link.label}
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
+                    <li key={link.href}>
+                      <Link
+                        onClick={() => setIsDropDownOpen(false)}
+                        href={link.href}
+                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                          pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
+                      >
+                        <span className="font-avenir-medium font-medium text-base text-white">
+                          {link.label}
+                        </span>
+                        <Image
+                          src="/ArrowRight.svg"
+                          alt="arrow right"
+                          width="10"
+                          height="10"
+                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                        />
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
               {/* second service close */}
 
               {/* third service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] h-auto rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[359px] rounded-3xl p-4">
                 <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
                   Tech & Software
                 </h1>
                 <div className="my-4 border-[0.5px] border-white"></div>
-                <div className="text-left mt-4 h-auto group-hover:scale-110 duration-300 styled-list">
+                <ul className="text-left mt-4 h-full styled-list">
                   {[
                     {
                       href: "https://www.zfour.in/",
@@ -254,116 +256,180 @@ const Header = () => {
                       label: "Cloud & DevOps Services",
                     },
                   ].map((link) => (
-                    <Link
-                      key={link.href}
-                      onClick={() => setIsDropDownOpen(false)}
-                      href={link.href}
-                      target={link.target || "_self"}
-                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                        pathname === link.href ? "bg-black/25 rounded-md" : ""
-                      }`}
-                    >
-                      <span className="font-avenir-medium font-medium text-sm text-white">
-                        {link.label}
-                      </span>
-                      <Image
-                        src="/ArrowRight.svg"
-                        alt="arrow right"
-                        width="10"
-                        height="10"
-                        className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
-                      />
-                    </Link>
+                    <li key={link.href}>
+                      <Link
+                        onClick={() => setIsDropDownOpen(false)}
+                        href={link.href}
+                        target={link.target || "_self"}
+                        className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
+                          pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
+                      >
+                        <span className="font-avenir-medium font-medium text-base text-white">
+                          {link.label}
+                        </span>
+                        <Image
+                          src="/ArrowRight.svg"
+                          alt="arrow right"
+                          width="10"
+                          height="10"
+                          className="w-auto h-[10px] opacity-0 group-hover:opacity-100 -translate-x-10 group-hover:translate-x-0 duration-300"
+                        />
+                      </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
               {/* third service close */}
             </div>
 
             {/* nav footer */}
-            {/* social icons */}
-            <div className="flex flex-row w-full justify-evenly mt-4">
-              <Link
-                className="w-[2%] h-[2%] hover:scale-120 duration-300"
-                href="https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#"
-                target="_blank"
-              >
-                <Image
-                  src="/social-icons/facebook.svg"
-                  alt="facebook icon"
-                  width="10"
-                  height="10"
-                  className="w-full group-hover:scale-110 duration-300"
-                />
-              </Link>
-              <Link
-                className="w-[2%] h-[2%] hover:scale-120 duration-300"
-                href="https://x.com/PantheonDigi"
-                target="_blank"
-              >
-                <Image
-                  src="/social-icons/x.svg"
-                  alt="x icon"
-                  width="10"
-                  height="10"
-                  className="w-full group-hover:scale-110 duration-300"
-                />
-              </Link>
-              <Link
-                className="w-[2%] h-[2%] hover:scale-120 duration-300"
-                href="https://www.instagram.com/pantheondigitals/"
-                target="_blank"
-              >
-                <Image
-                  src="/social-icons/insta.svg"
-                  alt="instagram icon"
-                  width="10"
-                  height="10"
-                  className="w-full group-hover:scale-110 duration-300"
-                />
-              </Link>
-              <Link
-                className="w-[2%] h-[2%] hover:scale-120 duration-300"
-                href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0bqQBFX6_kAAAAZgwY1kQJ_M9XEiW2MgEn9JGXzKTXud2Y708iYiT2Mjj6zTHnUYndWoWgeHoi2QqDr1vYMG3a6d3hIcV5OOcdhKWInnOeyIh0J58gE15Ws1MwNTcsg57jWg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpantheon-digitals%2F"
-                target="_blank"
-              >
-                <Image
-                  src="/social-icons/linkedin.svg"
-                  alt="linkedin icon"
-                  width="10"
-                  height="10"
-                  className="w-full group-hover:scale-110 duration-300"
-                />
-              </Link>
-              <Link
-                className="w-[2%] h-[2%] hover:scale-120 duration-300"
-                href="https://www.youtube.com/@pantheondigital"
-                target="_blank"
-              >
-                <Image
-                  src="/social-icons/youtube.svg"
-                  alt="youtube icon"
-                  width="10"
-                  height="10"
-                  className="w-full group-hover:scale-110 duration-300"
-                />
-              </Link>
-              <Link
-                className="w-[2%] h-[2%] hover:scale-120 duration-300"
-                href="https://in.pinterest.com/pantheondigitals/"
-                target="_blank"
-              >
-                <Image
-                  src="/social-icons/pinterest.svg"
-                  alt="pinterest icon"
-                  width="10"
-                  height="10"
-                  className="w-full group-hover:scale-110 duration-300"
-                />
-              </Link>
+            <div className="grid grid-cols-3 gap-6 mt-6">
+              <div className="my-auto">
+                <div className="flex flex-row w-full justify-evenly">
+                  <Image
+                    src="/social-icons/iso1.svg"
+                    alt="iso 1"
+                    width="10"
+                    height="10"
+                    className="w-[15%] h-[15%]"
+                  />
+                  <Image
+                    src="/social-icons/iso2.svg"
+                    alt="iso 2"
+                    width="10"
+                    height="10"
+                    className="w-[15%] h-[15%]"
+                  />
+                  <Image
+                    src="/social-icons/aicpa.svg"
+                    alt="aicpa"
+                    width="10"
+                    height="10"
+                    className="w-[15%] h-[15%]"
+                  />
+                </div>
+                {/* social icons */}
+                <div className="flex flex-row w-full justify-evenly mt-4">
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.facebook.com/people/Pantheon-Digitals/100090577747427/#"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/facebook.svg"
+                      alt="facebook icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://x.com/PantheonDigi"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/x.svg"
+                      alt="x icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.instagram.com/pantheondigitals/"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/insta.svg"
+                      alt="instagram icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0bqQBFX6_kAAAAZgwY1kQJ_M9XEiW2MgEn9JGXzKTXud2Y708iYiT2Mjj6zTHnUYndWoWgeHoi2QqDr1vYMG3a6d3hIcV5OOcdhKWInnOeyIh0J58gE15Ws1MwNTcsg57jWg=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpantheon-digitals%2F"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/linkedin.svg"
+                      alt="linkedin icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://www.youtube.com/@pantheondigital"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/youtube.svg"
+                      alt="youtube icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                  <Link
+                    className="w-[7%] h-[7%] hover:scale-120 duration-300"
+                    href="https://in.pinterest.com/pantheondigitals/"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/social-icons/pinterest.svg"
+                      alt="pinterest icon"
+                      width="10"
+                      height="10"
+                      className="w-full h-full"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="col-span-2 bg-[#2A2A2A] min-h-[120] rounded-3xl justify-between flex-row flex px-6 py-2 items-center">
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium font-medium text-base text-white underline underline-offset-4">
+                    Privacy Policy
+                  </span>
+                </Link>
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
+                    Terms & Condition
+                  </span>
+                </Link>
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
+                    Cookie Policy
+                  </span>
+                </Link>
+                <Link
+                  href=""
+                  onClick={() => setIsDropDownOpen(false)}
+                  className="hover:scale-110 duration-300"
+                >
+                  <span className="font-avenir-medium font-medium  text-base text-white underline underline-offset-4">
+                    Blogs
+                  </span>
+                </Link>
+              </div>
             </div>
-
-            {/* bottom bar close */}
           </div>
         </button>
       </div>
@@ -461,7 +527,7 @@ const Header = () => {
                         Digital Marketing
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
-                      <ul className="text-left mt-4 group-hover:scale-110 duration-300 styled-list">
+                      <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
                             href="/Services/social-management/"
@@ -580,7 +646,7 @@ const Header = () => {
                         Graphic Designing
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
-                      <ul className="text-left mt-4 group-hover:scale-110 duration-300 styled-list">
+                      <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
                             href="/Services/ui-ux/"
@@ -663,7 +729,7 @@ const Header = () => {
                         Tech & Software
                       </h1>
                       <div className="my-4 border-[0.5] border-white"></div>
-                      <ul className="text-left mt-4 group-hover:scale-110 duration-300 styled-list">
+                      <ul className="text-left mt-4 h-full styled-list">
                         <li>
                           <Link
                             href="https://www.zfour.in/"
@@ -810,7 +876,7 @@ const Header = () => {
                 alt="facebook icon"
                 width="10"
                 height="10"
-                className="w-full group-hover:scale-110 duration-300"
+                className="w-full h-full"
               />
             </Link>
             <Link
@@ -823,7 +889,7 @@ const Header = () => {
                 alt="x icon"
                 width="10"
                 height="10"
-                className="w-full group-hover:scale-110 duration-300"
+                className="w-full h-full"
               />
             </Link>
             <Link
@@ -836,7 +902,7 @@ const Header = () => {
                 alt="instagram icon"
                 width="10"
                 height="10"
-                className="w-full group-hover:scale-110 duration-300"
+                className="w-full h-full"
               />
             </Link>
             <Link
@@ -849,7 +915,7 @@ const Header = () => {
                 alt="linkedin icon"
                 width="10"
                 height="10"
-                className="w-full group-hover:scale-110 duration-300"
+                className="w-full h-full"
               />
             </Link>
             <Link
@@ -862,7 +928,7 @@ const Header = () => {
                 alt="youtube icon"
                 width="10"
                 height="10"
-                className="w-full group-hover:scale-110 duration-300"
+                className="w-full h-full"
               />
             </Link>
             <Link
@@ -875,7 +941,7 @@ const Header = () => {
                 alt="pinterest icon"
                 width="10"
                 height="10"
-                className="w-full group-hover:scale-110 duration-300"
+                className="w-full h-full"
               />
             </Link>
           </div>
