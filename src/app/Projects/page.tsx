@@ -228,7 +228,7 @@ const Page = () => {
         </p>
 
         {/* all types */}
-        <div className="flex w-full mt-12 sm:mt-24 pb-2 sm:pb-4 overflow-y-scroll">
+        <div className="flex w-full mt-12 sm:mt-24 pb-2 sm:pb-4 overflow-clip overflow-x-scroll">
           {list.map((item) => (
             <button
               key={item.id}
@@ -236,7 +236,7 @@ const Page = () => {
               onClick={() => setType(item.id)}
             >
               <span
-                className={`font-avenir-demi sm:text-xl text-xs cursor-pointer duration-300 hover:underline underline-offset-4 ${
+                className={`font-avenir-demi sm:text-xl text-xs cursor-pointer duration-300 hover:underline underline-offset-6 ${
                   type === item.id ? "text-[#FF4D4D] underline" : "text-white"
                 } `}
               >
