@@ -120,9 +120,9 @@ const Header = () => {
               : "opacity-0 -translate-y-3 hidden"
           } absolute flex w-screen h-screen justify-center duration-300 bg-[#00000080] top-23 z-[51]`}
         >
-          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[495] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
+          <div className="-top-0.5 w-[75.3vw] min-w-[761] h-[475] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
-          <div className="w-[75vw] min-w-[760] h-[490]  bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
+          <div className="w-[75vw] min-w-[760] h-[470]  bg-black  p-6 rounded-3xl shadow-xl/30 shadow-white text-center">
             <p className="font-avenir-regular text-white text-base ">
               Welcome to Pantheon Digital, where innovation meets excellence. As
               a leading player in the digital landscape, we specialize in
@@ -133,7 +133,7 @@ const Header = () => {
             {/* category */}
             <div className="grid grid-cols-3 mt-6 gap-6">
               {/* first service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[340px] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] h-auto rounded-3xl p-4">
                 <h1 className="font-avenir-bold text-white text-xl font-bold text-left">
                   Digital Marketing
                 </h1>
@@ -181,7 +181,7 @@ const Header = () => {
               {/* first service close */}
 
               {/* second service start */}
-              <div className="bg-[#2A2A2A] min-w-[25%] min-h-[340px] rounded-3xl p-4">
+              <div className="bg-[#2A2A2A] min-w-[25%] h-auto rounded-3xl p-4">
                 <h1 className="font-avenir-bold font-bold text-xl text-left text-white">
                   Graphic Designing
                 </h1>
