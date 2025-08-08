@@ -49,7 +49,7 @@ const page = () => {
   ];
 
   return (
-    <div className="mt-24 flex flex-col justify-center items-center">
+    <div className="mt-24 flex flex-col justify-center items-center overflow-x-hidden">
       {/* hero section */}
       <Hero
         title="Where Ideas Evolve Into Intelligent Applications."
@@ -176,7 +176,7 @@ const page = () => {
       <About />
 
       {/* Project section */}
-      <div className="sm:mt-0 mt-12 w-screen h-auto flex justify-center">
+      <div className="sm:mt-0 mt-12 w-full h-auto flex justify-center">
         <OurProject />
       </div>
 

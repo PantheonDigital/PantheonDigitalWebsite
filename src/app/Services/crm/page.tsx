@@ -49,7 +49,7 @@ const page = () => {
     },
   ];
   return (
-    <div className="mt-24 flex flex-col justify-center items-center">
+    <div className="mt-24 flex flex-col justify-center items-center overflow-x-hidden">
       <BackgroundBeams />
       {/* hero section */}
       <Hero

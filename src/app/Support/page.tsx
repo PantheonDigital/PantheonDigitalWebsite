@@ -177,9 +177,8 @@ const Support = () => {
               Full name <sup>*</sup>
             </h4>
             <input
-              className={`w-full ${
-                errors.name ? "error-input-box" : "input-box"
-              }`}
+              className={`w-full ${errors.name ? "error-input-box" : "input-box"
+                }`}
               placeholder="e.g., Sam Smith"
               value={name}
               onChange={(e) => {
@@ -200,9 +199,8 @@ const Support = () => {
               Registered Email <sup>*</sup>
             </h4>
             <input
-              className={`w-full ${
-                errors.email ? "error-input-box" : "input-box"
-              }`}
+              className={`w-full ${errors.email ? "error-input-box" : "input-box"
+                }`}
               placeholder="e.g., abc@company.com"
               value={email}
               onChange={(e) => {
@@ -232,9 +230,8 @@ const Support = () => {
               <input
                 type="tel"
                 maxLength={10}
-                className={`w-full grow ${
-                  errors.contact ? "error-input-box" : "input-box"
-                }`}
+                className={`w-full grow ${errors.contact ? "error-input-box" : "input-box"
+                  }`}
                 placeholder="000  000  0000"
                 value={contact}
                 onChange={(e) => {
@@ -259,9 +256,8 @@ const Support = () => {
               Company Name <sup>*</sup>
             </h4>
             <input
-              className={`w-full ${
-                errors.companyName ? "error-input-box" : "input-box"
-              }`}
+              className={`w-full ${errors.companyName ? "error-input-box" : "input-box"
+                }`}
               placeholder="xyz inc."
               value={companyName}
               onChange={(e) => {
@@ -282,9 +278,8 @@ const Support = () => {
               Issue Type <sup>*</sup>
             </h4>
             <button
-              className={`w-full flex items-center cursor-pointer ${
-                errors.issueType ? "error-input-box" : "input-box"
-              }`}
+              className={`w-full flex items-center cursor-pointer ${errors.issueType ? "error-input-box" : "input-box"
+                }`}
               onClick={(e) => {
                 e.stopPropagation();
                 setIsIssueDropDownOpen(!isIssueDropDownOpen);
@@ -298,9 +293,8 @@ const Support = () => {
                 alt=""
                 width="20"
                 height="20"
-                className={`transition-transform ${
-                  isIssueDropDownOpen ? "rotate-180" : "rotate-0"
-                }`}
+                className={`transition-transform ${isIssueDropDownOpen ? "rotate-180" : "rotate-0"
+                  }`}
               />
             </button>
             {errors.issueType && (
@@ -309,9 +303,8 @@ const Support = () => {
               </p>
             )}
             <div
-              className={`bg-[#212121] w-[350px] absolute right-0 top-28 overflow-hidden border border-zinc-700 rounded-lg duration-300 z-10 ${
-                isIssueDropDownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
-              }`}
+              className={`bg-[#212121] w-[350px] absolute right-0 top-28 overflow-hidden border border-zinc-700 rounded-lg duration-300 z-10 ${isIssueDropDownOpen ? "h-auto opacity-100" : "h-0 opacity-0"
+                }`}
             >
               {issues.map((item) => (
                 <button
@@ -337,9 +330,8 @@ const Support = () => {
               Project Name / ID <sup>*</sup>
             </h4>
             <input
-              className={`w-full ${
-                errors.projectId ? "error-input-box" : "input-box"
-              }`}
+              className={`w-full ${errors.projectId ? "error-input-box" : "input-box"
+                }`}
               placeholder="e.g., xyz website development"
               value={projectId}
               onChange={(e) => {
@@ -361,9 +353,8 @@ const Support = () => {
             </h4>
             <textarea
               placeholder="Please provide as much detail as possible..."
-              className={`w-full h-[200px] ${
-                errors.description ? "error-input-box" : "input-box"
-              }`}
+              className={`w-full h-[200px] ${errors.description ? "error-input-box" : "input-box"
+                }`}
               value={description}
               onChange={(e) => {
                 setDescription(e.target.value);
@@ -383,18 +374,16 @@ const Support = () => {
             />
             {attachment && (
               <h4
-                className={`lg:absolute right-12 ${
-                  errors.description ? "lg:bottom-10" : "lg:bottom-4"
-                } text-white font-avenir-medium font-sm sm:font-xl`}
+                className={`lg:absolute right-12 ${errors.description ? "lg:bottom-10" : "lg:bottom-4"
+                  } text-white font-avenir-medium font-sm sm:font-xl`}
               >
                 File attached: {attachment.name}
               </h4>
             )}
             <button
               onClick={() => fileInputRef.current?.click()}
-              className={`lg:absolute ${
-                errors.description ? "lg:bottom-10" : "lg:bottom-4"
-              } right-3 cursor-pointer`}
+              className={`lg:absolute ${errors.description ? "lg:bottom-10" : "lg:bottom-4"
+                } right-3 cursor-pointer`}
             >
               <Image
                 src="/upload-image.svg"
@@ -411,9 +400,8 @@ const Support = () => {
               Priority Level <sup>*</sup>
             </h4>
             <div
-              className={`sm:flex grid grid-cols-2 place-items-center sm:flex-row sm:gap-16 gap-4 ${
-                errors.priority ? "bg-[#210000]" : "bg-black"
-              } p-4 mt-4`}
+              className={`sm:flex grid grid-cols-2 place-items-center sm:flex-row sm:gap-16 gap-4 ${errors.priority ? "bg-[#210000]" : "bg-black"
+                } p-4 mt-4`}
             >
               {(["Low", "Medium", "High", "Urgent"] as const).map((p) => (
                 <label

@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* starting of main section */}
-      <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center">
+      <main className="relative w-full h-full min-h-[100vh] flex flex-col row-start-2 items-center overflow-x-hidden">
         <div className="w-[90%] h-auto rounded-b-4xl flex flex-col justify-center items-center mt-32">
           {/* hero section background image */}
           <video

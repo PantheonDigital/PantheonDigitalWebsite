@@ -9,7 +9,7 @@ import Image from "next/image";
 const AboutUs = () => {
   return (
     <>
-      <div className="mt-24 flex flex-col items-center w-screen">
+      <div className="mt-24 flex flex-col items-center w-screen overflow-x-hidden">
         {/* Hero Section */}
         <Hero
           buttonTitle="Contact Us"
