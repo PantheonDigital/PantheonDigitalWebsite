@@ -181,14 +181,13 @@ const Page = () => {
   }, [isPopUpOpen]);
 
   return (
-    <div className="w-full h-full flex flex-col items-center">
+    <div className="w-full h-full flex flex-col items-center overflow-x-hidden">
       {/* image pop up */}
       <div
-        className={`fixed left-[50%] top-[50%] translate-[-50%]  bg-[#00000080] duration-300  ${
-          isPopUpOpen
-            ? "opacity-100 z-[99] w-screen h-screen"
-            : "opacity-0 w-0 h-0 -z-10 "
-        }`}
+        className={`fixed left-[50%] top-[50%] translate-[-50%]  bg-[#00000080] duration-300  ${isPopUpOpen
+          ? "opacity-100 z-[99] w-screen h-screen"
+          : "opacity-0 w-0 h-0 -z-10 "
+          }`}
       >
         <button
           className="w-10 h-10 rounded-full absolute bg-white top-5 right-13 z-[100] border border-red-800 hover:scale-110 duration-300 cursor-pointer"
@@ -228,7 +227,7 @@ const Page = () => {
         </p>
 
         {/* all types */}
-        <div className="flex w-full mt-12 sm:mt-24 pb-2 sm:pb-4 overflow-clip overflow-x-scroll">
+        <div className="flex w-full mt-12 sm:mt-24 pb-2 sm:pb-4 lg:overflow-hidden overflow-x-scroll macos-scrollbar">
           {list.map((item) => (
             <button
               key={item.id}
@@ -236,9 +235,8 @@ const Page = () => {
               onClick={() => setType(item.id)}
             >
               <span
-                className={`font-avenir-demi sm:text-xl text-xs cursor-pointer duration-300 hover:underline underline-offset-6 ${
-                  type === item.id ? "text-[#FF4D4D] underline" : "text-white"
-                } `}
+                className={`font-avenir-demi sm:text-xl text-xs cursor-pointer duration-300 hover:underline underline-offset-6 ${type === item.id ? "text-[#FF4D4D] underline" : "text-white"
+                  } `}
               >
                 {item.type}
               </span>
@@ -246,9 +244,66 @@ const Page = () => {
           ))}
         </div>
         {/* main body for projects */}
-        <div className="w-full mt-4 sm:mt-12 grid sm:grid-cols-3 grid-cols-1 gap-8 place-items-center">
+        <div className="w-full mt-4 sm:mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 place-items-center">
           {type === 1
             ? projects.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => {
+                  setIsPopUpOpen(true);
+                  setPopUpImg(item.img);
+                }}
+                className="max-w-[282px] cursor-pointer min-w-[200px] h-[241px] w-full flex flex-col rounded-2xl group overflow-hidden"
+              >
+                {/* Image Section */}
+                <div className="relative w-full h-full min-h-[60%] bg-[#D9D9D9] overflow-hidden p-6 pb-0">
+                  {/* Image */}
+                  <Image
+                    src={item.img}
+                    alt=""
+                    width={0}
+                    height={0}
+                    className="w-full h-full min-w-full min-h-[60%] group-hover:scale-110 duration-300 object-contain"
+                  />
+
+                  {/* Backdrop on hover */}
+                  <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+
+                  {/* Arrow Button */}
+                  <div className="absolute top-[50%] left-[50%] translate-[-50%] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsPopUpOpen(true);
+                        setPopUpImg(item.img);
+                      }}
+                      className="cursor-pointer"
+                    >
+                      <Image
+                        src="/arrow-up.svg"
+                        alt="arrow right"
+                        width="0"
+                        height="0"
+                        className="w-[40] h-auto rotate-30 "
+                      />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Text Section */}
+                <div className="w-full flex flex-col bg-black p-2 sm:p-4">
+                  <h4 className="text-white font-avenir-demi text-sm sm:text-xl">
+                    {item.title}
+                  </h4>
+                  <p className="text-[#a8a8a8] font-avenir-light sm:text-sm text-xs">
+                    {item.category}
+                  </p>
+                </div>
+              </div>
+            ))
+            : projects
+              .filter((item) => item.type === type)
+              .map((item) => (
                 <div
                   key={item.id}
                   onClick={() => {
@@ -271,7 +326,7 @@ const Page = () => {
                     {/* Backdrop on hover */}
                     <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
 
-                    {/* Arrow Button */}
+                    {/* Yellow Arrow Button */}
                     <div className="absolute top-[50%] left-[50%] translate-[-50%] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <button
                         onClick={(e) => {
@@ -302,64 +357,7 @@ const Page = () => {
                     </p>
                   </div>
                 </div>
-              ))
-            : projects
-                .filter((item) => item.type === type)
-                .map((item) => (
-                  <div
-                    key={item.id}
-                    onClick={() => {
-                      setIsPopUpOpen(true);
-                      setPopUpImg(item.img);
-                    }}
-                    className="max-w-[282px] cursor-pointer min-w-[200px] h-[241px] w-full flex flex-col rounded-2xl group overflow-hidden"
-                  >
-                    {/* Image Section */}
-                    <div className="relative w-full h-full min-h-[60%] bg-[#D9D9D9] overflow-hidden p-6 pb-0">
-                      {/* Image */}
-                      <Image
-                        src={item.img}
-                        alt=""
-                        width={0}
-                        height={0}
-                        className="w-full h-full min-w-full min-h-[60%] group-hover:scale-110 duration-300 object-contain"
-                      />
-
-                      {/* Backdrop on hover */}
-                      <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-
-                      {/* Yellow Arrow Button */}
-                      <div className="absolute top-[50%] left-[50%] translate-[-50%] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIsPopUpOpen(true);
-                            setPopUpImg(item.img);
-                          }}
-                          className="cursor-pointer"
-                        >
-                          <Image
-                            src="/arrow-up.svg"
-                            alt="arrow right"
-                            width="0"
-                            height="0"
-                            className="w-[40] h-auto rotate-30 "
-                          />
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Text Section */}
-                    <div className="w-full flex flex-col bg-black p-2 sm:p-4">
-                      <h4 className="text-white font-avenir-demi text-sm sm:text-xl">
-                        {item.title}
-                      </h4>
-                      <p className="text-[#a8a8a8] font-avenir-light sm:text-sm text-xs">
-                        {item.category}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+              ))}
         </div>
       </div>
       {/* project seciton ends */}

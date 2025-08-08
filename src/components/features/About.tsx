@@ -37,11 +37,11 @@ const About = () => {
         {/* right side */}
         <div className=" md:w-[50%] md:h-[500px] w-full h-ful mt-12 md:mt-0 flex justify-end">
           <Image
-            src="/lottie/youtubeAnimation.gif"
+            src="/YoutubeLogo.svg"
             alt="Youtube logo"
             width="0"
             height="0"
-            className="md:relative absolute  md:left-[27%] md:bottom-[-10%] bottom-[83.5%] w-[15%] h-[15%]  cursor-pointer transition-all hover:scale-110"
+            className="md:relative absolute animate-bounce  md:left-[27%] md:bottom-[-10%] bottom-[83.5%] w-[15%] h-[15%]  cursor-pointer transition-all hover:scale-110"
           />
           <Image
             src="/AboutUsSectionImage.svg"
@@ -56,14 +56,12 @@ const About = () => {
       <div className=" md:hidden flex flex-row-reverse md:flex-row items-center justify-evenly md:justify-normal w-full mt-12 gap-4">
         <PrimaryButton
           label={"Get in touch"}
-          href={""}
+          href={"/Contact_Us"}
           className="rounded-lg"
         />
-        <PrimaryButton label="About Us" href={""} type="red-outline" />
+        <PrimaryButton label="About Us" href={"/About"} type="red-outline" />
       </div>
 
-      {/* about information in numerical */}
-      {/* <AboutNumerics /> */}
     </div>
   );
 };

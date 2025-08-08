@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
 
       {/* main footer section for full page */}
-      <footer className="flex flex-col items-center rounded-t-4xl md:rounded-t-5xl shadow-[0_0px_200px_rgba(246,19,19,.3)] w-screen sm:h-[90vh] bg-linear-to-br from-[#000] via-[#000] to-[#F61313]">
+      <footer className="flex flex-col items-center rounded-t-4xl md:rounded-t-5xl shadow-[0_0px_200px_rgba(246,19,19,.3)] w-full sm:h-[90vh] bg-linear-to-br from-[#000] via-[#000] to-[#F61313]">
         <Image
           src="/Logo.svg"
           alt=""
@@ -27,7 +27,7 @@ const Footer = () => {
           height="0"
           className="md:w-[25%] md:h-[20%] w-[240] h-[30] mt-8"
         />
-        <h1 className="mx-10 text-center font-avenir-regular text-base text-white">
+        <h1 className="mx-10 mt-12 sm:mt-0 text-center font-avenir-regular text-base text-white">
           Passionate digital crafting, limitless tomorrows. Join us in shaping
           innovative experiences with creativity and dedication.
         </h1>

@@ -155,7 +155,7 @@ const page = () => {
       <About />
 
       {/* Project section */}
-      <div className="sm:mt-0 -mt-160 w-screen h-auto flex justify-center">
+      <div className="sm:mt-0 mt-12 w-screen h-auto flex justify-center">
         <OurProject />
       </div>
 

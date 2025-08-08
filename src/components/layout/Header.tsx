@@ -19,7 +19,7 @@ const Header = () => {
     setIsMobileDropDown(!isMobileDropDown);
   };
 
-  useEffect(() => {}, [isMobileDropDown]);
+  useEffect(() => { }, [isMobileDropDown]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -102,11 +102,10 @@ const Header = () => {
               onClick={closeDropDownMenu}
               leftIcon="/Contact-Us.svg"
               label="Contact Us"
-              className={`rounded-3xl ${
-                pathname === "/Contact_Us"
-                  ? "border-2 shadow-none ring-2"
-                  : "ring-0"
-              }`}
+              className={`rounded-3xl ${pathname === "/Contact_Us"
+                ? "border-2 shadow-none ring-2"
+                : "ring-0"
+                }`}
             />
           </div>
         </header>
@@ -114,9 +113,8 @@ const Header = () => {
         {/* dropdown body -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-= */}
         <button
           onClick={() => setIsDropDownOpen(false)}
-          className={`${
-            isDropDownOpen ? "block" : "hidden"
-          } absolute flex w-screen h-screen justify-center duration-1000 bg-[#00000095] z-[51]`}
+          className={`${isDropDownOpen ? "block" : "hidden"
+            } absolute flex w-screen h-screen justify-center duration-1000 bg-[#00000095] z-[51]`}
         >
           <div className="-top-0.5 w-full h-[40.5vh] absolute bg-white z-[-1] rounded-3xl bg-[linear-gradient(to_right,_#FF0000,_#0095FF)]" />
 
@@ -271,9 +269,8 @@ const Header = () => {
                       key={link.href}
                       onClick={() => setIsDropDownOpen(false)}
                       href={link.href}
-                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                        pathname === link.href ? "bg-black/25 rounded-md" : ""
-                      }`}
+                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
                     >
                       <span className="font-avenir-medium text-sm text-white">
                         {link.label}
@@ -314,9 +311,8 @@ const Header = () => {
                       key={link.href}
                       onClick={() => setIsDropDownOpen(false)}
                       href={link.href}
-                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                        pathname === link.href ? "bg-black/25 rounded-md" : ""
-                      }`}
+                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
                     >
                       <span className="font-avenir-medium text-sm text-white">
                         {link.label}
@@ -370,9 +366,8 @@ const Header = () => {
                       onClick={() => setIsDropDownOpen(false)}
                       href={link.href}
                       target={link.target || "_self"}
-                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${
-                        pathname === link.href ? "bg-black/25 rounded-md" : ""
-                      }`}
+                      className={`flex flex-row justify-between items-center hover:bg-black/25 hover:rounded-lg py-2 px-1 group ${pathname === link.href ? "bg-black/25 rounded-md" : ""
+                        }`}
                     >
                       <span className="font-avenir-medium text-sm text-white">
                         {link.label}
@@ -423,9 +418,8 @@ const Header = () => {
               src="/MenuIcon.svg"
               width="20"
               height="20"
-              className={`w-[20] h-[20] duration-300 ${
-                isMobileMenuOpen ? "-translate-y-100" : "translate-y-0"
-              }`}
+              className={`w-[20] h-[20] duration-300 ${isMobileMenuOpen ? "-translate-y-100" : "translate-y-0"
+                }`}
               alt="menu icon"
             />
           </button>
@@ -440,9 +434,8 @@ const Header = () => {
         )}
 
         <div
-          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[60] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-x-hidden overflow-y-scroll  ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 w-[80%] h-[100dvh] bg-black z-[60] p-4 pt-18 md:pt-24 flex flex-col gap-4  duration-300 overflow-x-hidden overflow-y-scroll  ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <button
             className="absolute top-1 -right-1"
@@ -482,7 +475,7 @@ const Header = () => {
                     {/* Categories */}
 
                     {/* first service start */}
-                    <div className="min-w-[25%] ">
+                    <div className="bg-[#2A2A2A] min-w-[25%]  rounded-3xl p-4 ">
                       <h1 className="font-avenir-bold font-bold text-lg text-left text-white">
                         Digital Marketing
                       </h1>

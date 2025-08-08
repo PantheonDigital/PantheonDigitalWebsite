@@ -18,7 +18,7 @@ const WeProvide = ({
       <h4 className="text-white font-avenir-medium opacity-60 text-sm md:text-xl ">
         {subtitle}
       </h4>
-      <h1 className="text-white font-geometric font-bold text-xl md:text-3xl text-center mt-4">
+      <h1 className="text-white font-geometric font-bold text-xl md:text-3xl text-center mb-6 sm:mb-0 sm:mt-4 ">
         {title}
       </h1>
 
